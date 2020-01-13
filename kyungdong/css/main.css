@@ -1,0 +1,353 @@
+#mainVisual .list li {
+  height: 100vh;
+  background-size: cover;
+}
+#mainVisual .list .visual01 {
+  background-image: url(../imgs/main_visual01.jpg);
+}
+#mainVisual .list .visual02 {
+  background-image: url(../imgs/main_visual02.jpg);
+}
+#mainVisual .list .visual03 {
+  background-image: url(../imgs/main_visual03.jpg);
+}
+#mainVisual .list .visual04 {
+  background-image: url(../imgs/main_visual04.jpg);
+}
+#mainVisual .list .txtBox {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 350px;
+  transform: translateY(-50%);
+}
+#mainVisual .list .txtBox .main {
+  font-size: 48px;
+  font-weight: 400;
+}
+#mainVisual .list .txtBox .sub {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+#mainVisual .list .txtBox a {
+  display: inline-block;
+  padding: 15px 30px;
+  border: 1px solid #fff;
+  border-radius: 100px;
+  font-size: 18px;
+}
+
+
+#mainVisual .btn {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  width: 100px;
+  height: 100px;
+  transform: translateY(-50%);
+  background-color: transparent;
+  font-size: 50px;
+  color: rgb(57, 235, 235);
+  border: 1px solid #000;
+  text-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+#mainVisual .btnNext {
+  right: 90px;
+}
+#mainVisual .btnPrev {
+  left: 90px;
+}
+#mainVisual .pagination {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 50px;
+  z-index: 3;
+}
+#mainVisual .pagination .swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  opacity: 1;
+  border: 3px solid #fff;
+  background-color: transparent;
+  border-radius: 100px;
+  transition: 0.25s ease;
+}
+#mainVisual .pagination .swiper-pagination-bullet-active {
+  width: 50px;
+  background-color: #fff;
+}
+/* business */
+#business{
+    background-color: #f8f8f8;
+}
+#business ul{
+    margin: 0 -1%;
+}
+#business li {
+  float: left;
+  width: 280px;
+  margin: 0 1%;
+  overflow: hidden;
+  transition: 0.25s ease;
+}
+
+#business .titleBox {
+  margin-bottom: 50px;
+}
+#business h3 {
+  font-size: 20px;
+  font-weight: 500;
+}
+#business h3 span {
+  display: block;
+  margin-bottom: 20px;
+}
+#business li img {
+  transition: 0.25s ease;
+  width: 100%;
+}
+#business li:hover img {
+  transform: scale(1.1);
+}
+#business .txtBox {
+  padding: 20px;
+}
+#business h3:after {
+  content: "";
+  display: block;
+  height: 1px;
+  left: 10px;
+  right: 10px;
+  background-color: #222;
+  margin: 10px auto;
+}
+#business .imgBox{
+    height: 360px;
+    overflow: hidden;
+}
+#mainVisual .iconScroll{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0);
+    bottom: 100px;
+    font-size: 24px;
+    z-index: 2;
+    animation: scrollMove 1s ease infinite alternate;
+}
+.view a:hover::before{
+    left: -10px;
+}
+.view a::before{
+    content: "";
+    display: block;
+    width: 130%;
+    height: 100%;
+    background-color: #f00;
+    position: absolute;
+    left: -140%;
+    top: 0;
+    transform: skewX(-30deg);
+    transition: 0.5s;
+    z-index: -1; 
+}
+/* technology */
+#technology{
+    position: relative;
+    z-index: 0;
+}
+#technology::before{
+    content: "";
+    display: block;
+    background-color: #d9d9d9;
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+
+}
+#technology ul{
+    margin: 0 -1%;
+}
+#technology li{
+    width: 48%;
+    margin: 0 1%;
+}
+#technology li img{
+    width: 100%;
+    transition: 0.25s ease;
+    height: 100%;
+}
+#technology li .imgBox{
+    overflow: hidden;
+    position: relative;
+}
+#technology li .imgBox h3{
+    text-align: center;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 50%;
+    color: #fff;
+    transform: translateY(-50%);
+    font-size: 32px;
+}
+#technology li .imgBox h3 span{
+    display: block;
+}
+#technology li .imgBox h3 span:nth-child(2){
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+#technology li .imgBox h3 span:nth-child(3){
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: 2px solid #fff;
+}
+
+#technology li a:hover img{
+    transform: scale(1.2);
+}
+
+
+/* relation */
+#relation{
+    position: relative;
+    z-index: 0;
+}
+#relation::before{
+    display: block;
+    content: "";
+    background-color: rgb(101, 160, 228);
+    left: 0;
+    top: 0;
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 40%;
+}
+#relation .titleBox{
+    float: left;
+    width: 480px;
+    text-align: left;
+    color: #fff;
+}
+#relation .contentBox{
+    float: left;
+    width: 600px;
+}
+#relation .contentBox ul{
+    margin: 0 -1%;
+}
+#relation .contentBox li{
+    width: 48%;
+    margin: 0 1% 30px;
+}
+#relation .contentBox li img{
+    width: 275px;
+    height: 176px;
+}
+#relation .contentBox li span{
+    display: block;
+}
+.btn.view a{
+    left: 0;
+}
+#relation .btn.view a{
+    transform: translateX(0);
+    color: #fff;
+    border: 2px solid #fff;
+}
+#relation .btn.view a::before{
+    background-color: #fff;
+}
+#relation .btn.view a:hover{
+    color: #333;
+}
+
+#about{
+    background-image: url(../imgs/main_foot_bg.jpg);
+    height: auto;
+    background-size:cover;
+    padding:80px 0;
+}
+#about .titleBox{
+    float: left;
+    width: 480px;
+    text-align: left;
+    color: #fff;
+}
+#about .contentBox{
+    float: left;
+    width: 720px;
+}
+#about .btn.view a{
+    transform: translateX(0);
+    color: #fff;
+    border: 2px solid #fff;
+}
+#about .btn.view a::before{
+    background-color: #fff;
+}
+#about .btn.view a:hover{
+    color: #333;
+}
+
+#about .titleBox span{
+    display: block;
+}
+#about .titleBox span:nth-child(2){
+    font-weight: 100;
+}
+#about .contentBox li{
+    width: 220px;
+    height: 220px;
+    float: left;
+    margin-left: 30px;
+    color: #fff;
+}
+#about .contentBox li a{
+    display: block;
+    background-color: rgba(0,0,0,0.2);
+    text-align: center;
+    padding-top: 172px;
+    position: relative;
+}
+#about .contentBox li a img{
+    position: absolute;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#about .contentBox li:nth-child(1){
+    margin-left:0;
+    background-color: rgba(244, 104, 17, .7);
+}
+#about .contentBox li:nth-child(2){
+    background-color: rgba(12, 21, 47, .7);
+    
+}
+#about .contentBox li:nth-child(2){
+    background-color: rgba(7, 37, 93, .7);
+}
+
+
+
+
+
+
+
+
+@keyframes scrollMove{
+    0%{
+        transform: translate(-50%,0);
+    }
+    100%{
+        transform: translate(-50%,30px);
+        
+    }
+}

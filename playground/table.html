@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      /* 
+        한덩어리를 보낼때는 margin을 많이 사용
+        컨텐츠 내용의 넓이가 일정할떄
+        .main{                   
+            width: 1500px;
+            padding-top:100px;
+            padding-bottom:100px;
+            border: 1px solid #f00;
+            position: relative;
+        }
+        .sub{
+            width: 1200px;
+            margin:0 auto;
+            height: 300px;
+            border: 1px solid #000;
+        } */
+
+      /* 컨턴츠가 여러개일 경우 사용 
+        .main{
+            width: 1500px;
+            padding-top:100px;
+            padding-bottom:100px;
+            border: 1px solid #f00;
+            text-align: center;
+            font-size: 0;
+        }
+        .sub{
+            display: inline-block;
+            width: 100px;
+            height: 300px;
+            border: 1px solid #000;
+        }
+        */
+      /* 
+        작은 컨탠츠를 보낼때 사용
+        .main{
+            width: 1500px;
+            padding-top:100px;
+            padding-bottom:100px;
+            border: 1px solid #f00;
+            position: relative;
+        }
+        .sub{
+            width: 1200px;
+            height: 300px;
+            border: 1px solid #000;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+        } */
+
+      /* 자식보다 부모널이가 클때
+         자식넓이가 일정하지 않을떄 
+         넓이가 컨텐츠만큼 이므로  넓이 지정*/
+      .main {
+        height: 800px;
+        width: 100%;
+        border: 1px solid #f00;
+        display: table;
+      }
+      .inner {
+        display: table-cell;
+        vertical-align: bottom;
+      }
+      .sub {
+        width: 1200px;
+        height: 300px;
+        margin: 0 auto;
+        border: 1px solid #000;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="inner">
+        <div class="sub"></div>
+        <div class="sub"></div>
+        <div class="sub"></div>
+        <div class="sub"></div>
+      </div>
+    </div>
+  </body>
+</html>

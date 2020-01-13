@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <title>경동</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="headerTitle">
+        <a href="./"><img src="../imgs/logo.png" alt="logo"/></a>
+      </h1>
+      <nav id="gmb">
+        <ul class="list">
+          <li>
+            <a href="introduce.html" class="depth01">회사소개</a>
+            <? include("../incloud/gmb01.html");?>
+          </li>
+          <li>
+            <a href="business.html" class="depth01">사업분야</a>
+            <? include("../incloud/gmb02.html");?>
+          </li>
+          <li>
+            <a href="tec.html" class="depth01">기술혁신</a>
+            <? include("../incloud/gmb03.html");?>
+          </li>
+          <li>
+            <a href="pr.html" class="depth01">홍보센터</a>
+            <? include("../incloud/gmb04.html");?>
+          </li>
+        </ul>
+      </nav>
+      <div class="btnAll">
+        <a href="" class="trans"></a>
+        <a href="" class="trans"></a>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
+  </body>
+</html>

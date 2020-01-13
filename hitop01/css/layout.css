@@ -1,0 +1,57 @@
+html{
+    font-size: 16px;
+}
+body{
+    background-image: url(../imgs/main_visual.jpg);
+    line-height: 1.5;
+    color: #333;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+header{
+    outline: 1px solid #fff;
+    height: 90px;
+    color:#fff;
+}
+#gmb .list{
+    text-align: center;
+}
+#logo{
+    position: absolute;
+}
+#gmb .list .depth01{
+    
+    font-size: 20px;
+    display: block;
+    line-height: 90px;
+    padding: 0 50px;
+    font-weight: 700;
+}
+#gmb .list .depth02{
+    display: none;
+    background-color: #bf0c14;
+    border-radius: 0 0 10px 10px;
+    padding: 10px 10px;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.5);
+}
+#gmb .list > li:hover .depth01{
+    background-color: #bf0c14;
+}
+#gmb .list > li:hover .depth02{
+    display: block;
+}
+#gmb .list > li{
+    display: inline-block;
+    vertical-align: top;
+}
+
+#gmb .list .depth02 a{
+    display: block;
+    padding:5px 0;
+    border-radius: 4px;
+}
+#gmb .list .depth02 li a:hover{
+    background-color: #4d0206;   
+}

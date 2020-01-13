@@ -1,0 +1,251 @@
+*{
+    box-sizing: border-box;
+}
+#mainVisual{
+    position: relative;
+    overflow: hidden ;
+}
+#mainVisual .list li{
+    height: 100vh;
+    background-size: cover;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+#mainVisual .list .visual01{
+    background-image: url(../imgs/main_visual.jpg);
+}
+#mainVisual .list .visual02{
+    background-image: url(../imgs/main_visual_02.jpg);
+}
+#mainVisual .list .visual03{
+    background-image: url(../imgs/main_visual_03.jpg);
+}
+
+#mainVisual .txtBox{
+    color: #fff;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top:50%;
+    z-index:2;
+    transform: translateY(-50%);
+}
+#mainVisual .txtBox .main{
+    font-size: 64px;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+#mainVisual .btn{
+    position: absolute;
+    top:50%;
+    z-index: 3;
+    transform: translateY(-50%);
+}
+#mainVisual .btnPrev{
+    left:0; 
+}
+#mainVisual .btnNext{
+    right:0; 
+}
+#mainVisual .pagination{
+    position: absolute;
+    z-index: 4;
+    bottom: 80px;
+    width: 100%;
+    text-align: center;
+}
+#mainVisual .pagination .swiper-pagination-bullet{
+    width: 20px;
+    height: 20px;
+    opacity: 1;
+    border: 3px solid #fff;
+    background-color:transparent;
+    border-radius: 100px;
+    transition: 0.25s ease;
+}
+#mainVisual .pagination .swiper-pagination-bullet-active{
+    width: 50px;
+    background-color: #fff;
+}
+#mainVisual .iconScroll{
+    position: absolute;
+    bottom: 150px;
+    z-index: 5;
+    color: #fff;
+    border: 1px solid #f00;
+    cursor: pointer;
+    left: 50%;
+    transform: translate(-50%, 0);
+    animation-name: scrollMove;
+    animation-duration: 1s;         /*시간*/
+    animation-iteration-count: infinite;  /*반복 횟수*/
+    animation-direction: alternate; /*스크롤 왕복*/
+    animation-timing-function:ease;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+.titleBox{
+    margin-bottom: 50px;
+}
+#quickMenu{
+    position: relative;
+    z-index: 4;
+}
+#quickMenu li{
+    float: left;
+    position: relative;
+    overflow: hidden;
+}
+#quickMenu li a::after{
+    position: absolute;
+    content: "";
+    display: block;
+    border: 1px solid #fff;
+    top: 20px;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    opacity: 0;
+    transition: 0.25s ease;
+}
+#quickMenu li:hover a::after{
+    opacity: 0.5;
+}
+
+#quickMenu li:nth-child(2){
+    margin-top:-100px;
+}
+#quickMenu .txtBox{
+    position: absolute;
+    color: #fff;
+    bottom: 40px;
+    left: 40px;
+    text-transform: uppercase;
+}
+h2{
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-top: 15px;
+}
+#business h2{
+    text-align: center;
+}
+#quickMenu li img{
+    transition: 0.25s ease;
+}
+#quickMenu li:hover img{
+    transform: scale(1.1); 
+}
+/* business start */
+#business ul{
+    margin: -10px;
+}
+#business li{
+    float: left;
+    width: 590px;
+    position: relative;
+    margin: 10px;
+    overflow: hidden;
+}
+#business li:nth-child(2n){
+    margin-right:0;
+}
+#business li .txtBox{
+    color: #fff;
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    padding-right: 30px;
+}
+#business li .txtBox h3{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+#business li img{
+    transition: 0.25s ease;
+}
+#business li:hover img{
+    transform: scale(1.1);   
+}
+#business{
+    background-color: #f8f8f8;
+    padding:80px 0;
+    margin-top: 80px;
+}
+
+/* news start */
+
+#news li{
+    float: left;
+    margin-left: 30px;
+    border: 1px solid #222;
+    width: 380px;
+    transition: 0.25s ease;
+    overflow: hidden;
+    position: relative;
+}
+#news li:nth-child(1){
+    margin-left:0px;
+}
+#news li .txtBox{
+    padding: 20px;
+}
+#news{
+    padding:80px 0;
+    margin-top: 80px;
+}
+#news li .txtBox .main{
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    white-space: nowrap; /* 타이틀 글이 길때 자르는법*/
+    text-overflow: ellipsis;
+    width: 100%;
+    overflow: hidden;
+}
+#news li .imgBox{
+    position: relative;
+    overflow: hidden;
+}
+#news li .imgBox::before{
+    content: "";
+    display: block;
+    padding-top: 100%;
+    background-color: #f00;
+}
+#news li .imgBox img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    transform: translateX(-50%);
+    left: 50%;
+}
+#news li .sub{
+    height: 6em;
+    overflow: hidden;
+    margin-bottom: 20px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+}
+#news li .txtBox .main:hover{
+    color: #f00;
+}
+#news li:hover{
+    margin-top:-30px;
+    transition: 0.25s ease;
+}
+
+
+
+@keyframes scrollMove{
+    0% {
+        transform: translate(-50%, 0);
+    }
+    100%{
+        transform: translate(-50%, 30px);
+    }
+}

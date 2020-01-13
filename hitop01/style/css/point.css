@@ -1,0 +1,50 @@
+.poster {
+  background-image: url(../imgs/css1.png);
+  width: 905px;
+  height: 470px;
+  padding-top: 95px;
+  padding-left: 82px;
+  font-family: "NanumSquare","맑은 고딕",sans-serif;
+}
+
+h1 {
+  font-size: 20px;
+  background-color: #c3f44f;
+  display: inline-block;
+  padding: 10px 25px;
+  margin-bottom: 30px;
+  border-radius: 100px;
+  font-weight: 700;
+  box-shadow: 0 5px 5px rgba(0,0,0,0.15);
+}
+p {
+  color: #fff;
+}
+
+.main_title {
+  font-size: 60px;
+  margin-bottom: 30px;
+  font-weight: 800;
+}
+
+.content {
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 100px;
+}
+
+.ps {
+  vertical-align: middle;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 1.5;
+  outline: 1px solid #f00;
+}
+p strong {
+  color: #c3f44f;
+  font-weight: bold;
+}
+.circle {
+  vertical-align: middle;
+  margin-right: 12px;
+}
