@@ -1,0 +1,74 @@
+.section {
+    height: 100vh;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#mainVisual {
+    overflow: hidden;
+}
+#mainVisual video {
+    position: absolute;
+    object-fit: cover;
+    left:0;
+    top:0;
+    right:0;
+    bottom: 0;
+    width:100vw;
+    height: 100vh;
+}
+.section .contentsBox {
+    position: absolute;
+    z-index: 2;
+    color:#fff;
+    text-align: center;
+    width:100%;
+    top:50%;
+    transform:translateY(-50%);
+}
+.section .txtBox .main {
+    font-size: 42px;
+    font-weight: 300;
+    margin-top: 20px;
+}
+.section .txtBox .main strong {
+    font-weight: 700;
+}
+.section .txtBox .sub {
+    font-size: 24px;
+}
+
+#business {
+    background-image: url("../images/main/main_bg2.jpg");
+}
+
+#business .iconList {
+    text-align: center;
+    color:#fff;
+    margin-top: 80px;
+}
+#business .iconList li {
+    display: inline-block;
+    width:300px;
+    padding:0 30px;
+}
+#business .iconList li .imgBox {
+    display: block;
+    position: relative;
+    width:120px;
+    height: 120px;
+    margin:0 auto;
+    border-radius:100px;
+    background-color: rgba(255,255,255,0.2);
+}
+#business .iconList li .imgBox img {
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+}
+#business .iconList li h3 {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 20px 0;
+}

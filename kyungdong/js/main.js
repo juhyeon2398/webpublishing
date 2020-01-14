@@ -16,15 +16,15 @@ new Swiper("#mainVisual",{
     },
 });
 
-var gmb=document.querySelectorAll("#gmb .list > li");
-var header=document.querySelector("#header");
-console.log(gmb);
-for(var i=0;i<4;i++){
-    var item = gmb.item(i);
+var gmb =document.querySelectorAll("#gmb .list>li");
+var header= document.querySelector("#header");
+
+for(var i=0;i<gmb.length;i++){
+    var item=gmb.item(i);
     item.addEventListener("mouseenter",function(){
         header.classList.add("open");
-    })
+    });
     item.addEventListener("mouseleave",function(){
         header.classList.remove("open");
-    })
+    });
 }

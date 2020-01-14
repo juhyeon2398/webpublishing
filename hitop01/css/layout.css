@@ -14,6 +14,7 @@ header{
     outline: 1px solid #fff;
     height: 90px;
     color:#fff;
+    z-index: 9999;
 }
 #gmb .list{
     text-align: center;
