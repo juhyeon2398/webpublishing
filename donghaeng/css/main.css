@@ -1,0 +1,208 @@
+#mainVisual {
+  overflow: hidden;
+}
+#mainVisual li {
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#mainVisual .list .visual01 {
+  background-image: url(../imgs/main01.jpg);
+}
+#mainVisual .list .visual02 {
+  background-image: url(../imgs/main02.jpg);
+}
+#mainVisual .list .visual03 {
+  background-image: url(../imgs/main_03.jpg);
+}
+#mainVisual li .txtBox {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  text-align: center;
+  width: 100%;
+  transform: translateY(-50%);
+}
+#mainVisual li .txtBox .main {
+  font-size: 84px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+#mainVisual .btn {
+  position: absolute;
+  top: 50%;
+  z-index: 3;
+  transform: translateY(-50%);
+  width: 100px;
+  height: 100px;
+  font-size: 30px;
+  color: #fff;
+  outline: 1px solid #f00;
+}
+.btnNext {
+  right: 0px;
+}
+
+.btnPrev {
+  left: 0px;
+}
+.container {
+  width: 1340px;
+  margin: 0 auto;
+}
+
+.section {
+  /* 가운데로 정렬하는 방법 table */
+  display: table;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+.section .inner {
+  display: table-cell;
+  vertical-align: middle;
+}
+#about .txtBox {
+  float: left;
+  width: 50%;
+  padding-right: 100px;
+  display: table; /* 사진 중앙에 정렬 */
+  height: 560px;
+}
+#about .imgBox {
+  float: left;
+  width: 50%;
+}
+h2 {
+  font-size: 26px;
+  font-weight: 700;
+}
+.txtBox .main {
+  font-size: 28px;
+  word-break: keep-all;
+  margin-bottom: 30px;
+}
+.txtBox .btns {
+  margin-top: 50px;
+}
+#about .imgBox::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 560px;
+  background-color: #f8f8f8;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: -100px 0 0 100px;
+  z-index: -1;
+}
+.txtBox .btns .btnMore {
+  display: inline-block;
+  padding: 10px 30px;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  transition: 0.25s ease;
+}
+.txtBox .btns .btnMore:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+/* business start */
+#business {
+  background-color: rgb(250, 239, 189);
+}
+#business .txtBox {
+  text-align: center;
+}
+#business .cList > li {
+  vertical-align: top;
+  margin-left: 33px;
+  position: relative;
+  transition: 0.5s ease;
+}
+#business .cList > li img {
+  transform: scaleY(0.9);
+  transition: 0.25s ease;
+}
+#business .cList li:nth-child(1) {
+  margin-left: 0px;
+}
+#business .content {
+  width: 280px;
+  position: absolute;
+  bottom: 10%;
+  z-index: 4;
+  color: #fff;
+  text-align: left;
+  padding: 0 15px;
+}
+#business .title {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+#business .title::after {
+  content: "";
+  width: 50px;
+  background-color: #fff;
+  height: 3px;
+  margin: 10px 0 30px;
+  display: block;
+}
+#business .txt {
+  font-size: 15px;
+  font-weight: 300;
+}
+#business .cList > li:hover img {
+  transform: scaleY(1);
+  transition: 0.25s ease;
+}
+#business .cList > li:hover .txt {
+  opacity: 0;
+  transition: 0.25s ease;
+}
+#business .cList > li:hover a {
+  opacity: 1;
+  transition: 0.25s ease;
+}
+#business .cList > li a {
+  position: absolute;
+  bottom: 10%;
+  opacity: 0;
+  font-size: 20px;
+  width: 100%;
+  left: 15px;
+  right: 15px;
+  border: 1px solid #fff;
+  padding: 10px;
+}
+#business .cList > li i {
+  position: absolute;
+  right: 10%;
+}
+
+#map .txtBox {
+  text-align: center;
+}
+#map .txtBox img {
+  position: relative;
+}
+#map .country {
+  padding: 5px 10px;
+  position: absolute;
+  z-index: 4;
+  border: 1px solid #ff0000;
+}
+#map .txtBox .country:nth-child(1) {
+  left: 50%;
+}
+
+/* #map{
+    background-image: url(../imgs/map.png);
+} */

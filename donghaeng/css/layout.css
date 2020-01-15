@@ -1,0 +1,72 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+html{
+    font-size: 16px;
+}
+body{
+    color: #333;
+    font-family: "Roboto Condensed","Noto Sans KR", sans-serif;
+    line-height: 1.5;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.logo{
+    position: absolute;
+    left: 5%;
+}
+.logo img{
+    position: absolute;
+}
+.logo a{
+    display: block;
+    padding: 20px 0;
+}
+.logo .color{
+    opacity: 0;
+}
+#header{
+    height: 90px;
+    width: 100%;
+    color: #fff;
+    position: fixed;
+    z-index: 9999;
+}
+
+
+
+#gnb{
+    text-align:center;
+}
+#gnb .list{
+    display: inline-block;
+}
+#gnb .list>li{
+    float: left;
+}
+#gnb .list>li .depth01{
+    display: block;
+    height: 90px;
+    line-height: 90px;
+    padding: 0 50px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* #gnb .list{
+    text-align: center;
+    font-size: 0;
+}
+#gnb .list>li{
+    display: inline-block;
+    outline: 1px solid #f00;
+}
+#gnb .list>li .depth01{
+    height: 90px;
+    line-height: 90px;
+    font-size: 24px;
+    font-weight: 500;
+    padding:30px 50px;
+} */

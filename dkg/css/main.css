@@ -42,17 +42,15 @@
     background-image: url("../images/main/main_bg2.jpg");
 }
 
-#business .iconList {
-    text-align: center;
+#business .cList {
     color:#fff;
     margin-top: 80px;
 }
-#business .iconList li {
-    display: inline-block;
+#business .cList li {
     width:300px;
     padding:0 30px;
 }
-#business .iconList li .imgBox {
+#business .cList li .imgBox {
     display: block;
     position: relative;
     width:120px;
@@ -61,14 +59,55 @@
     border-radius:100px;
     background-color: rgba(255,255,255,0.2);
 }
-#business .iconList li .imgBox img {
+#business .cList li .imgBox img {
     position: absolute;
     left:50%;
     top:50%;
     transform:translate(-50%,-50%);
 }
-#business .iconList li h3 {
+#business .cList li h3 {
     font-size: 18px;
     font-weight: 500;
     margin: 20px 0;
+}
+#portfolio{
+    background-image: url(../images/main/main_bg3.jpg);
+}
+
+.btns{
+    text-align: center;
+    margin-top: 30px;
+}
+.btns a{
+    display: inline-block;
+    border: 1px solid #fff;
+    padding: 12px 50px;
+}
+#portfolio .cList{
+    margin-top: 50px;
+}
+#portfolio .cList li{
+    width: 380px;
+    margin: 0 20px;
+}
+#portfolio .cList li img{
+    width: 100%;
+    margin-bottom: 15px;
+}
+#community{
+    background-image: url(../images/main/main_bg4.jpg);
+}
+
+#community .cList {
+    margin-top: 50px;
+}
+
+#community .cList li{
+    margin: 0 10px;
+}
+
+#community .cList li a{
+    display: block;
+    padding: 15px 30px;
+    border: 1px solid #fff;
 }
