@@ -61,6 +61,9 @@
   overflow: hidden;
   position: relative;
 }
+.section.none{
+    height: auto;
+}
 .section .inner {
   display: table-cell;
   vertical-align: middle;
@@ -114,33 +117,86 @@ h2 {
 }
 
 /* business start */
+
 #business {
-  background-color: rgb(250, 239, 189);
-}
-#business .txtBox {
+  background-color: #f3f3f3;
   text-align: center;
 }
-#business .cList > li {
+#business .fList li {
+  width: 310px;
+  position: relative;
+  margin-left: 33px;
+  overflow: hidden;
+}
+
+#business .fList li:nth-child(1) {
+  margin-left: 0px;
+}
+#business .content {
+  position: absolute;
+  bottom: 50px;
+  z-index: 4;
+  color: #fff;
+  text-align: left;
+  width: 100%;
+  padding: 0 30px;
+}
+#business h3 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+#business p::before {
+  content: "";
+  width: 30px;
+  background-color: #fff;
+  height: 2px;
+  margin: 25px 0 15px;
+  display: block;
+}
+
+#business .fList li .content a {
+  height: 40px;
+  display: block;
+  border: 1px solid #fff;
+  line-height: 38px;
+  padding: 0 30px;
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  width: calc(100% - 80px);/* 연산자를 붙이면 안됨*/
+}
+ #business .fList li:hover .content a{
+    opacity: 1;
+}
+
+#business .fList li:hover .content p{
+    opacity: 0;
+}
+
+
+
+/* #business .fList > li {
+  width: 310px;
   vertical-align: top;
   margin-left: 33px;
   position: relative;
   transition: 0.5s ease;
 }
-#business .cList > li img {
+#business .fList > li img {
   transform: scaleY(0.9);
   transition: 0.25s ease;
 }
-#business .cList li:nth-child(1) {
+#business .fList li:nth-child(1) {
   margin-left: 0px;
 }
 #business .content {
-  width: 280px;
   position: absolute;
   bottom: 10%;
   z-index: 4;
   color: #fff;
   text-align: left;
-  padding: 0 15px;
+  margin: 0 20px;
 }
 #business .title {
   font-size: 28px;
@@ -159,50 +215,202 @@ h2 {
   font-size: 15px;
   font-weight: 300;
 }
-#business .cList > li:hover img {
+#business .fList > li:hover img {
   transform: scaleY(1);
   transition: 0.25s ease;
+
 }
-#business .cList > li:hover .txt {
+#business .fList > li:hover .txt {
   opacity: 0;
   transition: 0.25s ease;
 }
-#business .cList > li:hover a {
+#business .fList > li:hover a {
   opacity: 1;
   transition: 0.25s ease;
 }
-#business .cList > li a {
+#business .fList > li a {
   position: absolute;
   bottom: 10%;
   opacity: 0;
   font-size: 20px;
-  width: 100%;
   left: 15px;
   right: 15px;
   border: 1px solid #fff;
   padding: 10px;
 }
-#business .cList > li i {
+#business .fList > li i {
   position: absolute;
   right: 10%;
 }
+*/
 
-#map .txtBox {
+#network{
   text-align: center;
 }
-#map .txtBox img {
-  position: relative;
+#network .map{
+    position: relative;
+    text-align: center;
+    width: 975px;
+    margin: auto;
 }
-#map .country {
-  padding: 5px 10px;
-  position: absolute;
-  z-index: 4;
-  border: 1px solid #ff0000;
+#network .map li{
+    position: absolute;
+    transform: translate(-50%,-100%);
 }
-#map .txtBox .country:nth-child(1) {
-  left: 50%;
+#network .map li:nth-child(1){
+    left: 29%;
+    top: 60%;
+}
+#network .map li:nth-child(2){
+    left: 46%;
+    top: 32%;
+}
+#network .map li:nth-child(3){
+    left: 60%;
+    top: 32%;
+}
+#network .map li:nth-child(4){
+    right: 18%;
+    top: 40%;
+}
+#network .map li:nth-child(5){
+   right: 13%;
+    top: 27%;
 }
 
-/* #map{
-    background-image: url(../imgs/map.png);
-} */
+#network .map li::before{
+    content: "";
+    display: block;
+    width: 1px;
+    height: 100px;
+    background-color: #000;
+    left: 50%;
+    position: absolute;
+    top: 5px;
+}
+#network .map li::after{
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.2);
+    left: 50%;
+    transform: translate(-50%,-50%);
+    top: 100px;
+    position: absolute;
+    border-radius:100px ;
+    animation: scale 1s ease infinite alternate;
+    top: 105px;
+    
+}
+#network .map li .country{
+    font-size: 9px;
+    padding: 5px 10px;
+    color: #fff;
+    border-radius: 4px;
+    background-color: #000;
+    text-transform: uppercase; 
+}
+#quickMenu li .bg{
+    width: 100%;
+    
+}
+#quickMenu li{
+    width: 25%;
+    position: relative;
+    overflow: hidden;
+}
+
+#quickMenu li .txtBox{
+    position: absolute;
+   text-align: center;
+   width: 100%;
+   color: #fff;
+   top: 50%;
+   transform: translateY(-50%);
+   z-index: 2;
+}
+#quickMenu li .icon{
+    display: block;
+}
+
+#quickMenu li .bg img{
+    transition: 0.25s ease;
+}
+#quickMenu li:hover .bg img{
+    transform: scale(1.2);
+}
+#quickMenu li::before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    opacity: 0;
+    transition: 0.25s ease;
+}
+#quickMenu li::after{
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    right: 20px;
+    bottom: 20px;
+    border: 1px solid rgba(255,255,255,0.5);
+    z-index: 1;
+    transform: scale(0);
+    transition: 0.25s ease;
+}
+#quickMenu li:hover::after{
+    transform: scale(1);
+}
+#quickMenu li:hover::before{
+    opacity: 1;
+}
+#quickMenu li .icon{
+    transition: 0.25s ease;
+}
+#quickMenu li:hover .icon{
+    transform: scale(1.1);
+}
+
+#footer{
+    text-align: center;
+    background-color: #333;
+}
+#footer .contentBox{
+    margin: 100px;
+}
+#footer .txtBox{
+    color: #fff;
+}
+#footer .contentBox h2{
+    margin-bottom: 30px;
+}
+
+#footer .txtBox span{
+    padding: 0 30px;
+    border-right: 1px solid #fff;
+    margin: 20px 0;
+}
+#footer .txtBox span:nth-child(3){
+    border-right: 0;
+}
+
+#footer .txtBox .copy{
+    display: block;
+    border-right: 0;
+}
+
+@keyframes scale{
+    0%{
+        transform: translate(-50%,-50%) scale(0.2);
+    }
+    100%{
+        transform: translate(-50%,-50%) scale(1);
+    }
+}
