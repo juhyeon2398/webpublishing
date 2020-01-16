@@ -81,6 +81,7 @@
   z-index: 2;
   position: relative;
   background-color: #1a1a1b;
+  overflow: hidden;
 }
 
 #product .txtBox {
@@ -108,12 +109,14 @@
 #solution {
   background-color: #1a1a1b;
   text-align: left;
+  overflow: hidden;
 }
 
 #solution .list li {
   margin: 100px 0;
   position: relative;
 }
+
 #solution .list li .txtBox {
   width: 430px;
   height: 536px;
@@ -122,39 +125,59 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+}
+#solution .list li h2 {
+  font-weight: 500;
+}
+#solution .list li .contents {
+  position: absolute;
+  top: 20%;
+  padding: 0 30px;
+}
+#solution .list li .main {
+  font-size: 48px;
+  display: block;
+  line-height: 1.1;
+  margin: 20px 0;
+}
+#solution .list li:nth-child(2n + 1) {
+  float: right;
+  transform: translateX(150%);
+  transition: 1s ease;
+}
+#solution .list li:nth-child(2n) {
+  float: left;
+  transform: translateX(-150%);
+  transition: 1s ease;
+}
+#solution .list li:nth-child(2n + 1) .txtBox {
+  left: -20%;
+}
+#solution .list li:nth-child(2n) .txtBox {
+  left: 85%;
+}
+
+#solution .txtBox a {
+  display: inline-block;
+  border: 1px solid rgb(199, 0, 206);
+  padding: 5px 30px;
+  margin-top: 40px;
+  transition: 0.5s ease;
+}
+
+#solution .txtBox a:hover {
+  background-color:rgb(199, 0, 206);
+}
+#solution .txtBox a:hover i {
+  transform: translateX(10px);
+  transition: 0.5s ease;
+}
+#solution .list li.right{
+  transform: translateX(0);
+  
+}
+#solution .list li.left{
+  transform: translateX(0);
 
 }
-#solution .list li h2{
-    font-weight: 500;
-}
-#solution .list li .contents{
-    position: absolute;
-    top: 20%;
-    padding:0 30px;
-}
-#solution .list li .main{
-    font-size: 48px;
-    display: block;
-}
-#solution .list li:nth-child(n+1){
-   float: right;
-   top: 20%;
-    padding:0 30px;
-}
-#solution .list li:nth-child(2n){
-    float: left;
-}
-#solution .list li:nth-child(n+1){
-    float: right;
-    top: 20%;
-    padding:0 30px;
- }
- #solution .list li:nth-child(2n){
-     float: left;
- }
-#mainVisual .txtBox a {
-    display: inline-block;
-    border: 1px solid rgb(199, 0, 206);
-    padding: 5px 30px;
-    margin-top: 20px;
-  }
+
