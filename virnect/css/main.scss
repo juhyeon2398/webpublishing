@@ -1,0 +1,21 @@
+#mainVisual {
+    height: 100vh;
+    video{
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        object-fit: cover;
+    }
+    .txtBox{
+        main{
+            font-size: 48px;
+            color: #fff;
+            font-weight: 100;
+            margin-bottom: 30px;
+            strong{
+                font-weight:700;
+            }
+        }
+    }
+}
