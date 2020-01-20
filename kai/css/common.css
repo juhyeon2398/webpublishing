@@ -1,0 +1,34 @@
+.hidden {
+    width:1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    left:-9999px;
+}
+.ol {
+    outline: 1px solid #f00;
+}
+.clearFix:after , .fList:after  {
+    content: '';
+    display:block;
+    clear: both;
+}
+.center {
+    text-align: center;
+}
+
+.fList > li {float: left;}
+
+
+.cList{ /* 컨텐츠 가운데 정렬 */
+    font-size: 0;
+    text-align: center;
+}
+.cList>li{
+    font-size: 1rem;
+    display: inline-block;
+}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}

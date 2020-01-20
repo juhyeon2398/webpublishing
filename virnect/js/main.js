@@ -42,11 +42,30 @@ window.addEventListener("resize",function(){
 window.addEventListener("scroll",function(){   //스크롤에 따라 속성변경
     // console.log(scrollY);
     var st=this.scrollY;
-    if(st>h){
-        header.classList.add("on");
-    }
-    else{
-        header.classList.remove("on");
+    console.log("TCL: st", st);
+        console.log("TCL: countPosY", countPosY);
+    if(st>countPosY){
+        
+        if(!count.classList.contains("on")){
+            count.classList.add("on");
+            var countIdx =setInterval(function(){
+                if(countNum<20){
+                    countNum= countNum+1;
+                    if(countNum<10){
+                        count.innerHTML="0"+countNum;
+                    }else{
+                        count.innerHTML=countNum;
+                    }
+                }else{
+                    clearInterval(countIdx);
+                }
+            },200);
+        };
+        
     }
 })
 AOS.init();
+
+ var countNum=0;
+ var count=document.querySelector(".count");
+ var countPosY=window.pageYOffset+count.getBoundingClientRect().top+window.screen.height;

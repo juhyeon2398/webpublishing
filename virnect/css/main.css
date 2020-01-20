@@ -1,3 +1,6 @@
+:root {
+  --main-color: #6700ff;
+}
 .section {
   display: table;
   width: 100%;
@@ -29,7 +32,6 @@
 .section .arrow {
   border: 1px solid rgb(199, 0, 206);
   padding: 5px 30px;
-  margin-top: 40px;
   transition: 0.5s ease;
 }
 .section .arrow.btn:hover {
@@ -236,62 +238,62 @@
   color: #fff;
   background-size: cover;
 }
-#consulting .process{
-    text-align: center;
-    font-size: 0;
+#consulting .process {
+  text-align: center;
+  font-size: 0;
 }
 #consulting .txtBox i.down {
   font-size: 50px;
   margin: 30px 0 50px;
   display: block;
 }
-#consulting .process ul{
-    display: inline-block;
-    background-color: rgba(255, 255, 255, 0.2);
-    padding: 20px;
-    border-radius: 200px;
-    margin: 0 70px;
-    position: relative;
+#consulting .process ul {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 200px;
+  margin: 0 70px;
+  position: relative;
 }
-#consulting .process ul::after{
-    display: block;
-    content: "";
-    height: 1px;
-    width: 70px;
-    background-color: rgba(255, 255, 255, 0.2);
-    top: 50%;
-    right: -70px;
-    position: absolute;
+#consulting .process ul::after {
+  display: block;
+  content: "";
+  height: 1px;
+  width: 70px;
+  background-color: rgba(255, 255, 255, 0.2);
+  top: 50%;
+  right: -70px;
+  position: absolute;
 }
-#consulting .process ul::before{
-    display: block;
-    content: "";
-    height: 1px;
-    width: 70px;
-    background-color: rgba(255, 255, 255, 0.2);
-    position: absolute;
-    top: 50%;
-    left: -70px;
+#consulting .process ul::before {
+  display: block;
+  content: "";
+  height: 1px;
+  width: 70px;
+  background-color: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  top: 50%;
+  left: -70px;
 }
-#consulting .process .item{
-    margin-left: -30px;
+#consulting .process .item {
+  margin-left: -30px;
 }
-#consulting .process ul .item:nth-child(1){
-    margin-left: 0;
+#consulting .process ul .item:nth-child(1) {
+  margin-left: 0;
 }
-#consulting .process ul .item:nth-child(4){
-    margin-left: 100px;
+#consulting .process ul .item:nth-child(4) {
+  margin-left: 100px;
 }
-#consulting .process .item{
-    font-size: 18px;
-    border-radius: 500px;
-    width: 180px;
-    height: 180px;
-    line-height: 180px;
-    display: inline-block;
-    background-color: rgba(33,53,231);
-    color: #fff;
-    margin-left: -30px;
+#consulting .process .item {
+  font-size: 18px;
+  border-radius: 500px;
+  width: 180px;
+  height: 180px;
+  line-height: 180px;
+  display: inline-block;
+  background-color: rgba(33, 53, 231);
+  color: #fff;
+  margin-left: -30px;
 }
 /* #consulting .fList {
   display: inline-block;
@@ -371,63 +373,134 @@
 #consulting .process{
 } */
 
-#news{
-    background-color: #fff;
-    position: relative;
-    text-align: center;
-    height: 80vh;
-    display: table;
+#news {
+  background-color: #fff;
+  position: relative;
+  text-align: center;
+  height: 80vh;
+  display: table;
 }
-#news .fList{
-    margin-top: 30px;
+#news .fList {
+  margin: 70px 0;
 }
-#news .fList li .imgBox{
-    overflow: hidden;
+#news .fList li .imgBox {
+  overflow: hidden;
+  height: 170px;
+  outline: 1px solid #f00;
+  position: relative;
 }
-#news .fList li{
-    width: 260px;
-    
-    margin-left: 53px;
+#news .fList li .imgBox::before {
+  content: "";
+  display: block;
+  padding-top: 200px;
 }
-#news .fList li:nth-child(1){
-    margin-left: 0;
+#news .fList li {
+  width: 260px;
+  margin-left: 53px;
 }
-#news .fList li img{
-    width: 100%;
-    height: 170px;
-    transition: 0.5s ease;
+#news .fList li:nth-child(1) {
+  margin-left: 0;
 }
-#news .fList>li:hover img{
-    transform: scale(1.1);
+#news .fList li img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  outline: 1px solid #f00;
+  transition: 0.5s ease;
 }
-#news .fList li .txtBox{
-    margin-top: 30px;
-    text-align: left;
+#news .fList > li:hover img {
+  transform: scale(1.1);
 }
-#news .fList li .txtBox .date{
-   font-size: 14px;
-   color: rgba(0, 0, 0, 0.5);
+#news .fList li .txtBox {
+  margin-top: 30px;
+  text-align: left;
 }
-#news .fList li .txtBox .title::after{
-    content: "";
-    display: block;
-    width: 10px;
-    height: 1;
-    background-color: rgba(0, 0, 0);
-    margin: 20px 0;
+#news .fList li .txtBox .date {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
 }
-#news .main{
-    font-size: 40px;
-    font-weight: 500;
-    display: block;
-    margin-bottom: 20px;
+#news ul li .txtBox .date::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: #999;
+  margin: 20px 0;
 }
-#careers{
-    background-image: url(../img/bitmap.jpg);
-    background-repeat: no-repeat;
-    background-color: #fff;
-    position: relative;
-    text-align: center;
-    height: 80vh;
-    display: table;
+#news .main {
+  font-size: 40px;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 20px;
+}
+
+#careers {
+  background-image: url(../img/bitmap.jpg);
+  background-repeat: no-repeat;
+  position: relative;
+  text-align: center;
+  height: 70vh;
+  display: table;
+}
+#careers .txtBox .h2 {
+  font-size: 20px;
+}
+#careers .txtBox .main {
+  font-size: 40px;
+  font-weight: 100;
+}
+#careers .txtBox .main strong {
+  font-weight: 700;
+}
+#careers .txtBox .sub {
+  font-size: 16px;
+}
+#careers .txtBox .count {
+  font-size: 210px;
+  font-weight: 700;
+}
+
+#contact {
+  background: url("../img/img_main_contact.png") no-repeat,
+    url("../img/img_main_contact_v_cut.png") no-repeat;
+  color: #fff;
+  background-color: #000;
+  position: relative;
+}
+#contact .txt {
+  top: 50%;
+  position: absolute;
+  left: 0;
+  transform: translateY(-50%);
+}
+#contact .container {
+  height: 300px;
+  position: relative;
+}
+#contact .btn {
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+}
+#contact .btn a {
+  display: inline-block;
+  width: 280px;
+  height: 60px;
+  line-height: 58px;
+  text-align: center;
+  border: 1px solid #6700ff;
+  transition: 0.25s ease;
+}
+#contact .btn a:hover {
+  border-color: var(--main-color);
+  background-color: var(--main-color);
+}
+
+#contact .btn .btnDemo {
+  border-color: var(--main-color);
+  background-color: var(--main-color);
 }

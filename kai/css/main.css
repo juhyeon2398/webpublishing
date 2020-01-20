@@ -1,0 +1,71 @@
+#mainVisual{
+    position: relative;
+    overflow: hidden;
+}
+#mainVisual li{
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 0;
+}
+#mainVisual .mainVisual01{
+    background-image: url(../img/main-visual-01.jpg);   
+}
+#mainVisual .mainVisual02{
+    background-image: url(../img/main-visual-02.jpg);   
+}
+#mainVisual .mainVisual03{
+    background-image: url(../img/main-visual-03.jpg);   
+}
+
+#mainVisual .txtBox{
+    color: #fff;
+    text-align: center;
+    width:100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 300;
+}
+#mainVisual .txtBox .sub{
+    font-size: 26px; 
+}
+#mainVisual .txtBox .main{
+    display: block;
+    font-size: 90px;
+}
+
+#mainVisual .btn{
+    color: #fff;
+    position: absolute;
+    bottom: 100px;
+    z-index: 2;
+    padding:25px;
+    font-size: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid #fff;
+}
+#mainVisual .pagination{
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 50px;
+    bottom: auto;
+    left: auto;
+    width: auto;
+}
+#mainVisual .swiper-pagination-bullet{
+    padding: 10px;
+    background-color: #fff;
+    display: block;
+    top: 50px;
+    margin: 10px 0;
+}
+#mainVisual .swiper-pagination-bullet-active{
+    height: 100px;
+    width: 10px;
+    border-radius: 10px ;
+    background-color: #f00;
+}

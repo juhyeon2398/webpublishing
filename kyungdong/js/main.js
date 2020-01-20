@@ -19,7 +19,7 @@ new Swiper("#mainVisual",{
 var gmb =document.querySelectorAll("#gmb .list>li");
 var header= document.querySelector("#header");
 
-for(var i=0;i<gmb.length;i++){
+for(var i=0;i<gnb.length;i++){
     var item=gmb.item(i);
     item.addEventListener("mouseenter",function(){
         header.classList.add("open");
