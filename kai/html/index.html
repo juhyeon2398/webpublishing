@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="../css/swiper.css" />
     <script defer src="../js/main.js"></script>
     <script src="../js/swiper.min.js"></script>
+    <script src="../js/gsap.min.js"></script>
+    <script src="../js/splitting.min.js"></script>
     <link
       href="https://fonts.googleapis.com/css?family=Titillium+Web:200,300,400,600,700,900&display=swap"
       rel="stylesheet"
@@ -18,18 +20,23 @@
       href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap"
       rel="stylesheet"
     />
-    <link rel="shortcut icon" href="../img/Untitled-1.png" type="image/x-icon">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
-
-
-    <link rel="stylesheet" href="../css/layout.css">
-    
-    <link rel="stylesheet" href="../css/main.css">
+    <link
+      rel="shortcut icon"
+      href="../img/Untitled-1.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
+    />
+    <link rel="stylesheet" href="../css/splitting.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/main.css" />
   </head>
   <body>
     <header id="header">
       <h1 id="logo">
-          <a href=""><img src="../img/logo.svg" alt=""></a>
+        <a href=""><img src="../img/logo.svg" alt=""/></a>
       </h1>
       <nav id="gnb">
         <h2 class="hidden">global navigation</h2>
@@ -37,56 +44,55 @@
           <li>
             <a href="" class="depth01">회사소개</a>
             <ul class="depth02">
-                <li><a href="">회사개요</a></li>
-                <li><a href="">CEO 인사말</a></li>
-                <li><a href="">가치체계</a></li>
-                <li><a href="">연구소</a></li>
-                <li><a href="">관리사</a></li>
-                <li><a href="">사업장</a></li>
-              </ul>
+              <li><a href="">회사개요</a></li>
+              <li><a href="">CEO 인사말</a></li>
+              <li><a href="">가치체계</a></li>
+              <li><a href="">연구소</a></li>
+              <li><a href="">관리사</a></li>
+              <li><a href="">사업장</a></li>
+            </ul>
           </li>
           <li>
             <a href="" class="depth01">제품소개</a>
             <ul class="depth02">
-                <li><a href="">제품정보</a>
-                </li>
-                <li><a href="">주정</a></li>
-                <li><a href="">석유화학</a></li>
-                <li><a href="">Color Paste</a></li>
-                <li><a href="">제품문의</a></li>
-              </ul>
-          </li>
-          <li >
-            <a href="" class="depth01">지속가능경영</a>
-            <ul class="depth02">
-                <li><a href="">정도경영</a></li>
-                <li><a href="">환경경영</a></li>
-                <li><a href="">품질경영</a></li>
+              <li><a href="">제품정보</a></li>
+              <li><a href="">주정</a></li>
+              <li><a href="">석유화학</a></li>
+              <li><a href="">Color Paste</a></li>
+              <li><a href="">제품문의</a></li>
             </ul>
           </li>
-          <li >
+          <li>
+            <a href="" class="depth01">지속가능경영</a>
+            <ul class="depth02">
+              <li><a href="">정도경영</a></li>
+              <li><a href="">환경경영</a></li>
+              <li><a href="">품질경영</a></li>
+            </ul>
+          </li>
+          <li>
             <a href="" class="depth01">투자정보</a>
             <ul class="depth02">
-                <li><a href="">경영정보</a></li>
-                <li><a href="">주가정보</a></li>
-                <li><a href="">재무정보</a></li>
-                <li><a href="">IR자료실</a></li>
+              <li><a href="">경영정보</a></li>
+              <li><a href="">주가정보</a></li>
+              <li><a href="">재무정보</a></li>
+              <li><a href="">IR자료실</a></li>
             </ul>
           </li>
           <li>
             <a href="" class="depth01">홍보센터</a>
             <ul class="depth02">
-                <li><a href="">KAI소식</a></li>
-                <li><a href="">CI소개</a></li>
-                <li><a href="">사회공헌</a></li>
+              <li><a href="">KAI소식</a></li>
+              <li><a href="">CI소개</a></li>
+              <li><a href="">사회공헌</a></li>
             </ul>
           </li>
           <li>
             <a href="" class="depth01">인재채용</a>
             <ul class="depth02">
-                <li><a href="">인사제도</a></li>
-                <li><a href="">채용공고</a></li>
-                <li><a href="">채용문의</a></li>
+              <li><a href="">인사제도</a></li>
+              <li><a href="">채용공고</a></li>
+              <li><a href="">채용문의</a></li>
             </ul>
           </li>
         </ul>
@@ -94,36 +100,121 @@
     </header>
     <!-- header end -->
     <div id="mainVisual" class="section">
-        <ul class="swiper-wrapper">
-            <li class="mainVisual01 swiper-slide">
-                <div class="txtBox">
-                	<h2>
-                	    <span class="sub">편리하고 행복한 케미컬</span>
-                	    <span class="main">Materials for better world</span>
-                	</h2>
-                </div>
-            </li>
-            <li class="mainVisual02 swiper-slide">
-                <div class="txtBox">
-                	<h2>
-                	    <span class="sub">기술과 경험의 융합, 미래를 위한 변화</span>
-                	    <span class="main">
-                             New Innovation</span>
-                	</h2>
-                </div>
-            </li>
-            <li class="mainVisual03 swiper-slide">
-                <div class="txtBox">
-                	<h2>
-                	    <span class="sub">혁신적 제품개발을 통한 그린케미컬의</span>
-                	    <span class="main">
-                            Asia leader</span>
-                	</h2>
-                </div>
-            </li>
-        </ul>
-        <div class="pagination"></div>
-        <a href=""><i class="xi-arrow-down btn"></i></a>
-    </section>
+      <ul class="swiper-wrapper">
+        <li class="mainVisual01 swiper-slide">
+          <div class="txtBox">
+            <h2>
+              <span class="sub">편리하고 행복한 케미컬</span>
+              <span class="main" data-splitting
+                >Materials for better world</span
+              >
+            </h2>
+          </div>
+        </li>
+        <li class="mainVisual02 swiper-slide">
+          <div class="txtBox">
+            <h2>
+              <span class="sub">기술과 경험의 융합, 미래를 위한 변화</span>
+              <span class="main" data-splitting> New Innovation</span>
+            </h2>
+          </div>
+        </li>
+        <li class="mainVisual03 swiper-slide">
+          <div class="txtBox">
+            <h2>
+              <span class="sub">혁신적 제품개발을 통한 그린케미컬의</span>
+              <span class="main" data-splitting> Asia leader</span>
+            </h2>
+          </div>
+        </li>
+      </ul>
+      <div class="pagination">
+        <div class="bullets"></div>
+        <div class="auto btns">
+          <button class="btn btnStop"><i class="xi-pause-circle-o"></i></button>
+          <button class="btn btnPlay"><i class="xi-play-circle-o"></i></button>
+        </div>
+      </div>
+      <a href=""><i class="xi-arrow-down down"></i></a>
+    </div>
+    <!-- <section id="business" class="section">
+      <div class="container">
+        <div class="txtBox">
+          <h2>BUSINESS</h2>
+          <p>
+            <span class="main">주정</span>
+            <span class="sub">Ethanol</span>
+          </p>
+          <p>
+            30여 년간의 노하우를 바탕으로<br />
+            고순도, 고품질의 주정을 생산합니다.
+          </p>
+        </div>
+        <video src="../img/business.mp4" autoplay loop muted alt=""></video>
+        <div class="imgBox">
+          <img src="../img/business01.jpg" alt="" class="img01" />
+          <img src="../img/main-business-03.jpg" alt="" class="img02" />
+        </div>
+        <img src="../img/business-colorpaste-bg.jpg" alt="" class="img03">
+      </div>
+    </section> -->
+    <div id="mainContents">
+      <section id="business">
+        <div class="sectionTitle container">
+            <h2>BUSINESS</h2>
+        </div>
+        <article class="contentBox contents01">
+          <div class="container clearFix">
+            <div class="txtBox">
+              
+              <h3>
+                <span>주정</span>
+                <strong>Ethanol</strong>
+              </h3>
+              <p>
+                30여 년간의 노하우를 바탕으로<br />
+                고순도, 고품질의 주정을 생산합니다.
+              </p>
+              <a href="" class="btnMore">View More</a>
+            </div>
+            <video src="../img/business.mp4" autoplay loop muted alt=""></video>
+          </div>
+        </article>
+        <article class="contentBox contents02">
+          <div class="container clearFix">
+            <div class="txtBox">
+              <h3>
+                <span>석유화학</span>
+                <strong>Chemistry</strong>
+              </h3>
+              <p>
+                국내 유일의 초산에틸, 초산부틸 생산업체로 <br />우수한 품질로
+                국내시장을 선도합니다.
+              </p>
+              <a href="" class="btnMore">View More</a>
+            </div>
+            <div class="imgBox">
+              <img src="../img/business01.jpg" alt="" />
+            </div>
+          </div>
+          <div class="bg"></div>
+        </article>
+        <article class="contentBox contents03">
+          <div class="container clearFix">
+            <div class="txtBox">
+              <h3>
+                <span>컬러 페이스트</span>
+                <strong>Color paste</strong>
+              </h3>
+              <p>
+                국내 최초 개발에 성공하여 디스플레이의 핵심소재로 사용되고
+                있습니다.
+              </p>
+              <a href="" class="btnMore">View More</a>
+            </div>
+          </div>
+        </article>
+      </section>
+    </div>
   </body>
 </html>

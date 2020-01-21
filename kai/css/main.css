@@ -1,5 +1,11 @@
+#mainContents{
+    max-width: 1900px;
+    margin: auto;
+
+}
 #mainVisual{
     position: relative;
+    z-index: 0;
     overflow: hidden;
 }
 #mainVisual li{
@@ -17,7 +23,6 @@
 #mainVisual .mainVisual03{
     background-image: url(../img/main-visual-03.jpg);   
 }
-
 #mainVisual .txtBox{
     color: #fff;
     text-align: center;
@@ -35,37 +40,132 @@
     font-size: 90px;
 }
 
-#mainVisual .btn{
+#mainVisual .down{
     color: #fff;
     position: absolute;
     bottom: 100px;
+    left: 50%;
     z-index: 2;
     padding:25px;
     font-size: 25px;
-    left: 50%;
     transform: translateX(-50%);
     border: 1px solid #fff;
 }
-#mainVisual .pagination{
+#mainVisual .pagination {
+    text-align: center;
+    width:auto;
     position: absolute;
-    z-index: 2;
-    top: 50%;
+    top:50%;
+    right:50px;
+    bottom:auto;
+    left:auto;
+    z-index: 4;
     transform: translateY(-50%);
-    right: 50px;
-    bottom: auto;
-    left: auto;
-    width: auto;
 }
-#mainVisual .swiper-pagination-bullet{
-    padding: 10px;
-    background-color: #fff;
+#mainVisual .pagination .swiper-pagination-bullet {
     display: block;
-    top: 50px;
-    margin: 10px 0;
+    width:20px;
+    height: 20px;
+    margin: 10px;
+    opacity: 1;
+    border:3px solid #fff;
+    background-color: transparent;
+    border-radius: 100px;
+    outline: none;
+    transition: 0.25s ease;
 }
-#mainVisual .swiper-pagination-bullet-active{
-    height: 100px;
-    width: 10px;
-    border-radius: 10px ;
-    background-color: #f00;
+#mainVisual .pagination .swiper-pagination-bullet-active {
+    height:80px;
+    background-color: #fff;
+}
+#mainVisual .pagination i{
+    color: #fff;
+    font-size: 24px;
+}
+#mainVisual .pagination .btns .btnPlay{
+    display: none;
+}
+#mainVisual .pagination .auto{
+    display: inline-block;
+}
+.container{
+    width: 1200px;
+    position: relative;
+    margin: auto;
+}
+#mainContents h2{
+  font-size: 40px;
+  font-weight: 200; 
+  margin-bottom: 30px;
+  
+}
+#mainContents h3 span{
+    font-size: 24px;
+}
+#mainContents h3 strong{  
+    display: block;
+    padding: 30px 0;
+    font-size: 70px;
+    font-weight: 200;
+}
+#business{
+    padding-top:100px ;
+}
+
+#business .contents01 .txtBox{  
+    float: left;
+}
+#business .contents01 video{  
+    float: right;
+    padding-top: 0;
+    margin-top: -150px;
+}
+#business .contents02 .imgBox{  
+    float: left;
+}
+#business .contents02 .txtBox{
+    color: #fff;  
+    float: right;
+    margin-right: 100px;
+}
+#business .contents03 .imgBox{  
+    float: left;
+}
+#business .contents03 .txtBox{  
+    float: right;
+}
+#business .txtBox{
+    padding: 100px 0;
+}
+#mainContents .btnMore{
+    display: inline-block;
+    padding: 20px 30px;
+    border: 1px solid #000;
+    margin-top: 50px;
+}
+#business .contents01{  
+    position: relative;
+    z-index: 2;
+    margin-top: -100px;
+}
+#business .contents02 {
+    position: relative;
+    z-index: 1;
+}
+#business .contents03 {
+    height: 700;
+    background-image: url("../img/business-colorpaste-bg.jpg");
+    color: #fff;
+    background-size: cover;
+}
+#business .contents02 .bg{
+    width: 56%;
+    height: 1300px;  
+    position: absolute;
+    top: -300px;
+    right: 0;
+    /* transform: translate(260px, -30%); */
+    z-index: -1;
+    background: url("../img/main-business-03.jpg") no-repeat 50%;
+    background-size: cover;
 }

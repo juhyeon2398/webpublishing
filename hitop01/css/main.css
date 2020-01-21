@@ -50,7 +50,7 @@
 }
 #mainVisual .pagination{
     position: absolute;
-    z-index: 4;
+    z-index: 5;
     bottom: 80px;
     width: 100%;
     text-align: center;

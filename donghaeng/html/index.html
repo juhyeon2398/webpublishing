@@ -14,9 +14,12 @@
       href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="../css/splitting.css">
     <link rel="stylesheet" href="../css/swiper.css" />
     <script src="../js/swiper.min.js"></script>
     <script defer src="../js/main.js"></script>
+    <script src="../js/splitting.min.js"></script>
+    <script src="../js/gsap.min.js"></script>
     <link rel="stylesheet" href="../css/layout.css" />
     <link rel="stylesheet" href="../css/main.css" />
     <link
@@ -49,7 +52,7 @@
       <ul class="list swiper-wrapper">
         <li class="visual01 swiper-slide">
           <div class="txtBox">
-            <p class="main">
+            <p class="main" data-splitting>
               MOVING TOGETHER<br />
               TOWARDS FUTURE
             </p>
@@ -60,7 +63,7 @@
         </li>
         <li class="visual02 swiper-slide">
           <div class="txtBox">
-            <p class="main">
+            <p class="main" data-splitting>
               MOVING TOGETHER<br />
               TOWARDS FUTURE
             </p>
@@ -70,7 +73,7 @@
           </div>
         </li>
         <li class="visual03 swiper-slide">
-          <div class="txtBox">
+          <div class="txtBox" data-splitting>
             <p class="main">
               MOVING TOGETHER<br />
               TOWARDS FUTURE
