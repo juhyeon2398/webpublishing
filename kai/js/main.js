@@ -50,7 +50,7 @@ var time01 = gsap.timeline({});
 time01.from("#mainVisual .mainVisual01 .txtBox .sub",{
     duration:2,
     y:-200,
-    opacity:0,
+    opacity:0,  
     ease:Bounce.easeIn,
     //Power1~4, Elastic,Black, Linear.easeNone,Bounce, easeIn,easeOut
 })
@@ -61,11 +61,11 @@ time01.from("#mainVisual .mainVisual01 .txtBox .sub",{
     stagger:0.1,     //여러개 옵션은 순서대로 실행
     ease:Bounce.easeIn,
 },0.5);
-var time02 = gsap.timeline({paused:true});
+var time02 = gsap.timeline({paused:true}); 
 time02.from("#mainVisual .mainVisual02 .txtBox .sub",{
-    duration:2,
-    y:-200,
-    opacity:0,
+    duration:2, 
+    y:-200, 
+    opacity:0, 
     ease:Bounce.easeIn,
 })
 .from("#mainVisual .mainVisual02 .txtBox .main .char",{
