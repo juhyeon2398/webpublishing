@@ -16,6 +16,10 @@
 .center {
     text-align: center;
 }
+.container{
+    width: 1400px;
+    margin: 0 auto;
+}
 
 .fList > li {float: left;}
 

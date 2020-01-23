@@ -89,3 +89,22 @@ time03.from("#mainVisual .mainVisual03 .txtBox .sub",{
     stagger:0.1,
     ease:Bounce.easeIn,
 },0.5);
+window.addEventListener("scroll",function(){
+    var st = window.scrollY;
+    console.log("TCL: st", st)
+    if(st>0){
+        header.classList.add("expanded");
+    }
+    else{
+        header.classList.remove("expanded");      
+    }
+    if(st>500){
+        btnTop.classList.add("show");
+    }else{
+        btnTop.classList.remove("show");      
+    }
+});
+var btnTop = document.querySelector(".btnTop");
+btnTop.addEventListener("click",function(){
+    gsap.to("html,body",{scrollTop:0,ease:Power4.easeOut,duration:1});
+});
