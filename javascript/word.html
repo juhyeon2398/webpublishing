@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="firstWord">장성호</div>
+    <input type="text" id="answerWord" />
+    <button id="btn">버튼</button>
+    <div id="result"></div>
+    <script>
+      let firstWord = document.querySelector("#firstWord");
+      let answerWord = document.querySelector("#answerWord");
+      let btn = document.querySelector("#btn");
+      let result = document.querySelector("#result");
+      let allWord = "";
+      console.log(
+        firstWord.textContent.charAt(firstWord.textContent.length - 1)
+      );
+
+      let ckeckWord = function() {
+        if (allWord.indexOf(answerWord.value) == -1) {
+          if (
+            firstWord.textContent.charAt(firstWord.textContent.length - 1) ==
+            answerWord.value.charAt(0)
+          ) {
+            result.innerHTML = "정답";
+            firstWord.textContent = answerWord.value;
+            allWord = allWord + (answerWord.value + " ");
+            answerWord.value = "";
+            console.log(allWord);
+          } else {
+            result.innerHTML = "땡";
+            answerWord.value = "";
+          }
+        } else {
+          answerWord.value = "";
+          alert("중복입니다");
+        }
+        answerWord.focus();
+      };
+
+      btn.addEventListener("click", function() {
+        ckeckWord();
+      });
+      answerWord.addEventListener("keyup", function(e) {
+        if (e.keyCode == 13) {
+          ckeckWord();
+        }
+      });
+    </script>
+  </body>
+</html>

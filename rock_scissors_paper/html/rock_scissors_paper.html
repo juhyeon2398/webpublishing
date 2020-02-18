@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ROCK_SCISSORS_PAPER</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        #computer {
+            width:300px;
+            height: 300px;
+        }
+        #computer img {
+            width:100%;
+        }
+        #computer li {
+            display: none;
+        }
+        #computer li:nth-child(1) {
+            display: block;
+        }
+        #human {
+            width:300px;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #human li {
+            width:80px;
+            display: inline-block;
+        }
+        #human img {
+            width:100%;
+        }
+        .gameWrap {
+            text-align: center;
+        }
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            padding:50px 0;
+        }
+        .game {
+            width:300px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="gameWrap">
+        <h1>ROCK , SCISSORS , PAPER</h1>
+        <div class="game">
+            <ul id="computer">
+                <li><img src="../images/rock.svg" alt=""></li>
+                <li><img src="../images/scissors.svg" alt=""></li>
+                <li><img src="../images/paper.svg" alt=""></li>
+            </ul>
+            <ul id="human">
+                <li><img src="../images/rock.svg" alt=""></li>
+                <li><img src="../images/scissors.svg" alt=""></li>
+                <li><img src="../images/paper.svg" alt=""></li>
+            </ul>
+        </div>
+        <div id="result"></div>
+    </div>
+    <script>
+        let list = document.querySelectorAll("#computer li");
+        let random = 0;
+        let result = [];
+        let resultTxt = document.querySelector("#result");
+        function makeComchoice() {
+            random = Math.floor(Math.random()*list.length);
+            for(let i= 0;i<list.length;i++) {
+                if(i===random) {
+                    list[i].style.display="block";    
+                } else {
+                    list[i].style.display="none";
+                }
+            }
+        }
+        makeComchoice();
+        let clearID = setInterval(makeComchoice,10);
+        let humanList = document.querySelectorAll("#human li");
+        let isGame = true;
+        for(let i=0;i<humanList.length;i++) {
+            humanList[i].addEventListener("click",function() {
+                if(isGame===true){
+                    clearInterval(clearID);
+                    setTimeout(function(){
+                        isGame=true;
+                        clearID = setInterval(makeComchoice,10)
+                    },1000);
+                    if(random===i) {
+                        console.log("비겼어요");
+                        result.push("비겼어요");
+                        resultTxt.innerHTML+="<span>D</span>";
+                    } else if(random===0 && i===2 || random===1 && i===0 ||random===2 && i===1) {
+                        console.log("이겼어요");
+                        result.push("이겼어요");
+                        resultTxt.innerHTML+="<span>W</span>";
+                    } else {
+                        console.log("졌어요");
+                        result.push("졌어요");
+                        resultTxt.innerHTML+="<span>L</span>";
+                    }
+
+                    isGame=false;
+                }
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
+    />
+
+    <style>
+      #dday {
+        font-size: 18px;
+        display: inline-block;
+        background-color: #000;
+        height: 50px;
+        line-height: 50px;
+        color: #ffffff;
+        padding: 0 30px;
+        border-radius: 100px;
+      }
+
+      .unit {
+        font-size: 12px;
+        color: #999;
+      }
+      i {
+        margin-right: 10px;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="dday">
+      <i class="xi-alarm-o"></i><span class="txt">4일 12시간 30분 08초</span>
+    </p>
+    <script>
+      let addZero = function(num) {
+        if (num < 10) {
+          return "0" + num;
+        } else {
+          return num;
+        }
+      };
+      let endDay = new Date(2020, 1, 13, 23, 59, 59);
+      let dDay = document.querySelector("#dday .txt");
+      let makeDay = function() {
+        let now = new Date();
+        let remainTime = endDay.getTime() - now.getTime();
+        let rSec = addZero(Math.ceil(remainTime / 1000) % 60);
+        let rMin = addZero(Math.ceil(remainTime / 1000 / 60) % 60);
+        let rhour = addZero(Math.ceil(remainTime / 1000 / 60 / 60) % 24);
+        let rday = Math.ceil(remainTime / 1000 / 60 / 60 / 24);
+        dDay.innerHTML = `${rday}<span class="unit">일</span> ${rhour}<span class="unit">시간</span> ${rMin}<span class="unit">분</span> ${rSec}`;
+      };
+      makeDay();
+      setInterval(makeDay, 1000);
+    </script>
+  </body>
+</html>

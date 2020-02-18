@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css" />
+
+    <script src="js/greensock/gsap.min.js"></script>
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+        background: url("img/다운로드.png");
+        background-size: contain;
+        color: #fff;
+        line-height: 100px;
+        text-align: center;
+        position: relative;
+        z-index: -1;
+      }
+      button{
+        width: 100px;
+        height: 50px;
+        text-align: center;
+        background-color: #d9d9d9;
+      }
+      </style>
+
+  </head>
+  <body>
+    <div class="box"></div>
+    <div class="btns">
+        <button id="pause">pause</button>
+        <button id="play">play</button>
+        <button id="restart">restart</button>
+        <button id="reverse">reverse</button>
+        <button id="resume">resume</button>
+        <button id="seek">seek</button>
+    </div>
+    <script>
+      let myTween = gsap.to(".box", {
+        x: 500,
+        borderRadius: 100,
+        rotation: 360,
+        y: 500,
+        duration: 5,
+        yoyo: true,
+        repeat: 1,
+        // onComplete: function() {
+        //   //끝나는 순간 발생
+        //   alert("모션끝");
+        // },
+        onUpdate: function() {
+          //모션 일어나는 동안
+          console.log("나는 모션 일어나는 순간 발생");
+        }
+      });
+      myTween.pause();
+      let box=document.querySelector(".box");
+      let pause=document.querySelector("#pause");
+      let play=document.querySelector("#play");
+      let restart=document.querySelector("#restart");
+      let reverse=document.querySelector("#reverse");
+      let resume=document.querySelector("#resume");
+      let seek=document.querySelector("#seek");
+      
+      pause.addEventListener("click",function(){
+          myTween.pause();
+      })
+      play.addEventListener("click",function(){
+          myTween.play();
+      })
+      restart.addEventListener("click",function(){
+          myTween.restart();
+      })
+      reverse.addEventListener("click",function(){
+          myTween.reverse();
+      })
+      resume.addEventListener("click",function(){
+          myTween.resume();
+      })
+      seek.addEventListener("click",function(){
+          myTween.seek(2);
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,537 @@
+#subContents {
+  min-height: 100vh;
+  margin: auto;
+}
+#subVisual {
+  color: #fff;
+  text-align: center;
+  height: 500px;
+  position: relative;
+}
+#subVisual .subtitle {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#subVisual .subtitle h2 {
+  font-size: 48px;
+  font-weight: 700;
+}
+#subVisual .subtitle p {
+  font-size: 18px;
+}
+#lnb {
+  text-align: left;
+  width: 100%;
+  height: 70px;
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+#lnb .btnHome {
+  text-align: center;
+  line-height: 70px;
+  display: block;
+  width: 70px;
+  height: 70px;
+  float: left;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+#lnb .listBox {
+  width: 340px;
+  float: left;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  margin-left: 1px;
+}
+#lnb .listBox a {
+  line-height: 70px;
+  display: block;
+  height: 70px;
+  position: relative;
+  padding: 0 20px;
+}
+#lnb .listBox a i {
+  line-height: 70px;
+  position: absolute;
+  top: 0;
+  right: 20px;
+}
+#lnb .listBox ul > li > a {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+#lnb .listBox ul {
+  display: none;
+}
+.subVisual01 {
+  background: url(../img/summary.jpg) no-repeat;
+  background-size: cover;
+}
+
+.summary {
+  position: relative;
+}
+.contentsTitle {
+  text-align: center;
+  font-size: 52px;
+  padding-top: 100px;
+}
+.contentsTitle::after {
+  display: block;
+  width: 1px;
+  height: 40px;
+  margin: 20px auto;
+  content: "";
+  background-color: #333;
+}
+
+.summary .contents01 {
+  position: relative;
+  float: right;
+}
+.summary .contents01 .txtBox {
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 35px;
+}
+.summary .contents01 .txtBox::before {
+  display: block;
+  width: 40px;
+  height: 1px;
+  margin: 20px auto;
+  content: "";
+  background-color: #fff;
+}
+.summary .contents02 {
+  position: relative;
+  margin: 100px 0;
+}
+.summary .contents02 img {
+  float: left;
+}
+.summary .contents02 .txtBox {
+  width: 630px;
+  float: left;
+  padding-left: 75px;
+  margin-top: 50px;
+}
+.summary .contents02 .txtBox h4 {
+  position: relative;
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 100px;
+}
+.summary .contents02 .txtBox h4::before {
+  display: block;
+  width: 200px;
+  height: 3px;
+  position: absolute;
+  top: 50%;
+  left: -230px;
+  content: "";
+  background-color: #82c6e4;
+  transform: translateY(-50%);
+}
+
+.summary .contents02 .txtBox p {
+  color: #444;
+  line-height: 190%;
+  font-size: 18px;
+  word-break: keep-all;
+}
+.summary .contents02 .txtBox p span {
+  display: block;
+}
+/* summary end */
+
+.greeting .titleTxt {
+  text-align: center;
+  height: 350px;
+  position: relative;
+  background: url(../img/m12_bg1.gif) no-repeat;
+  z-index: -1;
+}
+.greeting .titleTxt p {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.greeting .titleTxt span {
+  display: block;
+}
+.greeting .titleTxt .main {
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.greeting .titleTxt .main::after {
+  display: block;
+  width: 40px;
+  height: 1px;
+  margin: 20px auto;
+  content: "";
+  background-color: #333;
+  z-index: 3;
+}
+
+.greeting .titleTxt .sub {
+  color: #666;
+  font-size: 28px;
+}
+/* .greeting .container{
+    text-align: center;
+    position: relative;
+}
+.greeting ul {
+    display: inline-block;
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+}
+.greeting ul > li {
+    float: left;
+    outline: 1px solid #f00;
+}
+.greeting ul > li a{
+    color:#fff;
+    line-height: 70px;
+    display: block;
+    width: 280px;
+    height: 70px;
+    font-size: 20px;
+    background-color: var(--main-color);
+}
+.greeting ul > li div {
+    text-align: left;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    word-break: keep-all;
+}
+.greeting ul > li div strong {
+   display: block;
+   margin: 50px 0 25px;
+   font-size: 28px;
+   font-weight: 600;
+}
+.greeting ul > li div strong:last-child {
+    margin: auto;
+ }
+.greeting ul > li div h3{
+    margin: 100px 0 50px 50px;
+    font-size: 42px;
+}
+
+.greeting ul > li p {
+    line-height: 1.9;
+    font-size: 18px;
+}
+.greeting ul > li p span {
+    display: block;
+    margin: 50px 0;
+}
+.greeting ul > li .greeting02 {
+    display: none;
+} */
+
+.tab {
+  background-color: #f5f5f5;
+  border: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+  text-align: center;
+}
+.tab ul li a {
+  text-align: center;
+  display: block;
+  height: 70px;
+  line-height: 70px;
+  padding: 0 40px;
+}
+.tab .cList li.on a {
+  color: #fff;
+  background-color: var(--main-color);
+  position: relative;
+}
+.tab .cList li.on a::after {
+  content: "";
+  display: block;
+  border: 10px solid transparent;
+  border-top-color: var(--main-color);
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.tabContentList > li {
+  display: none;
+}
+.tabContentList > li.on {
+  display: block;
+}
+.greeting .greetingList .hi {
+  padding: 100px 0 100px 150px;
+  background: url(../img/bg_dd1.png) no-repeat 50% 50%;
+  font-size: 42px;
+  font-weight: 700;
+}
+.greeting .greetingList .greetingTxt {
+  padding: 100px 150px;
+}
+.greeting .greetingList .greetingTxt .main {
+  font-size: 28px;
+  margin: 30px 0;
+}
+.greeting .greetingList .greetingTxt .sign {
+  margin-top: 100px;
+}
+.greeting .greetingList .greetingTxt .sign strong {
+  font-weight: 700;
+  font-size: 18px;
+}
+/* business start */
+.subVisual02 {
+  background: url(../img/business.jpg) no-repeat;
+  background-size: cover;
+}
+.business .container {
+  position: relative;
+}
+.business .businessHeaderBox {
+  padding-bottom: 300px;
+  background: url(../img/m12_bg1.gif) no-repeat 50% 100% / contain;
+  background-size: contain;
+}
+.business .businessHeaderBox .titleBox {
+  position: absolute;
+  width: 950px;
+  height: 300px;
+  padding: 80px;
+  background-color: #fff;
+  right: 0;
+  bottom: 0;
+}
+.business .businessHeaderBox .titleBox .eng {
+  font-size: 20px;
+  font-weight: 700;
+}
+.business .businessHeaderBox .titleBox .eng::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 40px;
+  background-color: #333;
+  margin: 10px 0;
+}
+
+.business .businessHeaderBox .titleBox .main {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.business .businessList .title {
+  position: relative;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.business .businessList .main {
+  padding: 100px;
+}
+.business .businessList .main .imgBox {
+  float: left;
+  width: 50%;
+}
+.business .businessList .main .txtBox {
+  float: right;
+  width: 50%;
+  padding: 80px 0;
+}
+.business .businessList .main .txtBox h4 {
+  margin-bottom: 50px;
+}
+.business .businessList .main .txtBox h4 .kor {
+  font-size: 28px;
+  font-weight: 700;
+  display: block;
+}
+.business .businessList .main .txtBox h4 .eng {
+  font-size: 52px;
+  font-weight: 700;
+  display: block;
+  margin-top: 10px;
+}
+.business .businessList .product {
+  min-height: 250px;
+}
+.business .businessList .productList li {
+  float: left;
+  width: 25%;
+  margin: 10px 0;
+  font-size: 18px;
+}
+.business .businessList .productList.wide li {
+  width: 100%;
+}
+.business .businessList .productList li::before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 2px;
+  background-color: #000;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+.business .businessList .title span {
+  background-color: #fff;
+  z-index: 2;
+  position: relative;
+  display: inline-block;
+  padding-right: 30px;
+}
+.business .businessList .title::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #333;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.business .businessList > li > div {
+  padding-top: 50px;
+}
+.business .businessList .example li {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  border: 1px solid #d9d9d9;
+  text-align: center;
+  margin-left: -1px;
+  padding-top: 140px;
+}
+.business .businessList .example li img {
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  transform: translateX(-50%);
+}
+.business .businessList .manager {
+  margin-bottom: 50px;
+}
+.business .businessList .manager li {
+  margin-left: 30px;
+}
+.business .businessList .manager li .name {
+  margin-bottom: 10px;
+}
+.business .businessList .manager li .name::before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 2px;
+  background-color: #000;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+.business .businessList .manager li .mail {
+  padding-left: 10px;
+}
+.business .businessList .manager li .mail i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+/*  */
+
+.subVisual03 {
+  background: url(../img/rnd_main.jpg) no-repeat;
+  background-size: cover;
+}
+.rnd .container {
+  position: relative;
+}
+.rnd .imgBox {
+  position: absolute;
+  left: 0;
+  transform: translateX(-27%);
+  overflow: hidden;
+  padding-bottom: 30px;
+}
+
+.rnd .txtBox {
+  float: right;
+  width: 50%;
+  padding-left: 100px;
+  margin-top: 75px;
+}
+.rnd .txtBox p {
+  margin-bottom: 30px;
+}
+.rnd .txtBox .title {
+  font-size: 42px;
+  margin-bottom: 50px;
+}
+
+/*  */
+.subVisual04 {
+  background: url(../img/ir_main.jpg) no-repeat;
+  background-size: cover;
+}
+.ir .infoBox {
+  width: 980px;
+  float: right;
+}
+.ir .infoBox .imgBox {
+  margin-bottom: 50px;
+}
+
+.ir h4 {
+  font-size: 30px;
+  float: left;
+}
+.ir h4::before {
+  content: "";
+  display: inline-block;
+  background-color: #333;
+  margin-right: 5px;
+  width: 5px;
+  height: 5px;
+  vertical-align: middle;
+  border-radius: 200%;
+}
+
+.ir .irBox {
+  padding: 50px 0;
+  border-top: 1px solid #333;
+  margin-top: 50px;
+}
+table.txtCenter {
+  text-align: center;
+}
+table {
+  border-top: 3px solid #333;
+  width: 100%;
+}
+table td,
+table th {
+  border-left: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+  padding: 15px;
+}
+table th {
+  background-color: #f8f8f8;
+}
+table td:nth-child(1),
+table th:nth-child(1) {
+  border-left: none;
+}
+
+/* outline: 1px solid #f00; */

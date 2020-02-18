@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>javascript</title>
+  </head>
+  <body>
+    <h1>JAVASCRIPT</h1>
+    <label>국어 : <input type="text" id="kor"></label>
+    <label>영어 : <input type="text" id="eng"></label>
+    <label>수학 : <input type="text" id="math"></label>
+    <button id="btnresult">결과보기</button>
+    <div id="txtresult"></div>
+    <script>
+        
+      biman = (weight, height) => {
+        return weight / (height ^ 2);
+      };
+      function isbiman(num) {
+        if (num > 30) {
+          return "비만";
+        } else if (num <= 30 && num > 25) {
+          return "비만";
+        } else if (num < 20) {
+          return "저체중";
+        } else {
+          return "정상";
+        }
+      }
+      console.log(isbiman(biman(70, 1.83)));
+    </script>
+    <script>
+      function avg(kor, eng, math) {
+        return (kor + eng + math) / 3;
+      }
+      function rank(num) {
+        if (num >= 90) {
+          return "a";
+        } else if (num < 90 && num >= 80) {
+          return "b";
+        } else if (num < 80 && num >= 70) {
+          return "c";
+        } else if (num < 70) {
+          return "d";
+        }
+      }
+      var btnresult=document.querySelector("#btnresult");
+      var kor=document.querySelector("#kor");
+      var eng=document.querySelector("#eng");
+      var math=document.querySelector("#math");
+      var txtresult=document.querySelector("#txtresult");
+      btnresult.addEventListener("click",function(){
+          if(kor.value == ""||eng.value == ""||math.value == ""){
+              alert("빈칸이 있습니다.");
+              return false;
+          }
+          var total =rank(avg(Number(kor.value),Number(eng.value),Number(math.value)));
+          txtresult.innerHTML=total;
+      });
+
+    </script>
+  </body>
+</html>

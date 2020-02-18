@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      span {
+        display: inline-block;
+        width: 80px;
+        height: 80px;
+        background-color: #f00;
+        margin: 30px;
+        border-radius: 200%;
+        text-align: center;
+        line-height: 80px;
+        color: #333;
+        font-size: 50px;
+        font-weight: 700;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
+      }
+
+      input {
+        height: 50px;
+        width: 300px;
+        font-size: 30px;
+        text-align: right;
+        vertical-align: top;
+        padding-right: 10px;
+      }
+      button {
+        height: 55px;
+        width: 70px;
+      }
+      .blue {
+        background: rgb(255, 255, 255);
+        background: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 1) 50%,
+          rgba(0, 39, 255, 1) 100%
+        );
+      }
+      .red {
+        background: rgb(255, 255, 255);
+        background: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 1) 50%,
+          rgba(255, 0, 52, 1) 100%
+        );
+      }
+      .yellow {
+        background: rgb(255, 255, 255);
+        background: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 1) 50%,
+          rgba(245, 255, 0, 1) 100%
+        );
+      }
+      .green {
+        background: rgb(255, 255, 255);
+        background: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 1) 50%,
+          rgba(0, 255, 51, 1) 100%
+        );
+      }
+      .gray {
+        background: rgb(255, 255, 255);
+        background: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 1) 50%,
+          rgba(119, 119, 119, 1) 100%
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <div class="btns">
+      <input type="text" id="re" placeholder="횟수를 입력하세요" />
+      <button id="btn">버튼</button>
+      <button id="delete">삭제</button>
+    </div>
+    <div id="txtlotto"></div>
+    <script>
+      let btn = document.querySelector("#btn");
+      let re = document.querySelector("#re");
+      var del = document.querySelector("#delete");
+      let color;
+      let colorArray = ["yellow", "blue", "red", "gray", "green"];
+      let tempArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      for (let i = 0; i < 10; i++) {
+        let random01 =Math.floor(Math.random()*tempArray.length);
+        let random02 =Math.floor(Math.random()*tempArray.length);
+        let temp = tempArray[random01];
+        tempArray[random01]=tempArray[random02];
+        tempArray[random02]=temp;
+        console.log("TCL: random1", random01)
+        console.log("TCL: random2", random02)
+        console.log("TCL: temp", temp)
+        console.log("TCL: tempArray", tempArray)
+      }
+        
+        
+
+      function makeLotto() {
+        let lotto = [];
+        let mylotto = [];
+        let count = 0;
+        let txtlotto = document.querySelector("#txtlotto");
+
+        for (let i = 1; i <= 45; i++) {
+          lotto.push(i);
+        }
+        for (let j = 0; j < 6; j++) {
+          let random = Math.floor(Math.random() * lotto.length);
+          mylotto.push(lotto[random]);
+          let lottoResult = lotto.splice(random, 1);
+          console.log("당첨번호", lottoResult);
+        }
+        console.log("TCL: mylotto", mylotto);
+        console.log(
+          "TCL:  arr.sort();",
+          mylotto.sort(function(a, b) {
+            return a - b;
+          })
+        );
+        for (let i = 0; i < mylotto.length; i++) {
+          let num = mylotto[i];
+          //   if (num <= 10) {
+          //     color = "yellow";
+          //   } else if (num > 10 && num <= 20) {
+          //     color = "blue";
+          //   } else if (num > 20 && num <= 30) {
+          //     color = "red";
+          //   } else if (num > 30 && num <= 40) {
+          //     color = "gray";
+          //   } else {
+          //     color = "green";
+          //   }
+          color = colorArray[Math.floor((num - 1) / 10)];
+          txtlotto.innerHTML += `<span class="${color}"> ${num} </span>`;
+          count++;
+          if (count % 6 == 0) {
+            txtlotto.innerHTML += "<br>";
+          }
+        }
+      }
+      btn.addEventListener("click", function() {
+        txtlotto.innerHTML = "";
+        for (let i = 0; i < re.value; i++) {
+          makeLotto();
+        }
+      });
+      del.addEventListener("click", function() {
+        txtlotto.innerHTML = "";
+      });
+    </script>
+  </body>
+</html>

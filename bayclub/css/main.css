@@ -1,0 +1,347 @@
+#mainVisual {
+  position: relative;
+}
+#mainVisual video {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  object-fit: cover;
+}
+#mainVisual h2 {
+  color: #fff;
+  position: absolute;
+  left: 10%;
+  transform: translateY(-50%);
+}
+#mainVisual h2 .main {
+  display: block;
+  font-size: 50px;
+}
+#mainVisual h2 .main::after {
+  display: block;
+  width: 100%;
+  height: 1px;
+  margin: 10px 0;
+  content: "";
+  background-color: #fff;
+}
+
+#dayornight ul li {
+  height: 100vh;
+}
+#dayornight ul {
+  position: relative;
+}
+#dayornight ul .sunBg {
+  display: block;
+  background: url("../img/sumImg.jpg") no-repeat 50% 50%;
+  background-size: cover;
+}
+#dayornight ul .moonBg {
+  display: none;
+  background: url("../img/moonImg.jpg") no-repeat 50% 50%;
+  background-size: cover;
+}
+.btns {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  z-index: 2;
+  transform: translateX(-50%);
+}
+#dayornight .btns .sun {
+  position: relative;
+  margin-right: 20px;
+}
+.btns .btnScroll {
+  text-align: center;
+  margin: 20px 0;
+}
+#dayornight .btns .sun::after {
+  display: block;
+  width: 2px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: -10px;
+  content: "";
+  background-color: #fff;
+}
+/*  */
+
+#no_1 ul {
+  position: relative;
+}
+#no_1 ul li {
+  height: 100vh;
+  background-size: cover;
+}
+#no_1 ul .visual01 {
+  background: url("../img/main_no1.jpg");
+}
+#no_1 ul .visual02 {
+  background: url("../img/2.jpg");
+}
+#no_1 ul .visual03 {
+  background: url("../img/3.jpg");
+}
+#no_1 ul .visual04 {
+  background: url("../img/4.jpg");
+}
+#no_1 ul .visual05 {
+  background: url("../img/5.jpg");
+}
+#no_1 ul .visual06 {
+  background: url("../img/6.jpg");
+}
+#no_1 ul .visual07 {
+  background: url("../img/7.jpg");
+}
+#no_1 ul .visual08 {
+  background: url("../img/8.jpg");
+}
+#no_1 ul .visual09 {
+  background: url("../img/9.jpg");
+}
+#no_1 ul .visual10 {
+  background: url("../img/10.jpg");
+}
+#no_1 ul .visual11 {
+  background: url("../img/11.jpg");
+}
+
+#no_1 .pagination {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  z-index: 55;
+  transform: translateX(-50%);
+}
+#no_1 .swiper-pagination-bullet::after {
+  display: block;
+  width: 20px;
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  content: "";
+  transform: translateY(-50%);
+  background-color: #fff;
+}
+#no_1 .swiper-pagination-bullet:nth-child(1)::after {
+  display: none;
+  content: "";
+}
+#no_1 .swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  position: relative;
+  margin: 0 10px;
+  background-color: #fff;
+  opacity: 1;
+}
+#no_1 .swiper-pagination-bullet-active {
+  position: relative;
+}
+#no_1 .swiper-pagination-bullet-active::before {
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: "";
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 100px;
+  transform: translate(-50%, -50%);
+}
+
+/*  */
+#facilty {
+  background: #e8e8e8;
+}
+#facilty h2 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 50px;
+}
+#facilty h2 .main {
+  font-size: 20px;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 20px;
+}
+
+#facilty .fList {
+  margin-left: -1%;
+}
+#facilty .fList li {
+  width: 19%;
+  height: 570px;
+  position: relative;
+  margin-left: 1%;
+  overflow: hidden;
+}
+#facilty .fList li::after {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.3);
+}
+#facilty .fList li:hover img {
+  transform: scale(1.1);
+}
+#facilty .fList li img {
+  width: 100%;
+  height: 100%;
+  transition: 0.5s ease;
+}
+#facilty .fList li:nth-child(2n) {
+  margin-top: 30px;
+}
+#facilty .fList li a h3 {
+  color: #fff;
+  text-align: center;
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+  transform: translate(-50%, -50%);
+  font-size: 17px;
+}
+/*  */
+
+#map {
+  background: url("../img/map.jpg") no-repeat 50% 50%;
+  background-size: cover;
+  position: relative;
+}
+#map h2 {
+  letter-spacing: 5px;
+  position: absolute;
+  right: 0;
+  bottom: 100px;
+  color: #fff;
+}
+#map h2::after {
+  content: "";
+  display: block;
+  width: 100%;
+  background-color: #fff;
+  height: 2px;
+}
+#map h2 p {
+  margin-right: 150px;
+  text-align: center;
+}
+#map h2 .main {
+  letter-spacing: 10px;
+  display: block;
+  font-size: 50px;
+}
+
+/*  */
+#fp-nav ul li a span {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  margin: -5px 0 0 -5px;
+  background: #fff;
+  border-radius: 50%;
+  border: 0;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  opacity: 0.5;
+}
+#fp-nav ul li:last-child {
+  display: none;
+}
+
+#fp-nav ul li a span::before {
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: "";
+  border: 1px solid #fff;
+  border-radius: 100px;
+  transform: translate(-50%, -50%) scale(0);
+  transition: all 0.1s ease-in-out;
+}
+#fp-nav ul li a span::after {
+  content: "";
+  display: block;
+  background-color: #fff;
+  height: 27px;
+  width: 1px;
+  position: absolute;
+  left: 50%;
+  top: -27px;
+  transform: translateX(-50%);
+}
+#fp-nav ul li:first-child a span::after {
+    display: none   ;
+}
+
+#fp-nav ul li a.active span::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+#fp-nav ul li:hover a span {
+  width: 10px;
+  height: 10px;
+  margin: -5px 0 0 -5px;
+}
+#fp-nav ul li .fp-tooltip {
+  color: #fff;
+  display: block;
+  width: auto;
+  position: absolute;
+  top: 50%;
+  font-size: 14px;
+  font-family: inherit;
+  white-space: nowrap;
+  max-width: 220px;
+  overflow: hidden;
+  cursor: pointer;
+  transform: translateY(-50%);
+  opacity: 0.5;
+}
+#fp-nav ul li a.active + .fp-tooltip {
+  opacity: 1;
+}
+#fp-nav ul li {
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+}
+#fp-nav ul li .fp-tooltip.fp-right {
+  right: 30px;
+}
+#fp-nav ul li a.active span,
+#fp-nav ul li:hover a.active span {
+  width: 10px;
+  height: 10px;
+  margin: -5px 0 0 -5px;
+  border-radius: 100%;
+  opacity: 1;
+}

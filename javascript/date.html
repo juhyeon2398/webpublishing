@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <style>
+      #analog {
+        width: 400px;
+        height: 400px;
+        margin: 100px auto;
+        position: relative;
+        border-radius: 1000px;
+        background-color: rgb(36, 248, 255);
+        background: url("img/clock.svg") no-repeat;
+        background-size: cover;
+      }
+      #hourItem {
+        display: block;
+        width: 6px;
+        height: 120px;
+        background-color: #f00;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -100%) rotate(10deg);
+        transform-origin: 50% 100%;
+        border-radius: 1000% 500% 10px 10px;
+      }
+      #minItem {
+        display: block;
+        width: 6px;
+        height: 140px;
+        background-color: #00f;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -100%);
+        transform-origin: 50% 100%;
+        z-index: 3;
+        border-radius: 500% 500% 10px 10px;
+      }
+      #secItem {
+        display: block;
+        width: 3px;
+        height: 160px;
+        background-color: #000;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -100%);
+        border-radius: 500% 500% 10px 10px;
+        transform-origin: 50% 100%;
+        z-index: 3;
+      }
+      #point {
+        display: block;
+        width: 15px;
+        height: 15px;
+        background-color: #333;
+        border-radius: 100px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 3;
+      }
+      #number span {
+        position: absolute;
+        display: block;
+        height: 395px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-weight: 700;
+      }
+      #current {
+        position: absolute;
+        top: 50%;
+        right: 25%;
+        transform: translate(25%, -50%);
+        font-size: 12px;
+      }
+      #analog #sunAndmoon {
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        top:55%;
+        left:55%;
+      }
+      #analog .sun {
+        background: url("img/sun.jpg") no-repeat;
+        background-size: contain;
+      }
+      #analog .moon {
+        background: url("img/sun.jpg") no-repeat;
+        background-size: contain;
+
+      }
+    </style>
+  </head>
+  <body>
+    <div id="analog">
+      <div id="current"></div>
+      <span id="hourItem"></span>
+      <span id="minItem"></span>
+      <span id="secItem"></span>
+      <span id="point"></span>
+      <span id="number"></span>
+      <div id="sunAndmoon"></div>
+    </div>
+
+    <script>
+      let monthArray = [
+        "Jan",
+        "Fei",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Oct",
+        "Sep",
+        "Nov",
+        "Dev"
+      ];
+      let datArray = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+      let hourArray = [12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+      let current = document.querySelector("#current");
+      let addZero = function(num) {
+        if (num < 10) {
+          return "0" + num;
+        } else {
+          return num;
+        }
+      };
+      let makeTime = function() {
+        let now = new Date();
+        let year = now.getFullYear();
+        let month = monthArray[now.getMonth()];
+        let date = now.getDate();
+        let day = datArray[now.getDay()];
+        let hour = now.getHours();
+        let min = now.getMinutes();
+        let sec = now.getSeconds();
+        let hourItem = document.querySelector("#hourItem");
+        let minItem = document.querySelector("#minItem");
+        let secItem = document.querySelector("#secItem");
+        let number = document.querySelector("#number");
+        let sunAndmoon = document.querySelector("#sunAndmoon");
+
+        let hDeg = hour * 30 + 0.5 * min;
+        let mDeg = min * 6 + 0.1 * sec;
+        let sDeg = sec * 6;
+        if ((hour > 7) & (hour <= 18)) {
+          sunAndmoon.classList.add("sun");
+        } else {
+          sunAndmoon.classList.add("mon");
+        }
+        if (month >= 6 && month < 9) {
+          if ((hour > 6) & (hour <= 19)) {
+            sunAndmoon.classList.add("sun");
+          } else {
+            sunAndmoon.classList.add("mon");
+          }
+        } else if (month == 11 && month >= 0 && month < 3) {
+          if ((hour > 8) & (hour <= 17)) {
+            sunAndmoon.classList.add("sun");
+          } else {
+            sunAndmoon.classList.add("mon");
+          }
+        } else {
+          if ((hour > 7) & (hour <= 18)) {
+            sunAndmoon.classList.add("sun");
+          } else {
+            sunAndmoon.classList.add("mon");
+          }
+        }
+
+        hourItem.style.transform = `translate(-50%,-100%)rotate(${hDeg}deg)`;
+        minItem.style.transform = `translate(-50%,-100%)rotate(${mDeg}deg)`;
+        secItem.style.transform = `translate(-50%,-100%)rotate(${sDeg}deg)`;
+        current.innerHTML = `${year}/${month}/${addZero(date)}/${day}`;
+      };
+
+      setInterval(makeTime, 1000);
+      for (let i = 0; i < 12; i++) {
+        number.innerHTML += `<span>${hourArray[i]}</span>`;
+        let numItem = number.querySelectorAll("span");
+        numItem[i].style.transform = `translate(-50%,-50%) rotate(${i *
+          30}deg)`;
+      }
+    </script>
+  </body>
+</html>

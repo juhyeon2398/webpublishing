@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+        let arr=[
+            {id:0,name:"위건",height:180,score:80},
+            {id:1,name:"하니",height:175,score:70},
+            {id:2,name:"보석",height:186,score:60},
+            {id:3,name:"희원",height:170,score:50},
+            {id:4,name:"혜원",height:160,score:40}
+        ];
+
+       let searchName =function(item){
+            console.log(item);
+        }
+
+       arr.forEach((item)=> console.log(item.name));
+        let score80Over=arr.filter(function(item){
+            // if(item.height>=170){
+                return item.height>170;
+            // }
+        });
+        console.log( score80Over)
+
+    </script>
+  </body>
+</html>

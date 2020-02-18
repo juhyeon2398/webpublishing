@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <style>
+      #dobi {
+        left: 10px;
+        right: 10px;
+        bottom: 50px;
+        height: 20px;
+        position: fixed;
+        background-color: #999;
+        text-align: center;
+        border-radius: 100px;
+      }
+      #red {
+        position: absolute;
+        width: 10%;
+        height: 100%;
+        left: 0;
+        background-color: #f00;
+        border-radius: 100px;
+      }
+      #dday {
+        font-size: 18px;
+        display: inline-block;
+        background-color: #000;
+        height: 50px;
+        line-height: 50px;
+        color: #ffffff;
+        padding: 0 30px;
+        border-radius: 100px;
+      }
+      .unit {
+        font-size: 12px;
+        color: #999;
+      }
+      i {
+        margin-right: 10px;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="dday">
+      <i class="xi-alarm-o"></i><span class="txt">4일 12시간 30분 08초</span>
+    </p>
+
+    <div id="dobi">
+      <div id="red"><p class="txtBox"></p></div>
+    </div>
+    <script>
+      let addZero = function(num) {
+        if (num < 10) {
+          return "0" + num;
+        } else {
+          return num;
+        }
+      };
+      let dDay = document.querySelector("#dday .txt");
+      let txtBox = document.querySelector("#dobi .txtBox");
+      let red = document.querySelector("#red");
+      
+      let makeDay = function() {
+        let now = new Date();
+        let year = now.getFullYear();
+        let month = now.getMonth();
+        let date = now.getDate()
+        let lastTime = new Date(year, month, date, 18, 30, 00);
+        let startTime = new Date(year, month, date, 9, 30, 00);
+        let ingTime =
+          ((now.getTime() - startTime.getTime()) /
+            (lastTime.getTime() - startTime.getTime())) *
+          100;
+        dDay.innerHTML = ingTime + "%";
+        
+        let sec = now.getSeconds();
+        let min =now.getMinutes();
+        let hour =now.getHours();
+        txtBox.innerHTML = `${hour}시 ${min}분 ${sec}초`;
+        red.style.width = `${ingTime}%`;
+        if((now.getTime() - startTime.getTime())>=(lastTime.getTime() - startTime.getTime())){
+            clearInterval(clearID);
+        }
+      };
+      makeDay();
+      let clearID=setInterval(makeDay, 1000);
+    </script>
+  </body>
+</html>

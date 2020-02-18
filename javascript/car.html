@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/greensock/gsap.min.js"></script>
+    <style>
+        body {
+            background-color: #333;
+        }
+        #car {
+            text-align: center;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            let imgNum = 0;
+            $(window).on("mousemove",function(e) {
+                // let mouseX = Math.floor(e.pageX)%36+1;
+                // let imgSrc = `images/car/SWP_${mouseX}.png`;
+                // $("#car img").attr({"src":imgSrc});
+            });
+            $(window).on("mousewheel",function(e){
+                let wheel = e.originalEvent.deltaY;
+                if(wheel>0){
+                    //아래로
+                    imgNum++;
+                    if(imgNum>36) {
+                        imgNum=1;
+                    }
+                } else {
+                    //위로
+                    imgNum--;
+                    if(imgNum<1) {
+                        imgNum=36;
+                    }
+                }
+                let imgSrc = `images/car/SWP_${imgNum}.png`;
+                $("#car img").attr({"src":imgSrc});
+            });
+        })
+    </script>
+</head>
+<body>
+    <div id="car">
+        <img src="images/car/SWP_1.png" alt="">
+    </div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        line-height: 1.5;
+        font-size: 30px;
+        font-weight: 700;
+        color: #fff;
+      }
+      span {
+        width: 170px;
+        padding: 5px 15px;
+        border-radius: 100px;
+        margin: 5px 15px;
+        display: inline-block;
+        background-color: rgb(212, 30, 188);
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.8);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="btns">
+      <button id="btn">버튼</button>
+      <button id="delete">삭제</button>
+    </div>
+    <div id="txt"></div>
+    <br />
+
+    <script>
+        // var a = 10;
+        // a>11 ? console.log("a>11"):console.log("a<11");
+        // for(var i=0;i<100;i++){
+        //     console.log(i);
+
+        // }
+        var answer = document.querySelector("#answer");
+        var txt = document.querySelector("#txt");
+        var span = document.querySelectorAll("body span");
+        var btn = document.querySelector("#btn");
+        var btns = document.querySelector("#btns");
+        var del = document.querySelector("#delete");
+        var count = 0;
+
+        if (txt.innerHTML == "") {
+            btn.addEventListener("click", function() {
+            for (let j = 1; j <= 9; j++) {
+              for (let i = 2; i <= 9; i++) {
+                var ggd = i + "x" + j + " = " + i * j;
+                txt.innerHTML += `<span>${ggd} </span>`;
+                count++;
+                if (count % 8 == 0) {
+                  txt.innerHTML = txt.innerHTML + "<br>";
+                }
+              }
+            }
+          });
+          del.addEventListener("click", function() {
+            txt.innerHTML = "";
+          });
+        } else {
+          alert("dfdfdf");
+        }
+       
+    </script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        text-align: center;
+        line-height: 100px;
+        border-radius: 10px;
+        background-color: #000;
+        margin: 10px;
+        color: #fff;
+      }
+      .red {
+        background-color: #f00;
+      }
+      .green {
+        background-color: #0f0;
+      }
+      .blue {
+        background-color: #00f;
+      }
+    </style>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".box").eq(2).addClass("red");
+        })
+        let box=document.querySelectorAll(".box");
+    </script>
+  </head>
+  <body>
+    <div class="box red">box01</div>
+    <div class="box green">box02</div>
+    <div class="box blue">box03</div>
+    <p>피난다</p>
+    <div>
+        <p>피가 콸콸콸~</p>
+    </div>
+    <section>
+        <ul>
+            <li><a href="">a</a></li>
+            <li><a href="">a</a></li>
+            <li><a href="">a</a></li>
+        </ul>
+        <p>
+            
+        </p>
+    </section>
+  </body>
+</html>

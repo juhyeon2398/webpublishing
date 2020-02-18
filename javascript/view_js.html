@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      li {
+        list-style: none;
+        float: left;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <input type="text" v-model="movieTitle" v-on:keyup="searchMovie(movieTitle)" />
+      <p>{{movieTitle}}</p>
+      <ul>
+        <li v-for="movie in movies">
+          <img v-bind:src="movie.img" alt="" />
+          <p>{{movie.title}}</p>
+          <p>{{movie.num}}</p>
+        </li>
+      </ul>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+      let app = new Vue({
+        el: "#app",
+        data: {
+          movieTitle: "",
+          origianlMovies: [
+            {
+              img: "https://picsum.photos/id/237/200/300",
+              title: "남산의 부장들",
+              num: 7000000
+            },
+            {
+              img: "https://picsum.photos/id/237/200/300",
+              title: "남산의 부장들",
+              num: 7000000
+            },
+            {
+              img: "https://picsum.photos/id/237/200/300",
+              title: "남산의 과장들",
+              num: 9000000
+            },
+            {
+              img: "https://picsum.photos/id/237/200/300",
+              title: "남산의 대리들",
+              num: 23200000
+            },
+            {
+              img: "https://picsum.photos/id/237/200/300",
+              title: "인왕산 부장들",
+              num: 8120000
+            },
+            {
+              img: "https://picsum.photos/id/237/200/300",
+              title: "인왕산 과장들",
+              num: 78700000
+            },
+            {
+              img: "https://picsum.photos/id/237/200/300",
+              title: "인왕산 대리들",
+              num: 9000000
+            },
+            {
+              img: "https://picsum.photos/id/237/200/300",
+              title: "기생충 과장들",
+              num: 8020000
+            },
+            {
+              img: "https://picsum.photos/id/237/200/300",
+              title: "기생충 부장들",
+              num: 9002000
+            },
+            {
+              img: "https://picsum.photos/id/237/200/300",
+              title: "기생충 대리들",
+              num: 10000000
+            },
+            {
+              img: "https://picsum.photos/id/237/200/300",
+              title: "기생충 사원들",
+              num: 213213000
+            },
+            {
+              img: "https://picsum.photos/id/237/200/300",
+              title: "인왕산 사원들",
+              num: 20320000
+            }
+          ],
+          movies: [
+            
+          ]
+        },
+        created:function(){
+            this.movies=this.origianlMovies.slice();
+        },
+        computed: {},
+        methods: {
+          searchMovie: function(search) {
+            this.movies=this.origianlMovies.filter(function(item) {
+              if (item.title == search.trim()) {
+                return true;
+              }
+            });
+            console.log(search);
+            
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

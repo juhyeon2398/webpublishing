@@ -1,0 +1,183 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+}
+body {
+  color: #333;
+  position: relative;
+  font-family: "Playfair Display", "Nanum Gothic", serif;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+p {
+  line-height: 1.5;
+}
+#header {
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  height: 170px;
+}
+#header .btnBox {
+  position: absolute;
+  top: 45px;
+  right: 60px;
+}
+#header .btnBox .btnMenu {
+  position: relative;
+  z-index: 9999;
+}
+#header #logo {
+  position: absolute;
+  width: 130px;
+  height: 118px;
+  top: 45px;
+  left: 60px;
+}
+#header .btnBox p {
+  color: #fff;
+  position: relative;
+  font-size: 18px;
+  float: left;
+  margin: 10px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+}
+#header .btnBox p::before {
+  content: "";
+  display: block;
+  width: 3px;
+  height: 55px;
+  background-color: #f00;
+  position: absolute;
+  top: 0;
+  left: -10px;
+}
+#gnb {
+  position: relative;
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 100vh;
+  display: none;
+}
+#gnb .list {
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#gnb ul {
+  width: 1000px;
+  font-weight: 700;
+}
+#gnb ul > li .depth01:hover {
+  color: rgb(180, 1, 1);
+}
+#gnb ul > li {
+  padding: 5px 0;
+  float: left;
+}
+#gnb ul > li .depth01 {
+  font-size: 30px;
+  width: 250px;
+  display: inline-block;
+}
+#gnb .depth02 {
+  float: right;
+  width: 750px;
+}
+#gnb .depth02 li {
+  float: left;
+  padding: 5px;
+}
+#gnb .depth02 li:hover a{
+  color: rgb(180, 1, 1);
+}
+
+#footer {
+  background-color: #000;
+  color: #fff;
+}
+#footer ul > li span {
+  display: block;
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+#footer .container {
+  height: 250px;
+  position: relative;
+}
+#footer .content {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#footer h2 {
+  float: left;
+  width: 10%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#footer ul li p {
+  font-size: 12px;
+  line-height: 1.5;
+}
+#footer ul li .btn {
+  border: 1px solid #fff;
+  padding: 10px 20px;
+  position: absolute;
+  bottom: 0;
+  font-size: 16px;
+  font-weight: 700;
+}
+#footer ul {
+  float: right;
+  position: relative;
+  width: 90%;
+}
+#footer ul > li {
+  float: left;
+  width: 25%;
+}
+#footer ul > li .box {
+  height: 100%;
+}
+#footer ul > li .icon {
+  position: absolute;
+  bottom: 0;
+}
+#footer ul > li i {
+  font-size: 30px;
+  padding: 5px;
+  border: 1px solid #fff;
+}
+
+#footer ul > li .linkBox {
+  font-size: 18px;
+  position: absolute;
+  bottom: 0;
+}
+#footer ul > li .linkBox a:nth-child(1) {
+  position: relative;
+  margin-right: 20px;
+}
+#footer ul > li .linkBox a:nth-child(1)::before {
+  content: "";
+  display: block;
+  background-color: #fff;
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  right: -10px;
+  top: 0;
+}

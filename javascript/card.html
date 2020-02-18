@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <script src="js/greensock/gsap.min.js"></script>
+    <style>
+      body {
+        height: 100vh;
+        background: url("img/PNG-cards-1.3/casino-1584645_1920.jpg") no-repeat
+          50% 50%;
+        background-size: cover;
+        overflow: hidden;
+      }
+      h1 {
+        text-align: center;
+        color: #fff;
+        margin: 50px 0;
+      }
+      h1 img {
+        width: 300px;
+        height: 100px;
+      }
+      #card li {
+        background-color: #fff;
+        padding: 10px;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 180px;
+        left: 50%;
+        top: 50%;
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+      }
+      #card li img {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><img src="img/PNG-cards-1.3/poker-table-4600997_1920.png" alt="" /></h1>
+
+    <ul id="card">
+      <li><img src="img/PNG-cards-1.3/2_of_clubs.png" alt="" /></li>
+      <li><img src="img/PNG-cards-1.3/3_of_clubs.png" alt="" /></li>
+      <li><img src="img/PNG-cards-1.3/4_of_clubs.png" alt="" /></li>
+      <li><img src="img/PNG-cards-1.3/5_of_clubs.png" alt="" /></li>
+      <li><img src="img/PNG-cards-1.3/6_of_clubs.png" alt="" /></li>
+      <li><img src="img/PNG-cards-1.3/7_of_clubs.png" alt="" /></li>
+      <li><img src="img/PNG-cards-1.3/8_of_clubs.png" alt="" /></li>
+      <li><img src="img/PNG-cards-1.3/9_of_clubs.png" alt="" /></li>
+      <li><img src="img/PNG-cards-1.3/10_of_clubs.png" alt="" /></li>
+      <li><img src="img/PNG-cards-1.3/jack_of_clubs2.png" alt="" /></li>
+      <li><img src="img/PNG-cards-1.3/queen_of_clubs2.png" alt="" /></li>
+      <li><img src="img/PNG-cards-1.3/king_of_clubs2.png" alt="" /></li>
+      <li><img src="img/PNG-cards-1.3/ace_of_clubs.png" alt="" /></li>
+      <li><img src="img/PNG-cards-1.3/2_of_hearts.png" alt="" /></li>
+      <li><img src="img/PNG-cards-1.3/3_of_hearts.png" alt="" /></li>
+      <li><img src="img/PNG-cards-1.3/4_of_hearts.png" alt="" /></li>
+      <li><img src="img/PNG-cards-1.3/5_of_hearts.png" alt="" /></li>
+      <li><img src="img/PNG-cards-1.3/6_of_hearts.png" alt="" /></li>
+      <li><img src="img/PNG-cards-1.3/7_of_hearts.png" alt="" /></li>
+      <li><img src="img/PNG-cards-1.3/8_of_hearts.png" alt="" /></li>
+      <li><img src="img/PNG-cards-1.3/9_of_hearts.png" alt="" /></li>
+      <li><img src="img/PNG-cards-1.3/10_of_hearts.png" alt="" /></li>
+      <li><img src="img/PNG-cards-1.3/jack_of_hearts2.png" alt="" /></li>
+      <li><img src="img/PNG-cards-1.3/queen_of_hearts2.png" alt="" /></li>
+      <li><img src="img/PNG-cards-1.3/king_of_hearts2.png" alt="" /></li>
+      <li><img src="img/PNG-cards-1.3/ace_of_hearts.png" alt="" /></li>
+      <li><img src="img/PNG-cards-1.3/2_of_diamonds.png" alt="" /></li>
+      <li><img src="img/PNG-cards-1.3/3_of_diamonds.png" alt="" /></li>
+      <li><img src="img/PNG-cards-1.3/4_of_diamonds.png" alt="" /></li>
+      <li><img src="img/PNG-cards-1.3/5_of_diamonds.png" alt="" /></li>
+      <li><img src="img/PNG-cards-1.3/6_of_diamonds.png" alt="" /></li>
+      <li><img src="img/PNG-cards-1.3/7_of_diamonds.png" alt="" /></li>
+      <li><img src="img/PNG-cards-1.3/8_of_diamonds.png" alt="" /></li>
+      <li><img src="img/PNG-cards-1.3/9_of_diamonds.png" alt="" /></li>
+      <li><img src="img/PNG-cards-1.3/10_of_diamonds.png" alt="" /></li>
+      <li><img src="img/PNG-cards-1.3/jack_of_diamonds2.png" alt="" /></li>
+      <li><img src="img/PNG-cards-1.3/queen_of_diamonds2.png" alt="" /></li>
+      <li><img src="img/PNG-cards-1.3/king_of_diamonds2.png" alt="" /></li>
+      <li><img src="img/PNG-cards-1.3/ace_of_diamonds.png" alt="" /></li>
+      <li><img src="img/PNG-cards-1.3/2_of_spades.png" alt="" /></li>
+      <li><img src="img/PNG-cards-1.3/3_of_spades.png" alt="" /></li>
+      <li><img src="img/PNG-cards-1.3/4_of_spades.png" alt="" /></li>
+      <li><img src="img/PNG-cards-1.3/5_of_spades.png" alt="" /></li>
+      <li><img src="img/PNG-cards-1.3/6_of_spades.png" alt="" /></li>
+      <li><img src="img/PNG-cards-1.3/7_of_spades.png" alt="" /></li>
+      <li><img src="img/PNG-cards-1.3/8_of_spades.png" alt="" /></li>
+      <li><img src="img/PNG-cards-1.3/9_of_spades.png" alt="" /></li>
+      <li><img src="img/PNG-cards-1.3/10_of_spades.png" alt="" /></li>
+      <li><img src="img/PNG-cards-1.3/jack_of_spades2.png" alt="" /></li>
+      <li><img src="img/PNG-cards-1.3/queen_of_spades2.png" alt="" /></li>
+      <li><img src="img/PNG-cards-1.3/king_of_spades2.png" alt="" /></li>
+      <li><img src="img/PNG-cards-1.3/ace_of_spades2.png" alt="" /></li>
+    </ul>
+    <script>
+      let list = document.querySelectorAll("#card li");
+      let card = document.querySelector("#card");
+      // let card=gsap.from("#card li",{
+      //     duration:2,
+      //     y:-800,
+      //     ease:"back.out",
+      //     stagger:{
+      //         each:0.1,
+
+      //     }
+      // })
+      //   for (let i = 0; i < 20; i++) {
+      //     gsap.set(list[i], { rotation: Math.random() * 10 - 5 }),
+      //       gsap.from(list[i], {
+      //         duration: 1.5,
+      //         y: -800,
+      //         delay: 0.1 * i,
+      //         ease: "back.out"
+      //       });
+      //   }
+      let total=list.length;
+      list.forEach(function(el, idx) {
+        if (idx == total - 1) {
+          gsap.set(el, { rotation: 0 });
+        } else {
+          gsap.set(el, { rotation: Math.random() * 10 - 5 });
+        }
+        gsap.from(el, {
+          duration: 1,
+          y: -800,
+          delay: 0.1 * idx,
+          ease: "bounce.out"
+        });
+        el.addEventListener("click", function() {
+          let selectedList = this;
+          gsap.killTweensOf(this);
+          gsap.set(this.previousElementSibling,{
+              duration:0.2,
+              rotation:0,
+          })
+          gsap.to(this, {
+            duration: 0.5,
+            x: 500,
+            rotation: 30,
+            ease: "power4.in",
+            onComplete: function(mc) {
+              gsap.to(mc, {
+                rotation: Math.random() * 10 - 5,
+                x: 0
+              });
+              card.insertBefore(selectedList, card.firstChild);
+              console.log("끝");
+            },
+            onCompleteParams: [selectedList]
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

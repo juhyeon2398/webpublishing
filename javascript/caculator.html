@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=], initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <span id="num01"></span> X
+      <span id="num02"></span>
+    </div>
+    <div><input type="text" id="answer" /> <button id="btn">btn</button></div>
+    <div id="txtResult"></div>
+    <script>
+      var num01 = document.querySelector("#num01");
+      var num02 = document.querySelector("#num02");
+      var answer = document.querySelector("#answer");
+      var btn = document.querySelector("#btn");
+      var num01Value = Math.ceil(Math.random() * 9);
+      var num02Value = Math.ceil(Math.random() * 9);
+      num01.innerHTML = num01Value;
+      num02.innerHTML = num02Value;
+      function makeGUgudan() {
+        if (num01Value * num02Value == Number(answer.value)) {
+          num01Value = Math.ceil(Math.random() * 9);
+          num02Value = Math.ceil(Math.random() * 9);
+          num01.innerHTML = num01Value;
+          num02.innerHTML = num02Value;
+          alert("정답입니다.");
+        } else {
+          alert("다시하세요.");
+        }
+        answer.value = "";
+        answer.focus();
+      }
+      btn.addEventListener("click", function() {
+        makeGUgudan();
+      });
+
+      answer.addEventListener("keyup", function(e) {
+        if (e.keyCode == 13) {
+          makeGUgudan();
+        }
+      });
+      for (var i = 1; i < 9; i++) {
+        for (var j = 1; j < 9; j++) {}
+      }
+    </script>
+  </body>
+</html>

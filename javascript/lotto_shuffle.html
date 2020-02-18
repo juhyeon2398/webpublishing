@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ARRAY</title>
+    <style>
+        #txtLotto {
+            text-align: center;
+            font-size: 20px;
+        }
+        #txtLotto span {
+            display: inline-block;
+            width:50px;
+            height: 50px;
+            line-height: 50px;
+            border: 2px solid #000;
+            border-radius: 100px;
+            margin: 10px;
+            color:#fff;
+        }
+        .red {
+            background: rgb(255,255,255);
+background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(254,122,122,1) 28%, rgba(0,0,0,1) 100%);
+        }
+        .yellow {
+            background: rgb(255,255,255);
+background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(245,228,72,1) 28%, rgba(0,0,0,1) 100%);     
+        }
+        .green {
+            background: rgb(255,255,255);
+background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(74,233,165,1) 28%, rgba(0,0,0,1) 100%);
+        }
+        .gray {
+            background: rgb(255,255,255);
+background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(164,164,164,1) 28%, rgba(0,0,0,1) 100%);
+        }
+        .blue {
+            background: rgb(255,255,255);
+background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(122,206,254,1) 28%, rgba(0,0,0,1) 100%);
+        }
+        .lottoBox {
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="lottoBox">
+        <h1>탕진잼 LOTTO !! </h1>
+        <input type="number" name="" id="lottoNum">
+        <button id="btnLotto">로또생성하기</button>
+        <div id="txtLotto">
+    
+        </div>
+    </div>
+    <script>
+        let txtLotto = document.querySelector("#txtLotto");
+        let btnLotto = document.querySelector("#btnLotto");
+        let lottoNum = document.querySelector("#lottoNum");
+        let colorArray=["red","blue","green","yellow","gray"];
+        btnLotto.addEventListener("click",function(){
+            txtLotto.innerHTML="";
+            for(let i=0;i<lottoNum.value;i++){
+                makeLotto();
+            }
+        });
+        function makeLotto() {
+            let lotto=[];
+            let myLotto=[];
+            
+            for(let i=1;i<=45;i++){
+                lotto.push(i);
+            }
+
+            for(let i= 0;i<100; i++) {
+                let random1 = Math.floor(Math.random()*lotto.length);
+                let random2 = Math.floor(Math.random()*lotto.length);
+                //random1 = 3;
+                //random2 = 5;
+                let temp = lotto[random1]; //4;
+                lotto[random1] = lotto[random2];
+                lotto[random2] = temp;
+            }
+            console.log(lotto);
+            for(let i=0;i<6;i++){
+                //let random = Math.floor(Math.random()*lotto.length);
+                myLotto.push(lotto[i]);
+                //lotto.splice(random,1);
+            }
+            myLotto.sort(function(a,b){return a-b});
+            let myDiv = document.createElement("div");
+            txtLotto.appendChild(myDiv);
+            let color;
+            for(let i=0;i<myLotto.length;i++){
+                let num = myLotto[i];
+                color = colorArray[Math.floor((num-1)/10)];
+                myDiv.innerHTML+=`<span class="${color}">${myLotto[i]}</span>`;
+            }
+        }
+    </script>
+</body>
+</html>

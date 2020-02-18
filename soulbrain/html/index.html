@@ -1,100 +1,4 @@
-<!DOCTYPE html>
-<html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/reset.css" />
-    <link rel="stylesheet" href="../css/common.css" />
-    <link rel="stylesheet" href="../css/layout.css" />
-    <link rel="stylesheet" href="../css/swiper.css" />
-    <link rel="stylesheet" href="../css/splitting.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
-    <script defer src="../js/main.js"></script>
-    <script src="../js/swiper.min.js"></script>
-    <link rel="stylesheet" href="../css/main.css" />
-  </head>
-  <body>
-    <header id="header">
-      <h1 id="logo">
-        <img src="../img/logo.png" alt="" />
-      </h1>
-      <nav id="gnb">
-        <h2 class="hidden">global navigation</h2>
-        <ul class="list">
-          <li>
-            <a href="" class="depth01">기업소개</a>
-            <ul class="depth02">
-              <li><a href="">기업개요</a></li>
-              <li><a href="">인사말</a></li>
-              <li><a href="">미션&비전</a></li>
-              <li><a href="">연혁</a></li>
-              <li><a href="">CI 소개</a></li>
-              <li><a href="">사업장 소개</a></li>
-              <li><a href="">계열회사</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="" class="depth01"> 사업영역</a>
-            <ul class="depth02">
-              <li><a href="">반도체 재료사업</a></li>
-              <li><a href="">디스플레이 재료사업</a></li>
-              <li><a href="">이차전지 재료사업</a></li>
-              <li><a href="">전자 재료사업</a></li>
-              <li><a href="">바이오헬스케어 사업</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="" class="depth01">R&D</a>
-            <ul class="depth02">
-              <li><a href="">중앙연구소 소개</a></li>
-              <li><a href="">기술개발 성과</a></li>
-              <li><a href="">기술연구분야</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="" class="depth01">IR/PR</a>
-            <ul class="depth02">
-              <li><a href="">기업지배구조</a></li>
-              <li><a href="">공시정보</a></li>
-              <li><a href="">주가정보</a></li>
-              <li><a href="">재무정보</a></li>
-              <li><a href="">IR자료</a></li>
-              <li><a href="">Soulbrain 소식</a></li>
-              <li><a href="">e-BROCHURE</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="" class="depth01">지속가능경영</a>
-            <ul class="depth02">
-              <li><a href="">윤리경영</a></li>
-              <li><a href="">품질경영</a></li>
-              <li><a href="">환경안전보건경영</a></li>
-              <li><a href="">혁신경영</a></li>
-              <li><a href="">사회공헌</a></li>
-              <li><a href="">지속가능경영보고서</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="" class="depth01">채용정보</a>
-            <ul class="depth02">
-              <li><a href="">인사철학</a></li>
-              <li><a href="">복리후생</a></li>
-              <li><a href="">직무소개</a></li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-    </header>
+   <? include("../include/header.html") ?>
     <!--  -->
     <section id="mainVisual">
       <ul class="list swiper-wrapper">
@@ -118,7 +22,6 @@
             </p>
           </div>
           <div class="img"></div>
-
         </li>
         <li class="mainVisual03 swiper-slide">
           <div class="txtBox">
@@ -129,48 +32,357 @@
             </p>
           </div>
           <div class="img"></div>
-          
         </li>
       </ul>
       <div class="pagination">
-          <div class="bullets"></div>
+        <div class="bullets"></div>
+        <div class="auto btns">
+          <button class="btn btnStop"><i class="xi-pause-circle-o"></i></button>
+          <button class="btn btnPlay"><i class="xi-play-circle-o"></i></button>
+        </div>
+        <button class="btn btnPrev"><i class="xi-angle-left-min"></i></button>
+        <button class="btn btnNext "><i class="xi-angle-right-min"></i></button>
       </div>
     </section>
     <!--  -->
-    <section id="business"  class="section">
-        <div class="container">
-            <h2>BUSINESS AREA</h2>
-            <ul class="clearFix">
-                <li class="left"> 
-                    <a href="">
-                        <img src="../img/main_s2_item1.png" class="img01" alt="">
-                        <h3>반도체 재료사업<i class="xi-plus-circle"></i></h3>
-                    </a>
-                    <a href="">
-                        <div class="imgBox01">
-                            <img src="../img/main_s2_item3.jpg" class="img03" alt="">
-                            <h3>반도체 재료사업<i class="xi-plus-circle"></i></h3>
-                        </div>
-                    </a>
-                    <a href="">
-                        <div class="imgBox02">
-                            <img src="../img/main_s2_item4.jpg" class="img04" alt="">
-                            <h3>반도체 재료사업<i class="xi-plus-circle"></i></h3>
-                        </div>
-                    </a>
-                </li>
-                <li class="right">
-                    <a href="">
-                        <img src="../img/main_s2_item2.jpg" class="img02" alt="">
-                        <h3>디스플레이 재료사업<i class="xi-plus-circle"></i></h3>
-                    </a>
-                    <a href="">
-                        <img src="../img/main_s2_item5.jpg" class="img05" alt="">
-                        <h3>바이오헬스케어 사업<i class="xi-plus-circle"></i></h3>
-                    </a>
-                </li>
-            </ul>
-        </div>
+    <section id="business" class="section">
+      <div class="container">
+        <h2>BUSINESS AREA</h2>
+        <ul class="clearFix">
+          <li class="left">
+            <a href="">
+              <img src="../img/main_s2_item1.png" class="img01" alt="" />
+              <h3>반도체 재료사업<i class="xi-plus-circle"></i></h3>
+            </a>
+            <a href="">
+              <div class="imgBox01">
+                <img src="../img/main_s2_item3.jpg" class="img03" alt="" />
+                <h3>반도체 재료사업<i class="xi-plus-circle"></i></h3>
+              </div>
+            </a>
+            <a href="">
+              <div class="imgBox02">
+                <img src="../img/main_s2_item4.jpg" class="img04" alt="" />
+                <h3>반도체 재료사업<i class="xi-plus-circle"></i></h3>
+              </div>
+            </a>
+          </li>
+          <li class="right">
+            <a href="">
+              <img src="../img/main_s2_item2.jpg" class="img02" alt="" />
+              <h3>디스플레이 재료사업<i class="xi-plus-circle"></i></h3>
+            </a>
+            <a href="">
+              <img src="../img/main_s2_item5.jpg" class="img05" alt="" />
+              <h3>바이오헬스케어 사업<i class="xi-plus-circle"></i></h3>
+            </a>
+          </li>
+        </ul>
+      </div>
     </section>
-  </body>
-</html>
+    <!--  -->
+    <section id="rnd" class="section">
+      <div class="container">
+        <h2 class="">R&amp;D CENTER</h2>
+        <div class="txtBox">
+          <h3>
+            ENVISION YOUR FUTURE,<br />
+            BEYOND TECHNOLOGY
+          </h3>
+          <p>
+            솔브레인 기술연구소는, 1994년 기업부설연구소로 출범하여 반도체 및<br />
+            TFL-LCD 산업에서 리튬 이차전지, OLED 산업에 이르기까지 첨단 IT
+            산업의<br />
+            다양한 소재 및 부품 연구를 통해 IT 및 첨단산업 발전에 일조하고
+            있습니다.
+          </p>
+          <ul>
+            <li>
+              <a href="">
+                <div class="imgBox">
+                  <img src="../img/RD_icon01.png" alt="" />
+                </div>
+                <span>중앙연구소 소개</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <div class="imgBox">
+                  <img src="../img/RD_icon02.png" alt="" />
+                </div>
+                <span> 기술개발 성과</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <div class="imgBox">
+                  <img src="../img/RD_icon03.png" alt="" />
+                </div>
+                <span>기술연구분야</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="rndImg">
+          <div class="imgBox">
+            <img src="../img/RD01.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--  -->
+    <section id="vision" class="section">
+      <div class="table">
+        <div class="tableCell">
+          <div class="container clearFix">
+            <h2>VISION</h2>
+            <ul>
+              <li>
+                <div class="txtBox">
+                  <img src="../img/main_s4_icon2.png" alt="" />
+                  <span class="main">매출상승률</span>
+                  <span
+                    >5년간 매출상승률<br />
+                    매년 증가</span
+                  >
+                  <span class="sub count01"></span>
+                </div>
+              </li>
+              <li>
+                <div class="txtBox">
+                  <img src="../img/main_s4_icon3.png" alt="" />
+
+                  <span class="main">첨단기술의 국산화</span>
+                  <span
+                    >첨단 제품 생산<br />
+                    핵심소재 국산화</span
+                  >
+                  <span class="sub">NO.1</span>
+                </div>
+              </li>
+              <li data-aos="fade-up" data-aos-duration="2000">
+                <div class="txtBox">
+                  <img src="../img/main_s4_icon1.png" alt="" />
+                  <span class="main">제품 생산 </span>
+                  <span
+                    >5개 분야 총 298여<br />
+                    제품 생산</span
+                  >
+                  <span class="sub count02"></span>
+                </div>
+              </li>
+              <li>
+                <div class="txtBox">
+                  <img src="../img/main_s4_icon4.png" alt="" />
+                  <span class="main">글로벌 생산시설 </span>
+                  <span
+                    >전세계 4개의<br />
+                    생산 시설</span
+                  >
+                  <span class="sub count03">4</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--  -->
+    <section id="contribution" class="section">
+      <div class="table">
+        <div class="tableCell">
+          <div class="container">
+            <div class="txtBox">
+              <h2>
+                <span class="main">SOCIAL CONTRIBUTION</span>
+                <span class="sub">솔브레인 나눔재단 설립</span>
+              </h2>
+              <p>
+                <span class="main">
+                  솔브레인은 기업의 지속적 발전뿐만 아니라, 사회적 책임의
+                  중요성에 대한 인식하에<br />
+                  “재단법인 솔브레인 나눔재단”을 설립하였습니다.<br />
+                </span>
+                <span class="sub">
+                  앞으로 장기적인 관점과 체계적인 추진계획을 통하여 각계각층의
+                  구성원에게 기업의<br />
+                  이윤을 환원하고, 함께하는 사회를 만드는데 일익을 담당할
+                  것입니다.
+                </span>
+              </p>
+              <a href="" class="btn"
+                >VIEW MORE<i class="xi-angle-right arrow"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--  -->
+    <section id="media" class="section">
+      <div class="table">
+        <div class="tableCell">
+          <div class="container">
+            <article id="public">
+              <h2>PUBLIC RELATIONS</h2>
+              <ul>
+                <li>
+                  <a href="">
+                    <span class="date">2019.12.05</span>
+                    <p>
+                      제56회 무역의 날 기념식 '5억불 수출의 탑' 수상
+                    </p>
+                    <i class="xi-long-arrow-right"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <span class="date"> 2019.06.20</span>
+                    <p>
+                      전자증권 전환 대상 주권 권리자(주주) 보호 및 조치사항 안내
+                    </p>
+                    <i class="xi-long-arrow-right"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <span class="date">2019.05.02</span>
+                    <p>
+                      솔브레인㈜ 창립 33주년 나눔 행사 개최
+                    </p>
+                    <i class="xi-long-arrow-right"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <span class="date">2018.07.03</span>
+                    <p>
+                      솔브레인㈜ '2018 대한민국 일자리 으뜸기업' 선정
+                    </p>
+                    <i class="xi-long-arrow-right"></i>
+                  </a>
+                </li>
+              </ul>
+            </article>
+            <article id="ir">
+              <h2>IR</h2>
+              <div class="irBox">
+                <p>
+                  솔브레인은 미래 성장동력 확보를 통해<br />최대의 투자 가치를
+                  드리겠습니다.
+                </p>
+                <dl>
+                  <dt>현재가</dt>
+                  <dd class="stock">
+                    <i class="xi-caret-up stack"></i>99,500
+                    <span class="unit">원</span>
+                  </dd>
+                  <dt>전일대비</dt>
+                  <dd><i class="xi-caret-up"></i>1300</dd>
+                  <dt>등락률</dt>
+                  <dd>+1.32%</dd>
+                  <dt>거래량</dt>
+                  <dd>87,025</dd>
+                </dl>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--  -->
+    <section id="partners">
+      <div class="container">
+        <h2>계열회사</h2>
+        <div class="benner">
+          <div class="mask">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide">
+                <a href="">
+                  <img src="../img/main_s7_img1.jpg" alt="" />
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="">
+                  <img src="../img/main_s7_img2.jpg" alt="" />
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="">
+                  <img src="../img/main_s7_img3.jpg" alt="" />
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="">
+                  <img src="../img/main_s7_img4.jpg" alt="" />
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="">
+                  <img src="../img/main_s7_img5.jpg" alt="" />
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="">
+                  <img src="../img/main_s7_img6.jpg" alt="" />
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="">
+                  <img src="../img/main_s7_img7.jpg" alt="" />
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="">
+                  <img src="../img/main_s7_img8.jpg" alt="" />
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="">
+                  <img src="../img/main_s7_img9.jpg" alt="" />
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="">
+                  <img src="../img/main_s7_img10.jpg" alt="" />
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="">
+                  <img src="../img/main_s7_img11.jpg" alt="" />
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="">
+                  <img src="../img/main_s7_img12.jpg" alt="" />
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="">
+                  <img src="../img/main_s7_img13.jpg" alt="" />
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="">
+                  <img src="../img/main_s7_img14.jpg" alt="" />
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="">
+                  <img src="../img/main_s7_img15.jpg" alt="" />
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="">
+                  <img src="../img/main_s7_img16.jpg" alt="" />
+                </a>
+              </li>
+            </ul>
+          </div>
+          <button class="btn btnPrev"><i class="xi-angle-left"></i></button>
+          <button class="btn btnNext"><i class="xi-angle-right"></i></button>
+        </div>
+      </div>
+    </section>
+   <? include("../include/footer.html") ?>

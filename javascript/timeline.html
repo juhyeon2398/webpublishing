@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <script src="js/greensock/gsap.min.js"></script>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        border-radius: 10px;
+        color: #fff;
+        line-height: 100px;
+        text-align: center;
+      }
+      #box01 {
+        background-color: rgb(255, 55, 55);
+      }
+      #box02 {
+        background-color: rgba(0, 255, 170, 0.534);
+      }
+      #box03 {
+        background-color: rgb(68, 0, 255);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box" id="box01">box01</div>
+    <div class="box" id="box02">box02</div>
+    <div class="box" id="box03">box03</div>
+    <script>
+        let tl=gsap.timeline();
+        tl.to("#box01",{
+            duration:2, x:500,rotation:180,ease:"power2.out"
+        },"+=1")
+        tl.to("#box02",{
+            duration:2, x:500,rotation:180,ease:"power2.out"
+        },"+=1")
+        tl.to("#box03",{
+            duration:2, x:500,rotation:180,ease:"power2.out"
+        },"+=1")
+        
+    </script>
+  </body>
+</html>

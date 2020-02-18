@@ -1,0 +1,13 @@
+.hidden {
+    width:1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    left:-9999px;
+}
+.ol {
+    outline: 1px solid #f00;
+}
+.center{
+    text-align: center;
+}

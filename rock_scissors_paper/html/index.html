@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <title>Document</title>
+    <style>
+      #computer {
+        width: 300px;
+        height: 300px;
+      }
+      #computer img {
+        width: 100%;
+      }
+      #computer li {
+        display: none;
+      }
+      #computer li:nth-child(1) {
+        display: block;
+      }
+      #human {
+        width: 300px;
+        text-align: center;
+        margin-top: 100px;
+      }
+      #human li {
+        width: 80px;
+        display: inline-block;
+      }
+      #human img {
+        width: 100%;
+      }
+      span{
+          background-color: #f00;
+          display: inline-block;
+          text-align: center;
+          width: 100px;
+          height: 50px;
+          font-size: 50px;
+          font-weight: 700;
+          color: #fff;
+          padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="computer">
+      <li><img src="../images/rock.svg" alt="" /></li>
+      <li><img src="../images/scissors.svg" alt="" /></li>
+      <li><img src="../images/paper.svg" alt="" /></li>
+    </ul>
+    <ul id="human">
+      <li><img src="../images/rock.svg" alt="" /></li>
+      <li><img src="../images/scissors.svg" alt="" /></li>
+      <li><img src="../images/paper.svg" alt="" /></li>
+    </ul>
+    <div id="txt"></div>
+    <script>
+      let list = document.querySelectorAll("#computer li");
+      let random = 0;
+      function makeComCoice() {
+        random = Math.floor(Math.random() * list.length);
+
+        for (let i = 0; i < list.length; i++) {
+          if (i == random) {
+            list[i].style.display = "block";
+          } else {
+            list[i].style.display = "none";
+          }
+        }
+      }
+      makeComCoice();
+      let clearId = setInterval(makeComCoice, 10);
+      let humanList = document.querySelectorAll("#human li");
+      let isGame = true;
+      let result=[];
+      let txt = document.querySelector("#txt");
+      for (let i = 0; i < humanList.length; i++) {
+        humanList[i].addEventListener("click", function() {
+          if (isGame == true) {
+            clearInterval(clearId);
+            setTimeout(() => {
+              isGame = true;
+              clearId = setInterval(makeComCoice, 10);
+            }, 3000);
+            if (random == i) {
+              txt.innerHTML = "비김";
+              result.push("비김");
+              txt.innerHTML+=`<span></span>`;
+            } else if (
+              (random == 0 && i == 2) ||
+              (random == 1 && i == 0) ||
+              (random == 2 && i == 1)
+            ) {
+              txt.innerHTML = "이김";
+              result.push("이김");
+              txt.innerHTML+=`<span></span>`;
+            } else {
+              txt.innerHTML = "짐";
+              result.push("짐");
+              txt.innerHTML+=`<span></span>`;
+            }
+            console.log(random, "++", i);
+            isGame = false;
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

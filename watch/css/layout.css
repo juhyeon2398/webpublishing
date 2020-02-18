@@ -1,0 +1,30 @@
+body{
+    background-color: #000;
+}
+.section{
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+    background-size: contain;
+    background-attachment: fixed;
+}
+#main01{border-image: url("../img/");}
+#main01{border-image: url("../img/");}
+#main01{border-image: url("../img/");}
+#main01{border-image: url("../img/");}
+#main01{border-image: url("../img/");}
+#main01{border-image: url("../img/");}
+#main01{border-image: url("../img/");}
+#main01{border-image: url("../img/");}
+
+
+.section h2{
+    font-size: 64px;
+    font-weight: 100;
+    color:rgba(255, 255, 255, 0.8);
+    margin-left: 100px;
+}
+h1{
+    position: absolute;
+    left: 0;
+    top: 0;
+}

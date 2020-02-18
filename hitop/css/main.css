@@ -1,0 +1,66 @@
+#mainVisual {
+    position: relative;
+    overflow: hidden;
+}
+#mainVisual .list li {
+    height: 100vh;
+    background-size: cover;
+}
+#mainVisual .list .visual01 {
+    background-image: url("../images/main_visual01.jpg");
+}
+#mainVisual .list .visual02 {
+    background-image: url("../images/main_visual02.jpg");
+}
+#mainVisual .list .visual03 {
+    background-image: url("../images/main_visual03.jpg");
+}
+
+#mainVisual .txtBox {
+    color:#fff;
+    position: absolute;
+    text-align: center;
+    width:100%;
+    top:50%;
+    z-index: 2;
+}
+#mainVisual .txtBox .main {
+    font-size: 64px;
+    text-shadow: 3px 3px 5px rgba(0,0,0,0.1);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+#mainVisual .btn {
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    z-index: 3;
+}
+#mainVisual .btnPrev {
+    left:0;
+}
+#mainVisual .btnNext {
+    right:0;
+}
+
+#mainVisual .pagination {
+    position: absolute;
+    z-index: 4;
+    bottom: 80px;
+    width:100%;
+    text-align: center;
+}
+#mainVisual .pagination .swiper-pagination-bullet {
+    width:20px;
+    height: 20px;
+    opacity: 1;
+    border:3px solid #fff;
+    background-color: transparent;
+    border-radius: 100px;
+    transition: 0.25s ease;
+}
+#mainVisual .pagination .swiper-pagination-bullet-active {
+    width:80px;
+    background-color: #fff;
+}

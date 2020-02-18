@@ -37,3 +37,13 @@
     white-space: nowrap;
     text-overflow: ellipsis;
 }
+.table{
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+.table >.tableCell{
+    display: table-cell;
+    height: 100%;
+    vertical-align: middle;
+}

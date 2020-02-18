@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVENGERS</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        body {
+            background-color: #333;
+            overflow: hidden;
+        }
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            color:#fff;
+            margin:50px 0;
+            position: relative;
+            z-index: 999;
+        }
+        h1 img {
+            height: 100px;
+        }
+        #avengers li {
+            position: absolute;
+            transform: translate(-50%,-50%);
+            background-color: #fff;
+            padding:10px;
+            width:400px;
+            left:50%;
+            top:50%;
+            box-shadow: 10px 10px 10px rgba(0,0,0,0.1);
+        }
+        #avengers li img {
+            width:100%;
+        }
+        body {
+            background-size: auto 100vh;
+            background-repeat: no-repeat;
+            background-position: 50% 0;
+        }
+    </style>
+    <script src="js/greensock/gsap.min.js"></script>
+</head>
+<body>
+    <h1><img src="images/avengers/logo.png" alt=""></h1>
+    <ul id="avengers">
+        <li><img src="images/avengers/01.jpg" alt=""></li>
+        <li><img src="images/avengers/02.jpg" alt=""></li>
+        <li><img src="images/avengers/03.jpg" alt=""></li>
+        <li><img src="images/avengers/04.jpg" alt=""></li>
+        <li><img src="images/avengers/05.jpg" alt=""></li>
+        <li><img src="images/avengers/06.jpg" alt=""></li>
+        <li><img src="images/avengers/07.jpg" alt=""></li>
+        <li><img src="images/avengers/08.jpg" alt=""></li>
+        <li><img src="images/avengers/09.jpg" alt=""></li>
+        <li><img src="images/avengers/10.jpg" alt=""></li>
+        <li><img src="images/avengers/11.jpg" alt=""></li>
+        <li><img src="images/avengers/12.jpg" alt=""></li>
+        <li><img src="images/avengers/13.jpg" alt=""></li>
+        <li><img src="images/avengers/14.jpg" alt=""></li>
+        <li><img src="images/avengers/15.jpg" alt=""></li>
+        <li><img src="images/avengers/16.jpg" alt=""></li>
+        <li><img src="images/avengers/17.jpg" alt=""></li>
+        <li><img src="images/avengers/18.jpg" alt=""></li>
+        <li><img src="images/avengers/19.jpg" alt=""></li>
+        <li><img src="images/avengers/20.jpg" alt=""></li>
+        <li><img src="images/avengers/21.jpg" alt=""></li>
+        <li><img src="images/avengers/22.jpg" alt=""></li>
+        <li><img src="images/avengers/23.jpg" alt=""></li>
+        <li><img src="images/avengers/24.jpg" alt=""></li>
+        <li><img src="images/avengers/25.jpg" alt=""></li>
+        <li><img src="images/avengers/26.jpg" alt=""></li>
+        <li><img src="images/avengers/27.jpg" alt=""></li>
+        <li><img src="images/avengers/28.jpg" alt=""></li>
+        <li><img src="images/avengers/29.jpg" alt=""></li>
+        <li><img src="images/avengers/30.jpg" alt=""></li>
+    </ul>
+    <script>
+        let list = document.querySelectorAll("#avengers li");
+        let avengers = document.querySelector("#avengers");
+        let selectedList;
+        let body = document.querySelector("body");
+        // let avengers = gsap.from("#avengers li",{
+        //                duration:1.5,
+        //                y:-800,
+        //                ease:"back.out",
+        //                stagger:{
+        //                    each:0.1
+        //                }
+        // });
+        //forEach  배열 반복문
+        /*
+            let total = list.length;
+            for(let i=0;i<total;i++) {
+                gsap.set(list[i],{rotation:Math.random()*10-5});
+                gsap.from(list[i],{
+                    duration:1.5,
+                    y:-800,
+                    delay:0.1*i,
+                    ease:"back.out",
+                })
+            }
+        */
+        let total = list.length;
+        let depth = 0;
+        list.forEach(function(el,idx){
+            //console.log(el,"===",idx);
+            gsap.fromTo(el,
+            {   x:0,
+                y:0,
+                scale:0
+            },
+            {
+                duration:1,
+                x:Math.random()*1000-500,
+                y:Math.random()*600-300,
+                scale:Math.random()*0.2+0.1,
+                rotation:Math.random()*180-90,
+                delay:0.05*idx,
+                ease:"power4.out",
+            });
+            el.addEventListener("click",function(){
+                selectedList = this;
+                gsap.killTweensOf(this);
+                depth++;
+                gsap.set(this,{
+                    zIndex:depth
+                });
+                if(this.classList.contains("big")){
+                    this.classList.remove("big");
+                    gsap.to(this,{
+                        duration:0.5,
+                        x:Math.random()*1000-500,
+                        y:Math.random()*600-300,
+                        scale:Math.random()*0.2+0.1,
+                        rotation:Math.random()*180-90,
+                        ease:"power4.out",
+                        onComplete:function(mc) {
+                            
+                        },
+                        onCompleteParams:[]
+                    });
+                } else {
+                    this.classList.add("big");
+                    gsap.to(this,{
+                        duration:0.5,
+                        x:0,
+                        y:0,
+                        scale:1,
+                        rotation:0,
+                        ease:"power4.out",
+                        onComplete:function(mc) {
+                            
+                        },
+                        onCompleteParams:[]
+                    });
+                }
+            });
+        })
+
+
+    </script>
+</body>
+</html>
