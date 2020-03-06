@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/axios.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/greensock/gsap.min.js"></script>
+</head>
+<body>
+    <h1 id="logo">IMAGE SEARCH</h1>
+    <div class="search">
+        <span class="searchBox">
+            <input type="text" id="search">
+        </span>
+        <button class="btnSearch">검색</button>
+    </div>
+    <ul id="thumbnail">
+        
+    </ul>
+    <script>
+        $("#search").on("keydown",function(e) {
+            if(e.keyCode===13){
+                $(".btnSearch").trigger("click");
+            }
+        })
+        $(".btnSearch").on("click",function(){
+            let searchInput = $("#search").val();
+            axios.get(`naver_search.php?javascript_search=${searchInput}`)
+            .then(function(response){
+                console.log("도착");
+                console.log(response);
+                let imgArr =  response.data.items;
+                $.each(imgArr,function(idx,item){
+                    let thumbnail = item.thumbnail;
+                    let big = item.link;
+                    let title = item.title;
+                    $("#thumbnail").append(
+                        `<li><a href="${big}" data-caption="${title}" data-fancybox="img"><img src="${thumbnail}" alt="${title}"></a></li>`
+                    )
+                })
+
+            })
+            .catch(function(error){
+                console.log("에러");
+                console.log(error);
+            });
+        });
+
+        
+    </script>
+</body>
+</html>

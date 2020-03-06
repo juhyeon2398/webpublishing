@@ -1,66 +1,63 @@
-var gnb = $("#gnb .list>li");
-var header =$("#header");
-console.log(header);
-var btnlanguage=$("#header .utilMenu .language > a")
-
-gnb.on("mouseenter",function(){
-    console.log("hover");
-    header.addClass("on");
-}),
-gnb.on("mouseleave",function(){
-    header.removeClass("on");
-})
-
-var mainVisual=new Swiper("#mainVisual",{
-    seed:1000,
+new Swiper("#mainVisual",{
+    speed:1000,
     effect:"fade",
     loop:true,
-    autoplay:{
-        delay:6000,
+    navigation: {
+        nextEl: "#mainVisual .btnNext",
+        prevEl: "#mainVisual .btnPrev",
     },
-    pagination:{
-        el: '#mainVisual .pagination .bullets',
-        type: 'bullets',
+    autoplay: {
+        delay: 3000,
+    },
+    pagination: {
+        el: "#mainVisual .pagination",
+        type: "bullets",
         clickable:true,
-        
     },
-    navigation:{
-        prevEl:"#mainVisual .btnPrev",
-        nextEl:"#mainVisual .btnNext",
-    } 
-})
-var partners=new Swiper("#partners .mask",{
-    seed:1000,
-    loop:true,
-    slidesPerView:"auto",
-    spaceBetween: 0,
-    navigation:{
-        prevEl:"#partners .btnPrev",
-        nextEl:"#partners .btnNext",
-    } 
-})
-var btnStop=$("#mainVisual .btnStop");
-var btnPlay=$("#mainVisual .btnPlay");
-$("#header .btnAll").on("click",function(){
-    $("#header #gnbAll").slideToggle();
-    $(this).toggleClass("on");
-    return false;
-})
-
-var lnb=$("#lnb .listBox > a");
-lnb.on("click",function(e){
-    console.log("click");
-    e.preventDefault();
-    $(this).next().stop().slideToggle();
+});
+$("#gnb .list > li").append('<div class="bg"></div>')
+$("#gnb .list > li").on("mouseenter",function(){
+    $(".depth02",this).stop().fadeIn(250);
+    $(".bg",this).stop().slideDown(250);
+});
+$("#gnb .list > li").on("mouseleave",function(){
+    $(".depth02",this).stop().fadeOut(250);
+    $(".bg",this).stop().slideUp(250);
 });
 
-for(var i=2000; i<=2025; i++) {        
-    if(i<2025){
-        var html =0;
-        html = "<option value="+i+">"+i+"</option>";
-    }
-    else{
-        bread;
-    }
+$("#popup .btnClose").on("click",function(){
+    gsap.to("#popup",{
+        y:-500,
+        ease:"back.out",
+        duration:1,
+        onComplete:function(){
+            $("#popup").remove();
+        }
+    })
+    return false;
+});
+$("#popup .btnOneday").on("click",function(){
+    gsap.to("#popup",{
+        y:-500,
+        ease:"back.out",
+        duration:1,
+        onComplete:function(){
+            $("#popup").remove();
+        }
+    })
+    Cookies.set("oneday", "one", { expires: 1 });
+    return false;
+});
+//console.log(Cookies.get("oneday"));
+let oneday = Cookies.get("oneday");
+if(oneday==="one") {
+    $("#popup").remove();
+} else {
+    gsap.from("#popup",{
+        y:-500,
+        duration:1,
+        ease:"back.out",
+        delay:1,
+    })
 }
-$("#subContents select option").append(html);
+Cookies.remove("oneday");

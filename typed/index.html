@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:200,900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .bg {
+            height: 100vh;
+            background:url("images/bg.jpg") 50% no-repeat;
+            background-size: cover;
+            font-family: 'Titillium Web', serif;
+        }
+        h2 {
+            font-size: 64px;
+            position: absolute;
+            top:50%;
+            width:100%;
+            text-align: center;
+            font-weight: 200;
+            color:#fff;
+            text-transform: uppercase;
+        }
+        h2 strong {
+            font-weight: 900;
+            color:#f00;
+            display: inline-block;
+            position: relative;
+            z-index: 2;
+            
+        }
+        h2 strong:before {
+            content: '';
+            display: block;
+            width:100%;
+            height: 10px;
+            background-color: rgba(255,255,255,0.8);
+            border-radius: 100px;
+            bottom: 20px;
+            z-index: -1;
+            position: absolute;
+            bottom: 22px;
+        }
+    </style>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/typed.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            let typed = new Typed("#changeTxt",{
+                strings:[
+                    "Front-end-developer",
+                    "Interactive media designer",
+                    "UI/UX Designer",
+                    "Professor"
+                ],
+                typeSpeed:50,
+                backSpeed:50,
+                backDelay: 2000,
+                loop:true,
+                showCursor: false,
+            });
+            let shadow="";
+            let total=100;
+            for (let i = 0; i < total; i++) {
+                if(i<total-1){
+                    shadow +=`${i+1}px ${i+1}px 0 rgba(0,0,0,1),`;           
+                }
+                else{
+                    shadow +=`${i+1}px ${i+1}px 0 rgba(0,0,0,1)`;           
+                }
+            }
+            $("#selfIntroduce").css({textShadow:shadow});
+
+        })
+    </script>
+</head>
+<body>
+    <div class="bg">
+        <h2 id="selfIntroduce">I am a <strong id="changeTxt"></strong></h2>
+    </div>
+</body>
+</html>

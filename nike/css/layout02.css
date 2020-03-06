@@ -1,0 +1,45 @@
+#main{
+    perspective: 1000px;
+    position: relative;
+    height: 100vh;
+}
+#main .cube{
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    transform-style: preserve-3d;
+    left: 50%;
+    top: 50%;
+    transform:translate(-50%,-60%) translateZ(-200px);
+}
+#main .cube div{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    line-height: 400px;
+    color: #fff;
+    font-size: 48px;
+    text-align: center;
+}
+#main .cube .front{transform: rotateY(0) translateZ(200px); background-color: rgb(148, 33, 33);}
+#main .cube .back{transform: rotateY(180deg) translateZ(200px);background-color: rgb(226, 7, 7);}
+#main .cube .left{transform: rotateY(-90deg) translateZ(200px);background-color: rgb(24, 108, 156);}
+#main .cube .right{transform: rotateY(90deg) translateZ(200px);background-color: rgb(238, 255, 0);}
+#main .cube .top{transform: rotateX(90deg) translateZ(200px);background-color: rgb(29, 135, 177);}
+#main .cube .bottom{transform: rotateX(-90deg) translateZ(200px);background-color: rgb(42, 85, 81);}
+
+.btns {
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    text-align: center;
+}
+.btns li{
+    display: inline-block;
+    line-height: 40px;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    border: 1px solid #d9d9d9;
+    cursor: pointer;
+}

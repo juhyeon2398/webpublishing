@@ -1,0 +1,36 @@
+{
+    "baseball":[
+        {
+            "name":"두산 베어스",
+            "link":"https://www.doosanbears.com/",
+            "thumbnail":"img/doosan_logo.png"
+        },
+        {"name":"SK 와이번즈",
+            "link":"https://www.doosanbears.com/",
+            "thumbnail":"img/SK_logo.png"},
+        {"name":"키움 히어로즈",
+            "link":"https://www.doosanbears.com/",
+            "thumbnail":"img/heroes_logo.png"},
+        {"name":"LG 트윈즈",
+            "link":"https://www.doosanbears.com/",
+            "thumbnail":"img/lg_logo.png"},
+        {"name":"NC 다이노스",
+            "link":"https://www.doosanbears.com/",
+            "thumbnail":"img/NC_logo.png"},
+        {"name":"KT 위즈",
+            "link":"https://www.doosanbears.com/",
+            "thumbnail":"img/kt_logo.png"},
+        {"name":"KIA 타이거즈",
+            "link":"https://www.tigers.co.kr/mainSeasonOff.asp",
+            "thumbnail":"img/kia_logo.png"},
+        {"name":"삼성 라이온즈",
+            "link":"https://www.samsunglions.com/",
+            "thumbnail":"img/samsung_logo.png"},
+        {"name":"한화 이글즈",
+            "link":"https://www.hanwhaeagles.co.kr/html/main/main.asp",
+            "thumbnail":"img/eagels_logo.png"},
+        {"name":"롯데 자이언츠",
+            "link":"http://www.giantsclub.com/html/",
+            "thumbnail":"img/lotte_logo.png"}
+    ]
+}

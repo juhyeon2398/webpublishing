@@ -134,6 +134,4 @@ new fullpage('#main', {
             portfolioTl.restart();
         }     
     },
-
-
 });

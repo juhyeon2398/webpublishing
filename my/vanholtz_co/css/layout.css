@@ -1,0 +1,54 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+}
+body {
+  color: #333;
+  font-family: 'Black Ops One', sans-serif;
+}
+p {
+  line-height: 1.5;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.section {
+  height: auto;
+}
+
+#header{
+    position: fixed;
+    left: 50px;
+    bottom: 0;
+    color: #fff;
+}
+#header #logo{
+    font-size: 40px;
+    font-weight: 700;
+}
+#header .list{
+    font-size: 14px;
+    margin: 50px 0; 
+}
+#header .list>li{
+    float: left;
+}
+#header .depth02>li{
+    margin: 15px 0 ;
+    perspective: 5000px;
+    transform-origin: 100% 0;
+    transform-style: preserve-3d;
+
+}
+#header .depth02 a:hover{
+    transform:rotateY(30deg);
+}
+
+
+
+

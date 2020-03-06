@@ -2,7 +2,6 @@ new fullpage('#main', {
     navigation:true,
     navigationTooltips: ["VIDEO","DAY or NIGHT","MAIN","FACILTY","RESORT MAP"],
     showActiveTooltip: true,
-    
 });
 
 let btnMenu = $("#header .btnBox .btnMenu");

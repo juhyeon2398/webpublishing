@@ -47,3 +47,6 @@ button , input[type="button"] {
     padding:0;
     outline: none;
 }
+img {
+    vertical-align: top;
+}

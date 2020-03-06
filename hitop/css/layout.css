@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 html {
     font-size: 16px;
 }
@@ -32,7 +35,7 @@ a {
     text-align: center;
 }
 #gnb .list > li:hover .depth02 {
-    display: block;
+    /* display: block; */
 }
 #gnb .list > li {
     display:inline-block;
@@ -69,18 +72,32 @@ a {
     transform:scaleX(1);
 }
 #gnb .list > li:hover .depth01 {
-    background-color:#bf0c14;
+    /* background-color:#bf0c14; */
     color:#fff;
+}
+#gnb .list > li {position: relative;}
+#gnb .list > li .bg {
+    content: '';
+    display: block;
+    position: absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height: 100%;
+    background-color: #bf0c14;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.15);
+    display: none;
+    z-index: -1;
 }
 #gnb .list .depth02 {
     display:none;
     padding-top:30px;
     padding-bottom: 30px;
     padding:30px 10px;
-    background-color:#bf0c14;
+    /* background-color:#bf0c14; */
     color:#fff;
-    border-radius:0 0 10px 10px;
-    box-shadow: 0 5px 5px rgba(0,0,0,0.15);
+    
 }
 
 #gnb .list .depth02 a {
@@ -89,11 +106,7 @@ a {
     border-radius:4px;
 }
 #gnb .list .depth02 a:hover {
-    background-color: #970910;
-}
-#header{
-    position:fixed ;
-    top: 0;
+    /* background-color: #970910; */
 }
 #header .utilMenu {
     position: absolute;
@@ -146,13 +159,17 @@ a {
     top:24px;
     transform:rotate(-45deg);
 }
-
-
+.subVisual {
+    background-image: url("../images/sub_visual01.jpg");
+    color:#fff;
+    text-align:center;
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+}
 .subTitle {
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    text-transform: capitalize;
+    margin-top:160px;
 }
 .container {
     width:1200px;
@@ -175,6 +192,31 @@ a {
     background-color: #970910;
 }
 
+#popup {
+    position: fixed;
+    left:50px;
+    top:50px;
+    background-color: #fff;
+    border: 1px solid #d9d9d9;
+    z-index: 9999;
+    padding:10px;
+    box-shadow:10px 10px 10px rgba(0,0,0,0.1);
+}
+#popup .contents {
+    min-height: 300px;
+    min-width: 400px;
+    background-color: #999;
+}
+#popup .footer {
+    text-align: right;
+    padding-top:10px;
+}
+#popup .footer button {
+    display: inline-block;
+    padding:5px 10px;
+    background-color: #000;
+    color: #fff;
+}
 
 /* 
 #gnb .list .depth02 li {

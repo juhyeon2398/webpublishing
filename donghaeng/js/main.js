@@ -94,3 +94,8 @@ time03.from("#mainVisual .visual03.swiper-slide-duplicate-prev .txtBox .sub",{
     ease:Bounce.easeOut,
 },0.5);
 
+new fullpage("#main",{
+    navigation:true,
+    navigationTooltips: ["VIDEO","DAY or NIGHT","MAIN","FACILTY","RESORT MAP"],
+   
+});

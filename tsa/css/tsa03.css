@@ -1,0 +1,34 @@
+#main {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  #main .section {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #section01 .box{
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      background: #fff;
+  }
+  #section01{
+      background-color: rgb(21, 179, 55);
+  }
+  #section02{
+      background-color: rgb(255, 0, 0);
+  }
+  #section03{
+      background-color: rgb(25, 0, 253);
+  }
+  #section04{
+      background-color: rgb(189, 54, 20);
+  }
+  

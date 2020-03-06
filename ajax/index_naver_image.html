@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/jquery.fancybox.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/greensock/gsap.min.js"></script>
+</head>
+<body>
+    <h1 id="logo">IMAGE SEARCH</h1>
+    <div class="container">
+        <div id="search">
+            <span class="inputBox"><input type="text" id="searchWord"></span>
+            <button class="btnSearch">검색</button>
+        </div>
+        <ul id="thumbnail">
+    
+        </ul>
+    </div>
+    <script>
+        // $.ajax({
+        //     url:"memo.json",
+        //     type:"GET",
+        //     dataType:"JSON",
+        //     fail:function(error) {
+        //         console.log(error);
+        //         console.log("fail");
+        //     },
+        //     success:function(response) {
+        //         console.log(response);
+        //         console.log("success");
+        //     },
+        //     always:function(response){
+        //         console.log(response);
+        //         console.log("success");
+        //     }
+        // });
+        // console.log("aaaaa");
+        $("#searchWord").on("keydown",function(e){
+            if(e.keyCode===13){
+                //searchImage();
+                $(".btnSearch").trigger("click");
+            }
+        });
+        //cors
+        $(".btnSearch").on("click",function() {
+            let searchWord = $("#searchWord").val();
+            $("#thumbnail li").remove();
+            $.ajax({
+                type:"GET",
+                url:`image_naver.php?searchWord=${searchWord}`,
+                success:function(response) {
+                    console.log(response);
+                    let imgArr= JSON.parse(response).items;
+                    //console.log(typeof imgArr);
+                    $.each(imgArr,function(idx,item){
+                        let  big = item.link;
+                        let  thumbnail =  item.image;
+                        $("#thumbnail").append(
+                            `
+                            <li><a href="${big}" data-fancybox="img"><img src="${thumbnail}"></a></li>
+                            `
+                        )
+                    });
+                    // $("body").append(
+                    //     `<img src="${response.documents[0].thumbnail_url}">`
+                    // )
+                    console.log(typeof response);
+                    $("body").imagesLoaded(function() {
+                        gsap.to("#thumbnail li",{
+                            duration:1,
+                            autoAlpha:1,
+                            stagger:{
+                                each:0.1,
+                                grid:"auto",
+                                from:"center"
+                            }
+                        })
+                    })
+                },
+                fail:function(error) {
+                    console.log(error);
+                },
+                done:function(response) {
+                    console.log(response);
+                },
+                always:function(response) {
+                    console.log(response);
+                },
+            });
+        })
+        function searchImage() {
+            
+        }
+
+
+    </script>
+
+</body>
+</html>

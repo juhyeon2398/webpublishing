@@ -1,0 +1,80 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+}
+body {
+  color: #333;
+  line-height: 1.5;
+  font-family: "Odibee Sans", cursive;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#main {
+  width: 1400px;
+  margin: 100px auto;
+}
+#main li {
+  width: 24%;
+  position: relative;
+  margin: 0.5%;
+  float: left;
+}
+#main li .front{
+    background: #0ff;
+    transform: perspective(500px);
+  transform-style: preserve-3d;
+}
+#main li .front .imgBox img{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  transform: scale(0.5) translateZ(100px);
+  backface-visibility: hidden; /* 밑에있는 걸 보여줌 */
+}
+#main li a {
+  display: block;
+  width: 100%;
+  height: 400px;
+  position: relative;
+  transform: perspective(500px);
+  transform-style: preserve-3d;
+}
+#main li a > div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 50px 10px;
+  background-color: #f6f6f6;
+  backface-visibility: hidden; /* 밑에있는 걸 보여줌 */
+}
+#main li .back {
+  background-color: #0f0;
+  transform: perspective(500px) rotateY(180deg);
+  transform-style: preserve-3d;
+  font-size: 18px;
+}
+#main li .back h2 {
+  text-align: center;
+  margin: 100px 0 30px;
+  font-size: 40px;
+  font-weight: 700;
+}
+#main li a.on {
+  transform: perspective(500px) rotateY(180deg);
+}
+#main li .back .txtBox {
+  padding: 0 20px;
+  transform: translateZ(300px);
+  backface-visibility: hidden; /* 밑에있는 걸 보여줌 */
+
+}
