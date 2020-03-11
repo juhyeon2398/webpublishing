@@ -65,3 +65,15 @@ for (let i = 1; i < 16; i++) {
    let logo = `<li><img src="../img/logo${i}.png"></li>`;
    $("#supporter .logos ul").append(logo);
 }
+$('.project').tilt({
+    perspective: 2000,
+})
+
+
+$("#mainVisual #nav ul li").on("mouseenter",function(){
+    $(this).addClass("rotate");
+})
+
+$("#mainVisual #nav ul li").on("mouseleave",function(){
+    $(this).removeClass("rotate");
+})

@@ -1,22 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/axios.min.js"></script>
-  </head>
-  <body>
-    <div id="baseball"></div>
+</head>
+<body>
+    <ul id="baseball">
+        
+    </ul>
     <script>
-      axios.get("memo.json").then(function(response) {
-        let baseball = response.data.baseball;
-        $.each(baseball, function(index, item) {
-            let element=`<li><a href="${item.link}" target_blank><img src="${item.thumbnail}">${item.name}</a></li>`;
-            $("#baseball").append(element);
+        axios.get("memo.json")
+        .then(function(response) {
+            let baseball = response.data.baseball;
+            $.each(baseball,function(index,item){
+                let element= `<li><a href="${item.link}" target="_blank">${item.name}</a></li>`;
+                $("#baseball").append(element);
+            })
         });
-      });
+
+        let myPromise = new Promise(function(resolve,reject) {
+            setTimeout(function() {
+                resolve("success");
+            },1000)
+        })
+        myPromise.then(function(res){
+            console.log(res);
+        })
+        .catch(function(error){
+            console.log(error);
+        })
+        
     </script>
-  </body>
+</body>
 </html>

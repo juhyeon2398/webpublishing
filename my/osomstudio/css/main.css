@@ -1,5 +1,6 @@
 :root {
   --main--color: #1e19cc;
+  --red--color:#f95157;
 }
 
 #mainVisual {
@@ -19,6 +20,79 @@
   line-height: 1.3;
   font-size: 60px;
 }
+#nav {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: url(../img/navphoto.png) no-repeat 0 #fff;
+  background-size: contain;
+  z-index: 998;
+}
+#nav .txtBox{
+    position: absolute;
+    left: 45%;
+    top: 10%;
+    width: 50%;
+}
+#nav .txtBox li{
+    position: relative;    
+}
+#nav .txtBox li:hover a{
+    color: var(--red--color);
+    transform: translateX(30px);
+    transition: 0.25s ease;
+}
+#nav .txtBox li::before{
+    content: "";
+    opacity: 0;
+    width: 25px;
+    height: 2px;
+    display: block;
+    background-color: var(--red--color);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#nav .txtBox li.rotate::before {
+    transform:rotate(180deg);
+    opacity: 1;
+    transition: 0.25s ease;
+}
+
+#nav .txtBox li>a{
+    display: block;
+    padding: 10px 0;
+    font-size: 3rem;
+    font-weight: 700;
+}
+#nav .txtBox .adress dl{
+    float: left;
+    width: 50%;
+}
+#nav .txtBox .adress dt{
+    color: rgba(46,46,48,0.4);
+    margin-bottom: 30px;
+}
+#nav .txtBox .adress dd{
+    padding: 15px 0;
+    width: 100%;
+}
+#nav .txtBox .adress a{
+    float: left;
+    width: 50%;
+    margin-top: 60px;
+    color: var(--red--color);
+    transition: 0.25s ease;
+}
+#nav .txtBox .adress a:hover{
+    color: var(--main--color);
+}
+#nav .txtBox .adress{
+    margin-top: 100px;
+}
 #orderPage {
   display: none;
   width: 100%;
@@ -35,6 +109,7 @@
   height: 100%;
   background-color: #fff;
   float: left;
+  padding: 40px 40px;
 }
 #orderPage .right {
   width: 50%;
@@ -42,6 +117,128 @@
   position: relative;
   background-color: var(--main--color);
   float: right;
+  color: #fff;
+}
+#orderPage .left h2 .main {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+#orderPage .left h2 .sub {
+  font-family: "Poppins";
+  margin: 60px 0 40px;
+  display: block;
+}
+#orderPage .left .inputBox input {
+  display: block;
+  padding: 30px 0 20px;
+  border: none;
+  width: 100%;
+  font-size: 1.25rem;
+  border-bottom: 2px solid rgba(46, 46, 48, 0.08);
+  transition: 0.5s ease;
+  color: rgba(46, 46, 48, 0.08);
+}
+#orderPage .left .checkBox {
+  width: 100%;
+}
+#orderPage .left .checkBox span {
+  display: block;
+  margin: 20px 0;
+}
+#orderPage .left .checkBox label {
+  display: inline-block;
+  width: 32.33%;
+}
+#orderPage .left input[type="checkbox"] {
+  margin-right: 15px;
+}
+#orderPage .left textarea {
+  margin-top: 30px;
+  border: none;
+  color: rgba(46, 46, 48, 0.08);
+  border-bottom: 2px solid rgba(46, 46, 48, 0.08);
+  width: 100%;
+  display: block;
+  font-size: 1.025rem;
+  font-weight: 700;
+  height: 50px;
+}
+#orderPage .left textarea:hover {
+  border-bottom: 2px solid var(--main--color);
+}
+
+#orderPage .left .inputBox input:hover {
+  border-bottom: 2px solid var(--main--color);
+}
+#orderPage .left .privacy {
+  display: block;
+  margin-top: 20px;
+  line-height: 1.25;
+  font-size: 0.9rem;
+}
+
+#orderPage .left .privacy a {
+  color: var(--red--color);
+  transition: 0.25s ease;
+}
+#orderPage .left .privacy a:hover {
+  color: var(--main--color);
+}
+#orderPage .right .contents {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#orderPage .right .contents .sub {
+  position: relative;
+  padding-left: 30px;
+}
+#orderPage .right .contents .sub::before {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 20px;
+  background-color: var(--red--color);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+#orderPage .right .contents h2 .main {
+  font-size: 1.75rem;
+  display: block;
+  color: var(--red--color);
+  white-space: nowrap;
+  margin: 30px 0;
+}
+#orderPage .right .mainIcon img {
+  float: left;
+  margin-right: 30px;
+  border-radius: 10px;
+}
+
+#orderPage .right .mainIcon .main {
+  font-size: 1.1rem;
+  display: block;
+  padding-top: 10px;
+}
+#orderPage .right .listBox .main {
+  display: block;
+  margin: 100px 0 20px;
+}
+#orderPage .right .listBox li {
+  width: 25%;
+  float: left;
+  height: 100px;
+  position: relative;
+}
+#orderPage .right .listBox li img {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 #orderPage .right button {
   color: #fff;
@@ -50,12 +247,17 @@
   right: 50px;
   font-size: 30px;
 }
-#mainVisual .btns .order {
-  color: #fff;
+.btns.red {
+  display: inline-block;
   padding: 20px 50px;
-  background-color: #f95157;
-  font-size: 16px;
+  background-color: var(--red--color);
   margin-top: 30px;
+  border-radius: 10px;
+}
+.btns.red button {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 /* support */
@@ -69,9 +271,10 @@
   width: 50%;
   font-size: 78px;
   float: left;
+  display: block;
 }
 strong {
-  color: #f95157;
+  color: var(--red--color);
 }
 #supporter .titleBox strong {
   display: block;
@@ -100,19 +303,233 @@ strong {
 #projects {
   padding: 150px 0;
 }
-#projects .projectBox ul>li{
-    display: inline-block;
+#projects .projectBox {
+  width: 100%;
+  display: inline-block;
+  position: relative;
 }
-#projects .projectBox ul>li:nth-child(1){
-    background-color: rgb(230, 230, 229);
+#projects .projectBox .project {
+  padding: 30px;
+  width: calc(100% - 10px);
+  margin: 10px 5px;
+  position: relative;
+  transform-style: preserve-3d;
 }
-#projects .projectBox ul>li:nth-child(2){
-    background-color:  rgb(21, 32, 148);
+#projects .projectBox img {
+  width: 100%;
 }
-#projects .projectBox ul>li:nth-child(3){
-    background-color: rgb(46, 50, 53);
+
+#projects .projectBox .project h2 .main {
+  color: #fff;
+  font-size: 28px;
 }
-#projects .projectBox ul>li:nth-child(4){
-    background-color: rgb(202, 182, 117);
+#projects .projectBox .project01 h2 .main {
+  color: #333;
 }
-#projects .projectBox img{ width: 150px; height: 150px;}
+#projects .projectBox .project h2 .sub {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+#projects .projectBox .project01 h2 .sub {
+  color: #f15252;
+}
+#projects .projectBox .project02 h2 .sub {
+  color: #7dd220;
+}
+#projects .projectBox .project03 h2 .sub {
+  color: #b47d2f;
+}
+
+#projects .left {
+  float: left;
+  width: 50%;
+}
+#projects .right {
+  float: right;
+  width: 50%;
+}
+#projects .bottom {
+  width: 100%;
+  display: inline-block;
+  margin-top: -10px;
+}
+#projects .projectBox .project01 {
+  background-color: rgb(230, 230, 229);
+  height: 500px;
+}
+#projects .projectBox .project:hover .imgBox {
+  transform: translateZ(30px);
+}
+#projects .projectBox .project01 .imgBox {
+  width: 500px;
+  position: absolute;
+  bottom: 0;
+  right: 30px;
+}
+#projects .projectBox .project01 img:last-child {
+  position: absolute;
+  width: 70%;
+  left: -30%;
+  bottom: 10px;
+}
+#projects .projectBox .project02 {
+  background-color: rgb(21, 32, 148);
+  height: 500px;
+}
+
+#projects .projectBox .project02 .imgBox {
+  width: 500px;
+  position: absolute;
+  bottom: 0;
+  left: 30px;
+}
+#projects .projectBox .project03 {
+  background-color: rgb(46, 50, 53);
+  color: #fff;
+  height: 1010px;
+}
+#projects .projectBox .project03 .imgBox {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  padding: 30px;
+}
+#projects .projectBox .project04 {
+  background-color: rgb(202, 182, 117);
+  height: 500px;
+  display: block;
+}
+#projects .projectBox .project04 .imgBox {
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 40%;
+}
+#projects .projectBox .project04 img:first-child {
+  height: 100%;
+  width: auto;
+}
+#projects .projectBox .project04 img:last-child {
+  position: absolute;
+  left: -60%;
+  top: 20%;
+  transform: scale(0.8);
+}
+
+#projects .projectBox .btns {
+  text-align: center;
+  margin-top: 80px;
+}
+#projects .projectBox .btns .more:hover {
+  transform: translateY(-10px);
+  background-color: #1e19cc;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+}
+#projects .projectBox .btns .more {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: var(--red--color);
+  border-radius: 100px;
+  font-size: 18px;
+  color: #fff;
+  transition: 0.5s ease;
+}
+
+/*  */
+#what .container {
+  position: relative;
+  height: 100%;
+}
+#what .contents {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#what h2 {
+  font-size: 78px;
+}
+#what .txtBox {
+  width: 100%;
+  margin: 100px 0;
+  color: #1a1b1b;
+  line-height: 1.5;
+  font-family: "Poppins";
+}
+#what .txtBox .first {
+  float: left;
+  width: 50%;
+  position: relative;
+  padding-left: 30px;
+}
+#what .txtBox .first::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: #00f;
+  position: absolute;
+  left: 0;
+  top: 7px;
+}
+#what .txtBox .second {
+  float: right;
+  width: 50%;
+}
+#what .list {
+  display: block;
+  font-family: "Poppins";
+}
+#what .list ul > li {
+  float: left;
+  width: calc(33.33% - 15px);
+  margin-left: 15px;
+  transition: 0.5s ease;
+}
+#what .list ul > li:hover {
+  transform: translateY(-10px);
+}
+#what .list ul > li:first-child {
+  margin-left: 0;
+}
+#what .list ul > li img {
+  width: 80px;
+  height: 80px;
+}
+#what .list ul > li .main {
+  font-size: 28px;
+  display: block;
+  font-weight: 700;
+  margin: 30px 0 20px;
+}
+#what .list ul > li .sub {
+  font-size: 18px;
+  color: rgba(46, 46, 48, 0.4);
+}
+#what .seeMore {
+  margin-top: 30px;
+  color: var(--red--color);
+  display: block;
+  margin-top: 30px;
+  font-weight: 700;
+}
+
+/*  */
+
+#wave .img {
+  background: url("../img/wave.svg") repeat-x;
+  height: 100vh;
+  width: 100%;
+  animation: wave 10s ease infinite;
+}
+
+@keyframes wave {
+  0% {
+    background-position-x: 3200px;
+  }
+}
+
+#bg {
+  background: url("../img/bg.jpg") no-repeat fixed;
+}

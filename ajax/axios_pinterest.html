@@ -1,135 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/common.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Poppins:300,400,700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/jquery.fancybox.css" />
-    <link rel="stylesheet" href="css/layout02.css" />
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/jquery.fancybox.css">
+    <link rel="stylesheet" href="css/layout02.css">
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/imagesloaded.pkgd.min.js"></script>
     <script src="js/jquery.fancybox.min.js"></script>
     <script src="js/greensock/gsap.min.js"></script>
     <script src="js/isotope.pkgd.min.js"></script>
     <script src="js/axios.min.js"></script>
-  </head>
-  <body>
+</head>
+<body>
     <h1 id="logo">IMAGE SEARCH</h1>
     <div class="container">
-      <div id="search">
-        <span class="inputBox"><input type="text" id="searchWord"/></span>
-        <button class="btnSearch">검색</button>
-      </div>
-      <ul id="thumbnail" class="clearFix"></ul>
-      <!-- <div class="btns"><a href="" class="btnMore">MORE</a></div> -->
+        <div id="search">
+            <span class="inputBox"><input type="text" id="searchWord"></span>
+            <button class="btnSearch">검색</button>
+        </div>
+        <ul id="thumbnail" class="clearFix">
+            
+        </ul>
+        <!-- <div class="btns"><a href="" class="btnMore">MORE</a></div> -->
     </div>
     <script>
-      $(".btnSearch").on("click", function() {
-        searchWord = $("#searchWord").val();
-        if (searchWord.trim() === "") {
-          alert("검색어를 입력해 주세요.");
-        } else {
-          //searchWord = $("#searchWord").val();
-          $("#thumbnail li").remove();
-          page = 1;
-          startNum = 0;
-          endNum = 30;
-          start = 1;
-          loadImg();
+        $(".btnSearch").on("click",function() {
+            searchWord = $("#searchWord").val();
+            if(searchWord.trim()===""){
+                alert("검색어를 입력해 주세요.");
+            } else {
+                //searchWord = $("#searchWord").val();
+                $("#thumbnail li").remove();
+                page=1;
+                startNum=0;
+                endNum=30;
+                start=1;
+                gallery.isotope("destroy");
+                loadImg();
+            }
+            return false;
+        });
+        $(window).on("keydown",function(e){
+            if(e.keyCode===13){
+                $(".btnSearch").trigger("click");
+            }
+        })
+        $(".btnMore").on("click",function() {
+            page=page+1;
+            startNum=endNum;
+            endNum=endNum+30;
+            start=start+30;
+            loadImg();
+            return false;
+        });
+        let start=1;
+        let searchWord = "";
+        let page=1;
+        let startNum=0;
+        let endNum=30;
+        let gallery = $("#thumbnail").isotope();
+        function loadImg() {
+            axios.get(`image_naver.php?searchWord=${searchWord}&start=${start}`)
+                .then(function(response){
+                    let imgArr = response.data.items;
+                    gallery = $("#thumbnail").isotope({
+                            itemSelector:".item",
+                            layoutMode: "masonry"
+                    });
+                    $.each(imgArr,function(idx,item){
+                        //console.log(idx,"===",item);
+                        let thumbnail = item.thumbnail;
+                        let big =  item.link;
+                        let element = $(`<li class="item"><a href="${big}" data-fancybox="img"><img src="${big}" alt=""></a></li>`);
+                        //let list = $("#thumbnail").append(element);
+                        $(element).imagesLoaded()
+                        .progress(function(instance, image){
+                            if(!image.isLoaded){
+                                //$(element).remove();
+                                //$("#thumbnail").append(element)
+                            } 
+                        })
+                        .done(function(){
+                            $("#thumbnail").isotope("layout");
+                            $("#thumbnail").append(element)
+                            .isotope( "appended", element);
+                        })
+                        .always(function(){
+                            isBottom=false;
+                        })
+                        .fail(function(instance){
+                            
+                        })
+                    });
+                    
+                })
+                .catch(function(error){
+                    console.log(error);
+                });
         }
-        return false;
-      });
-      $(window).on("keydown", function(e) {
-        if (e.keyCode === 13) {
-          $(".btnSearch").trigger("click");
-        }
-      });
-      $(".btnMore").on("click", function() {
-        page = page + 1;
-        startNum = endNum;
-        endNum = endNum + 30;
-        start = start + 30;
-        loadImg();
-        return false;
-      });
-      let start = 1;
-      let searchWord = "";
-      let page = 1;
-      let startNum = 0;
-      let endNum = 30;
-      function loadImg() {
-        axios
-          .get(`image_naver.php?searchWord=${searchWord}&start=${start}`)
-          .then(function(response) {
-            console.log(response);
-            let imgArr = response.data.items;
-            console.log(imgArr);
-            let gallery = $("#thumbnail").isotope({
-              itemSelector: ".item",
-              layoutMode: "masonry"
-            });
-            $.each(imgArr, function(idx, item) {
-                let thumbnail = item.thumbnail;
-                let big = item.link;
-                let elements = `<li class="item"><a href="${big}" data-fancybox="img"><img src="${big}" alt=""></a></li>`;
-
-                $("#thumbnail").append(elements);
-                gallery.isotope("appended", elements);
-                gallery.isotope("reloadItems");
-            
-              //console.log(idx,"===",item);
-            });
-            //0~29, 30~59
-            $("#thumbnail").imagesLoaded(function() {
-              gallery.isotope();
-              gallery.one("layoutComplete", function() {
-                console.log("정렬 끝");
-                for (let i = startNum; i < endNum; i++) {
-                  gsap.to($("#thumbnail li").eq(i), {
-                    autoAlpha: 1,
-                    ease: "power4",
-                    delay: (i % 30) * 0.1
-                  });
-                }
-              });
-
-              isBottom = false;
-              // gsap.to($("#thumbnail li"),{
-              //     autoAlpha:1,
-              //     ease:"power4",
-              //     stagger:{
-              //         each:0.1
-              //     }
-              // })
-            });
-          })
-          .catch(function(error) {
-            console.log(error);
-          });
-      }
-      let isBottom = false;
-      $(window).on("scroll", function() {
-        let st = $(window).scrollTop();
-        let wh = $(window).height();
-        let dh = $(document).height();
-        let bottom = dh - wh;
-        if (st >= bottom && !isBottom) {
-          page = page + 1;
-          isBottom = true;
-          startNum = endNum;
-          endNum = endNum + 30;
-          start = start + 30;
-          loadImg();
-          return false;
-        }
-      });
-      //loadImg();
+        let isBottom=false;
+        $(window).on("scroll",function() {
+            let st = $(window).scrollTop();
+            let wh = $(window).height();
+            let dh = $(document).height();
+            let bottom = dh-wh;
+            if(st>=bottom-100 && !isBottom){
+                console.log("바닥");
+                isBottom=true;
+                page=page+1;
+                startNum=endNum;
+                endNum=endNum+30;
+                start=start+30;
+                loadImg();
+            }
+        })
+        //loadImg();
     </script>
-  </body>
+
+</body>
 </html>

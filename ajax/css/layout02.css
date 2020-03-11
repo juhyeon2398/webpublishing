@@ -29,15 +29,14 @@ img {
 }
 #thumbnail li {
     float: left;
+    width:24%;
     margin: 0.5%;
-    width: 24%;
     border: 3px solid #fff;
     box-shadow: 3px 3px 3px rgba(0,0,0,0.1);
-    opacity: 0;
-    visibility: hidden;
+    
 }
-#thumbnail img{
-    width: 100%;
+#thumbnail li img {
+    width:100%;
 }
 
 #search {
@@ -80,4 +79,8 @@ img {
     padding:15px 50px;
     border-radius: 100px;
     box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
+}
+
+.blind {
+    display: none !important;
 }

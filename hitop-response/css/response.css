@@ -1,0 +1,141 @@
+@media all and (max-width:1440px) {
+    #logo {
+        left:50px;
+    }
+    #gnb .list .depth01 {
+        padding:0 30px;
+    }
+    #header .utilMenu {
+        right:20px;
+    }
+}
+
+
+@media all and (max-width:1200px){
+    #header{
+        position: fixed;
+    }
+    #gnb {
+        position: fixed;
+        width:100%;
+        min-height: 100%;
+        left:100%;
+        top:0px;
+        background-color: #bf0c14;
+        transition: 0.25s ease-out;
+    }
+    #header .utilMenu .btnAll{
+        display: inline-block;
+    }
+    body.open #gnb{
+        left: 0;
+    }
+    #gnb .list > li {
+        display: block;
+        text-align: left;
+        border-bottom: 1px solid #d9d9d9;
+    }
+    #gnb .list > li .depth01 {
+        text-align: left;
+    }
+    #gnb .list > li .depth02 a {
+        padding-left: 30px;
+    }   
+    .container {
+        width:100%;
+        background-color: #f00;
+    }
+    #quickMenu li {
+        width:33.33%;
+    }
+    #quickMenu li img {
+        width:100%;
+    }
+
+    #business .container {
+        padding:5px;
+    }
+    #business ul {
+        margin: 0;
+    }
+    #business li {
+        width: calc(50% - 10px);
+        margin: 0;
+        margin: 5px;
+    }
+    #business li img {
+        width: 100%;
+    }
+    #news .container {
+        padding:5px;
+    }
+    #news li {
+        margin: 0 5px;
+        width:calc(33.33% - 10px);
+    }
+    #news li:nth-child(1) {
+        margin-left: 5px;
+    }
+}
+
+@media all and (max-width:1024px){
+    h2 {
+        font-size: 1.5rem;
+    }
+    #business li .txtBox h3 {
+        font-size: 1.3rem;
+    }
+}
+
+@media all and (max-width:640px){
+    h2 {
+        font-size: 1.25rem;
+    }
+    #header{
+       height:50px;
+    }
+    #gnb .list>li .depth01{
+        height: 50px;
+        line-height: 50px;
+    }
+    #logo{
+        transform: scale(0.5);
+        left: 0;
+    }
+    #logo a{
+        padding: 5px;
+        
+    }
+    #header .utilMenu{
+        transform: scale(0.7);
+        padding: 0;
+    }
+    #quickMenu .container {
+        padding:5px;
+    }
+    #quickMenu li {
+        float: none;
+        width:calc(100% - 10px);
+        margin: 5px;
+    }
+    #quickMenu li:nth-child(2) {
+        margin-top: 10px;
+    }
+    #business li {
+        width: calc(100% - 10px);
+        float: none;
+        margin: 10px 5px;
+    }
+    #news li {
+        width: calc(100% - 10px);
+        float: none;
+        margin: 10px 5px;
+    }
+}
+
+/* business */
+
+
+/* 
+    
+*/

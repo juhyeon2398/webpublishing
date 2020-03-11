@@ -18,7 +18,14 @@
     <script src="../js/js.cookie.min.js"></script>
     <script src="../js/swiper.min.js"></script>
     <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/mobile-detect.min.js"></script>
     <script defer src="../js/main.js"></script>
+    <script>
+        let md = new MobileDetect(window.navigator.userAgent);
+        if(md.mobile() != null){
+            location.href ="../../hitop-mobile/html";
+        }
+    </script>
 </head>
 <body>
     <header id="header">
