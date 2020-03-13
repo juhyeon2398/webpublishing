@@ -29,25 +29,30 @@ a {
 .section {
   height: 100vh;
   overflow: hidden;
+  background-color: #fff;
 }
 .section.auto {
   height: auto;
+}
+.section.blue {
+  transition: 0.5s ease;
 }
 #logo .logoBox {
   width: 240px;
   height: 32px;
   position: absolute;
-  top: 50%;
+  top: 34px;
   left: 50px;
-  transform: translateY(-50%);
 }
 #logo .logoBox img {
-  left: 0;
-  top: 0;
-  position: absolute;
   width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
-
+#logo .logoBox .white {
+  opacity: 0;
+}
 #header .order {
   color: #f00;
   position: absolute;
@@ -67,17 +72,81 @@ a {
   float: left;
 }
 
-#navBar{
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 9999;
+#navBar {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  z-index: 9999;
+  transform: translateY(-50%);
 }
-#navBar span{
-    display: block;
-    width: 40px;
-    height:4px;
-    margin: 5px;
-    background-color: #000;
+#navBar button {
+  display: block;
+  width: 40px;
+  height: 30px;
+}
+#navBar span {
+  display: block;
+  width: 35px;
+  height: 4px;
+  position: absolute;
+  right: 0;
+  background-color: #000;
+  transition: 0.5s ease;
+}
+#navBar span:nth-child(1) {
+  top: 0;
+}
+#navBar span:nth-child(2) {
+  top: 10px;
+  right: 10px;
+}
+#navBar span:nth-child(3) {
+  top: 20px;
+}
+#navBar.on span:nth-child(1) {
+  top: 10px;
+  transform: rotate(45deg);
+}
+#navBar.on span:nth-child(2) {
+  transform: translateX(100px);
+}
+#navBar.on span:nth-child(3) {
+  top: 10px;
+  transform: rotate(-45deg);
+}
+
+#footer {
+  padding: 50px 0 100px;
+  background-color: #f95157;
+}
+#footer h2 {
+  width: 15%;
+  float: left;
+}
+#footer ul {
+  width: 85%;
+  padding: 15px 50px;
+  float: right;
+}
+#footer ul > li {
+  color: #fff;
+  width: 33.33%;
+  float: left;
+}
+
+#footer ul > li dt {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.75rem;
+  margin-bottom: 20px;
+}
+#footer ul > li dd {
+  margin: 15px 0;
+  font-size: 0.9rem;
+}
+#footer ul > li dd.email {
+  margin-top: 30px;
+  transition: 0.5s ease;
+}
+#footer ul > li dd.email:hover a {
+  color: rgba(255, 255, 255, 0.4);
 }

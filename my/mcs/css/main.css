@@ -1,0 +1,28 @@
+:root {
+  --main--color: #1e19cc;
+  --red--color: #f95157;
+}
+
+#mainVisual{
+}
+#mainVisual ul>li{
+    height: 100vh;
+
+}
+#mainVisual .visual01{
+    background: url("../img/main_slider01.png") no-repeat 50%;
+    background-size: cover;
+}
+#mainVisual .visual02{
+    background: url("../img/main_slider02.png") no-repeat 50%;
+    background-size: cover;
+
+}
+#mainVisual .visual03{
+    background: url("../img/main_slider03.png") no-repeat 50%;
+    background-size: cover;
+}
+#mainVisual .visual04{
+    background: url("../img/main_slider04.png") no-repeat 50%;
+    background-size: cover;
+}

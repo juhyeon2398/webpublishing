@@ -1,0 +1,245 @@
+@media all and (max-width: 1280px) {
+  #gnb {
+    text-align: left;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    padding-top: 100px;
+    background-color: #fff;
+    margin-left: 0;
+    transition: 0.5s ease-out;
+  }
+  #gnb.on {
+    left: 0;
+  }
+  #gnb .gnbList > li {
+    float: none;
+    border-bottom: 1px solid #d9d9d9;
+  }
+  #gnb .gnbList > li .depth02 {
+    display: none;
+    padding: 10px 0;
+    background-color: #eee;
+    margin-top: 0;
+  }
+  #gnb .gnbList > li .depth02 a {
+    display: block;
+    padding: 10px 0 10px 40px;
+  }
+  #gnb .gnbList .depth01 .plus {
+    display: block;
+  }
+  #summary .contentsBox:nth-child(2) .contents {
+    height: 350px;
+  }
+  #summary .contentsBox:nth-child(2) .contents .imgBox {
+    width: 100%;
+    height: 175px;
+    float: none;
+  }
+  #summary .contentsBox:nth-child(2) .contents .infoBox {
+    width: 100%;
+    height: 175px;
+    padding: 30px;
+    float: none;
+  }
+  #summary .contentsBox:nth-child(2) .contents .infoBox ul > li {
+    width: 50%;
+    float: left;
+  }
+}
+@media all and (max-width: 1100px) {
+  #product .descBox {
+    margin: 0;
+    width: 100%;
+  }
+  #product .descBox li .img {
+    left: 20px;
+    transform: translateX(0);
+  }
+  #product .descBox li .inner {
+    width: 100%;
+    padding-left: 250px;
+  }
+  #product .descBox li .bigTitle {
+    font-size: 5rem;
+  }
+  #product .descBox li .btnMore {
+    width: 50px;
+    height: 50px;
+    font-size: 1.24rem;
+    line-height: 50px;
+    right: 50px;
+  }
+  #product .descBox li p {
+    margin-top: 10px;
+  }
+}
+@media all and (max-width: 960px) {
+  #mainVisual .btns {
+    width: 100%;
+    left: 0;
+  }
+  #mainVisual .btns button {
+    line-height: 60px;
+    width: 60px;
+    height: 60px;
+    font-size: 1rem;
+  }
+  #mainVisual .btns .btnPrev {
+    position: absolute;
+    left: 20px;
+  }
+  #mainVisual .btns .btnNext {
+    position: absolute;
+    right: 20px;
+  }
+  #summary .contentsBox {
+    width: 100% !important;
+    position: relative;
+    float: none !important;
+  }
+  #summary .contentsBox:nth-child(1) {
+    height: auto;
+  }
+  #summary .contentsBox:nth-child(1)::before {
+    display: block;
+    content: "";
+    padding-top: 100%;
+    border: 1px solid #f00;
+  }
+  #summary .contentsBox:nth-child(1) .inner {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+  }
+  #summary .contentsBox:nth-child(2) .contents {
+    height: auto;
+    position: relative;
+    overflow: hidden;
+  }
+  #summary .contentsBox:nth-child(2) .contents::before {
+    display: block;
+    content: "";
+    padding-top: 50%;
+  }
+  #summary .contentsBox:nth-child(2) .contents .inner {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #summary .contentsBox:nth-child(2) .contents:nth-child(1) .infoBox {
+    width: 50%;
+    height: 100%;
+    float: right;
+    background-color: var(--green-color);
+    color: #fff;
+  }
+  #summary .contentsBox:nth-child(2) .contents:nth-child(1) .imgBox {
+    width: 50%;
+    height: 100%;
+
+    float: left;
+  }
+  #summary .contentsBox:nth-child(2) .contents:nth-child(2) .infoBox {
+    width: 50%;
+    height: 100%;
+    float: left;
+    background-color: var(--green-color);
+    color: #fff;
+  }
+  #summary .contentsBox:nth-child(2) .contents:nth-child(2) .imgBox {
+    width: 50%;
+    height: 100%;
+    float: right;
+  }
+  #process .icons ul {
+    position: relative;
+  }
+  #process .icons ul li {
+    width: 25%;
+    position: relative;
+  }
+  #process .icons::before {
+    display: none;
+  }
+  #process .icons ul li .txtBox .txt {
+    font-size: 1rem;
+  }
+  #process .icons ul li::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top: 50%;
+    background-color: #d9d9d9;
+    z-index: -1;
+  }
+}
+@media all and (max-width: 640px) {
+  .onlymobile {
+    display: block;
+  }
+  .pcOnly {
+    display: none;
+  }
+  #mainVisual li {
+    height: auto;
+    background: none !important;
+  }
+  #mainVisual li img {
+    width: 100%;
+  }
+  #mainVisual li .txt {
+    text-align: center;
+    width: 100%;
+    top: 30%;
+    left: 0;
+    font-size: 0.825rem;
+  }
+  #mainVisual li .main {
+    font-size: 2.4rem;
+  }
+  #mainVisual li .sub {
+    font-size: 1rem;
+    letter-spacing: 0;
+  }
+  #product .descBox li .img img{
+    width: 120px;
+  }
+  #product .descBox li .inner {
+    width: 100%;
+    padding-left: 200px;
+  }
+  #product .descBox li .bigTitle {
+    font-size: 2.5rem;
+  }
+  #product .descBox li .btnMore {
+    width: 50px;
+    height: 50px;
+    font-size: 1.24rem;
+    line-height: 50px;
+    right: 50px;
+  }
+  #product .descBox li p {
+    margin-top: 10px;
+    padding-right: 2px;
+    font-size: 0.825rem;
+  }
+  #product .descBox li p br{
+    content: "";
+    display: none;
+  } 
+}
+@media all and (min-width: 1100px) {
+  #mainVisual .productBox .mask li {
+    width: 1100px !important;
+  }
+}
