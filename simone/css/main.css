@@ -1,0 +1,43 @@
+#main {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+#main section {
+    position: absolute;
+    width:100vw;
+    height: 100vh;
+    transform: perspective(1000px);
+    top:100%;
+}
+#main section .inner {
+    width:100vw;
+    height: 100vh;
+    padding:200px 100px 100px;
+    /* transform: rotateX(10deg) translateZ(-200px); */
+}
+#main section h2 {
+    font-size: 3rem;
+    color:#fff;
+    font-weight: 700;
+}
+#main #section01 {
+    top:0;
+}
+#section01 .inner {    background-color: rgb(236, 64, 64);}
+#section02 .inner {    background-color: rgb(49, 241, 65);}
+#section03 .inner {    background-color: rgb(96, 163, 250);}
+#section04 .inner {    background-color: rgb(255, 229, 79);}
+
+.btns {
+    position: fixed;
+    left:-100px;
+    top:50%;
+    transform: rotate(90deg);
+    color:#fff;
+    font-weight: 700;
+}
+.btns li {
+    float: left;
+    margin: 0 10px;
+}

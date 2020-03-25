@@ -112,12 +112,6 @@ let productDesc = new Swiper("#product .descBox .mask",{
 let product = new Swiper("#product .productBox .mask",{
     loop:true,
     centeredSlides:true,
-    breakpoints: {
-        1100: {
-        slidesPerView:"auto",
-        spaceBetween: 250
-        }
-    },
     slidesPerView:1,
     spaceBetween:50,
     //allowTouchMove:false,
@@ -128,6 +122,12 @@ let product = new Swiper("#product .productBox .mask",{
     navigation:{
         prevEl:"#product .btnPrev",
         nextEl:"#product .btnNext",
+    },
+    breakpoints: {
+        1100: {
+          slidesPerView: "auto",
+          spaceBetween: 250,
+        },
     }
 });
 

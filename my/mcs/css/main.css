@@ -1,28 +1,208 @@
 :root {
-  --main--color: #1e19cc;
+  --main--color: #21b8ce;
   --red--color: #f95157;
 }
+#mainVisual ul > li {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+#mainVisual .visual01 {
+  background: url("../img/main_slider01.png") no-repeat 50%;
+  background-size: cover;
+}
+#mainVisual .visual02 {
+  background: url("../img/main_slider02.png") no-repeat 50%;
+  background-size: cover;
+}
+#mainVisual .visual03 {
+  background: url("../img/main_slider03.png") no-repeat 50%;
+  background-size: cover;
+}
+#mainVisual .visual04 {
+  background: url("../img/main_slider04.png") no-repeat 50%;
+  background-size: cover;
+}
+#mainVisual .visual01 .effect {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+#mainVisual .visual01 .effect img {
+  position: absolute;
+  top: 50%;
+  right: 12%;
+  transform: translateY(-60%);
+  transform-origin: center;
+}
+#mainVisual .visual01 .effect img:nth-child(1) {
+  animation: circle01 20s infinite linear;
+}
+#mainVisual .visual01 .effect img:nth-child(2) {
+  animation: circle02 20s infinite linear;
+}
+#mainVisual .visual01 .effect img:nth-child(3) {
+  animation: circle03 20s infinite linear;
+}
 
-#mainVisual{
+#mainVisual .titleBox {
+  color: #fff;
+  line-height: 1.2;
+  position: absolute;
+  bottom: 40%;
+  left: 15%;
 }
-#mainVisual ul>li{
-    height: 100vh;
+#mainVisual .titleBox .sub {
+  font-size: 2rem;
+}
+#mainVisual .titleBox .main {
+  display: block;
+  padding: 20px 0 30px;
+  font-size: 3.5rem;
+}
+#mainVisual .titleBox p {
+  color: rgba(255, 255, 255, 0.7);
+}
+#mainVisual .visual01 .titleBox strong,
+#mainVisual .visual03 .titleBox strong {
+  color: #a2f2fe;
+}
+#mainVisual .visual02 .titleBox strong {
+  color: #e3e3bd;
+}
+#mainVisual .visual04 .titleBox strong {
+  color: #e3e3bd;
+  display: block;
+}
+#mainVisual .titleBox .btns .more {
+  color: rgba(255, 255, 255, 0.7);
+  padding: 10px 15px;
+  margin-top: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+#mainVisual .mask .pagination {
+  position: absolute;
+  bottom: 35%;
+  left: 15%;
+  z-index: 2;
+}
+#mainVisual .mask .pagination .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background-color: var(--main--color);
+  opacity: 1;
+  margin-right: 5px;
+}
+#mainVisual .mask .pagination .swiper-pagination-bullet-active {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  vertical-align: middle;
+}
 
+@keyframes circle01 {
+  0% {
+    transform-origin: 50%;
+    transform: translateY(-60%) rotate(360deg);
+  }
 }
-#mainVisual .visual01{
-    background: url("../img/main_slider01.png") no-repeat 50%;
-    background-size: cover;
+@keyframes circle02 {
+  0% {
+    transform-origin: 50%;
+    transform: translateY(-60%) rotate(-360deg);
+  }
 }
-#mainVisual .visual02{
-    background: url("../img/main_slider02.png") no-repeat 50%;
-    background-size: cover;
+@keyframes circle03 {
+  0% {
+    transform: translateY(-60%) rotate(360deg);
+  }
+}
 
+/*  */
+
+#business .bg {
+  width: 50%;
+  height: 100%;
+  background: url("../img/bg_section2.png") no-repeat 0;
+  float: left;
+  background-size: contain;
 }
-#mainVisual .visual03{
-    background: url("../img/main_slider03.png") no-repeat 50%;
-    background-size: cover;
+#business .txtBox {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  background: url("../img/bg_section01.png") no-repeat 100% 100%;
+  float: left;
 }
-#mainVisual .visual04{
-    background: url("../img/main_slider04.png") no-repeat 50%;
-    background-size: cover;
+#business .txtBox .contents {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 20%;
+  left: 0;
+  padding-right: 80px;
+}
+#business .txtBox h2 {
+  text-align: center;
+  font-size: 2.875rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+#business .txtBox .list {
+  width: 100%;
+  height: 50%;
+  position: relative;
+}
+#business .txtBox .list > li {
+  width: 25%;
+  float: left;
+}
+#business .txtBox .list > li.active a {
+  color: #fff;
+  background-color: #1a9eb1;
+  border: none;
+}
+#business .txtBox .list > li.active .listBox {
+  display: block;
+}
+#business .txtBox .list > li a {
+  text-align: center;
+  display: block;
+  width: 90%;
+  padding: 10px 0;
+  border: 1px solid #9b9b9b;
+  border-radius: 10px;
+}
+#business .txtBox .list > li .listBox {
+  display: none;
+  position: absolute;
+  top: 30%;
+  left: 25%;
+  width: 100%;
+}
+#business .txtBox .list > li .listBox span {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid #9b9b9b;
+}
+#business .txtBox .list > li .listBox dt {
+  padding: 20px 0 30px;
+  font-size: 2rem;
+  font-weight: 700;
+}
+#business .txtBox .list > li .listBox dd {
+  line-height: 1.7;
+  font-size: 1.25rem;
+}
+#business .txtBox .listBox .imgBox {
+  position: absolute;
+  top: -75px;
+  left:-75%;
+  width: 559px;
+  height: 446px;
+  overflow: hidden;
+}
+
+.swiper-notification {
+  display: none !important;
 }

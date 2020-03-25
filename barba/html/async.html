@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       function aa() {
+           return new Promise(function(resolve,reject){
+                let data=100;
+                resolve(100);
+           })
+       }
+       aa().then(function(resolveData){
+        console.log(resolveData);
+       })
+    </script>
+
+    <script>
+        console.log("1");
+        setTimeout(function() {
+            console.log("2");
+        },0);
+        console.log("3");
+        let isSunDay = new Promise(function(resolve,reject){
+            let current = new Date();
+            let sunday = current.getDate()===0? true:false;
+            if(sunday) {
+                resolve("일요일");
+            } else {
+                reject("일요일이 아");
+            }
+        });
+        isSunDay.then(function(resolveData) {
+            console.log(resolveData,"입니다.");
+        }).catch(function(rejectData){
+            console.log(rejectData,"닙니다.");
+        });
+        var promise = new Promise(function (resolve, reject) {
+            setTimeout(function () {
+                resolve(1);
+            }, 1000);
+        });
+
+        promise.then(function (num) {
+            console.log(num + 'complete'); /// 1complete
+            return num + 1; /// return = 2
+        }).then(function (value) {
+            console.log(value) // 2
+        });
+    </script>
+</body>
+</html>

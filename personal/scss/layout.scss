@@ -1,0 +1,135 @@
+@import "vars";
+
+html {
+  font-size: 10px;
+}
+body {
+  color: $base_color;
+  font-family: "Lato", "Noto Sans KR", "돋움";
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/* skip */
+#skip a {
+  display: block;
+  text-align: center;
+  padding: 15px 0;
+  background-color: #f00;
+  color: #fff;
+  position: fixed;
+  left: -9999px;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+  &:focus {
+    display: block;
+  }
+}
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background-color: rgba(0, 0, 0, 0.5);
+  #logo {
+    position: absolute;
+    left: 0;
+    font-size: 3rem;
+    font-weight: 300;
+  }
+  
+}
+.btnAll {
+    position: absolute;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    display: block;z-index: 999;
+    span {
+      width: 40px;
+      height: 2px;
+      display: block;
+      position: absolute;
+      left: 30px;
+      background-color: #fff;
+      transition: 0.25s ease;
+      &:nth-child(1) {
+        top: 39px;
+      }
+      &:nth-child(2) {
+        top: 49px;
+      }
+      &:nth-child(3) {
+        top: 59px;
+      }
+    }
+    &.on{
+        span{
+            &:nth-child(1) {
+                top: 49px;
+                transform: rotate(45deg);
+              }
+              &:nth-child(2) {
+                top: 49px;opacity: 0;
+                left: -100px;
+              }
+              &:nth-child(3) {
+                top: 49px;
+                transform: rotate(-45deg);
+
+              }
+        }
+    }
+  }
+#gnb {
+  position: fixed;
+  left: 100%;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000;
+  z-index: 9;
+  color: #ffffff;
+  font-size: 20rem;
+  font-weight: 900;
+  ul {
+    position: absolute;
+    left: 100px;
+    top: 50%;
+    transform: translateY(-50%);
+    li {
+      a {
+        transition: 0.5s ease;
+        &:hover {
+          color: #ff0000;
+        }
+      }
+    }
+  }
+}
+.changeItem{
+    position: fixed;left: 0;top: 0;width: 100vw;height: 100vh;z-index: 99;opacity: 0;visibility: hidden;
+    ul{
+        li{
+            position: absolute;
+            width: 20%;background-color: #000000;
+            transform: scaleY(0);
+            height: 100%;
+            transform-origin: 50% 100%;
+            &:nth-child(1){background-color: #0179de;left: 0;}
+            &:nth-child(2){background-color: #b6de01;left: 20%;}
+            &:nth-child(3){background-color: #01de56;left: 40%;}
+            &:nth-child(4){background-color: #de5a01;left: 60%;}
+            &:nth-child(5){background-color: #de019c;left: 80%;}
+        }
+    }
+}

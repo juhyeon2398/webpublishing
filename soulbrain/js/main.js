@@ -30,7 +30,7 @@ var mainVisual=new Swiper("#mainVisual",{
     } 
 })
 var partners=new Swiper("#partners .mask",{
-    seed:1000,
+    speed:1000,
     loop:true,
     slidesPerView:"auto",
     spaceBetween: 0,

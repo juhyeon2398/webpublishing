@@ -1,0 +1,195 @@
+<!DOCcategory html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gtgwellness</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900|Noto+Sans+KR:100,300,400,500,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/swiper.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/greensock/gsap.min.js"></script>
+    <script src="../js/greensock/CSSRulePlugin.min.js"></script>
+    <script src="../js/swiper.min.js"></script>
+    <script src="../js/axios.min.js"></script>
+    <script src="../js/main.js" defer></script>
+    
+</head>
+<body>
+    <div id="skip">
+        <a href="#mainContents">본문바로가기</a>
+        <!-- 접근성 마크 획득하기 위한 요소 -->
+    </div>
+    <header id="header">
+        <h1 id="logo">
+            JJANG
+        </h1>
+    </header>
+    <button class="btnAll">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button> 
+    <nav id="gnb">
+        <h2 class="hidden">global navigation</h2>
+        <ul class="gnbList">
+            <li><a href="" data-url="#home">HOME</a></li>
+            <li><a href="" data-url="#about">ABOUT</a></li>
+            <li><a href="" data-url="#portfolio">PORTFOLIO</a></li>
+            <li><a href="" data-url="#contact">CONTANT</a></li>
+        </ul>
+    </nav>
+    <div class="changeItem">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <div id="home">
+        <h2>Welcome</h2>
+    </div>
+    <div id="about">
+        <section id="abc">
+            <div class="mask">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide">
+                        <p class="alphabet"><span class="red">A</span>lcohol</p>
+                        <span class="icon"><img src="../images/main/alcohol.svg" alt=""></span>
+                    </li>
+                    <li class="swiper-slide">
+                        <p class="alphabet"><span class="red">B</span>lood Type</p>
+                        <span class="icon"><img src="../images/main/blood.svg" alt=""></span>
+                    </li>
+                    <li class="swiper-slide">
+                        <p class="alphabet"><span class="red">C</span>haracter</p>
+                        <span class="icon"><img src="../images/main/character.svg" alt=""></span>
+                    </li>
+                    <li class="swiper-slide">
+                        <p class="alphabet"><span class="red">D</span>ream</p>
+                        <span class="icon"><img src="../images/main/dream.svg" alt=""></span>
+                    </li>
+                    <li class="swiper-slide">
+                        <p class="alphabet"><span class="red">E</span>.T</p>
+                        <span class="icon"><img src="../images/main/et.svg" alt=""></span>
+                    </li>
+                    <li class="swiper-slide">
+                        <p class="alphabet"><span class="red">F</span>ootball team</p>
+                        <span class="icon"><img src="../images/main/football.svg" alt=""></span>
+                    </li>
+                    <li class="swiper-slide">
+                        <p class="alphabet"><span class="red">G</span>ame</p>
+                        <span class="icon"><img src="../images/main/game.svg" alt=""></span>
+                    </li>
+                    <li class="swiper-slide">
+                        <p class="alphabet"><span class="red">H</span>eight</p>
+                        <span class="icon"><img src="../images/main/height.svg" alt=""></span>
+                    </li>
+                    <li class="swiper-slide">
+                        <p class="alphabet"><span class="red">I</span>dea</p>
+                        <span class="icon"><img src="../images/main/idea.svg" alt=""></span>
+                    </li>
+                    <li class="swiper-slide">
+                        <p class="alphabet"><span class="red">J</span>ob</p>
+                        <span class="icon"><img src="../images/main/job.svg" alt=""></span>
+                    </li>
+                    <li class="swiper-slide">
+                        <p class="alphabet"><span class="red">K</span>nowledge</p>
+                        <span class="icon"><img src="../images/main/knowledge.svg" alt=""></span>
+                    </li>
+                    <li class="swiper-slide">
+                        <p class="alphabet"><span class="red">L</span>otte Giants</p>
+                        <span class="icon"><img src="../images/main/lotte.png" alt=""></span>
+                    </li>
+                    <li class="swiper-slide">
+                        <p class="alphabet"><span class="red">M</span>oney</p>
+                        <span class="icon"><img src="../images/main/money.svg" alt=""></span>
+                    </li>
+                    <li class="swiper-slide">
+                        <p class="alphabet"><span class="red">N</span>ature</p>
+                        <span class="icon"><img src="../images/main/nature.svg" alt=""></span>
+                    </li>
+                    <li class="swiper-slide">
+                        <p class="alphabet"><span class="red">O</span>rganic</p>
+                        <span class="icon"><img src="../images/main/organic.svg" alt=""></span>
+                    </li>
+                    <li class="swiper-slide">
+                        <p class="alphabet"><span class="red">P</span>eople</p>
+                        <span class="icon"><img src="../images/main/people.svg" alt=""></span>
+                    </li>
+                    <li class="swiper-slide">
+                        <p class="alphabet"><span class="red">Q</span>uestion</p>
+                        <span class="icon"><img src="../images/main/question.svg" alt=""></span>
+                    </li>
+                    <li class="swiper-slide">
+                        <p class="alphabet"><span class="red">R</span>adio Head</p>
+                        <span class="icon"><img src="../images/main/radio.svg" alt=""></span>
+                    </li>
+                    <li class="swiper-slide">
+                        <p class="alphabet"><span class="red">S</span>earch Engine</p>
+                        <span class="icon"><img src="../images/main/search.svg" alt=""></span>
+                    </li>
+                    <li class="swiper-slide">
+                        <p class="alphabet"><span class="red">T</span>eacher</p>
+                        <span class="icon"><img src="../images/main/teacher.svg" alt=""></span>
+                    </li>
+                    <li class="swiper-slide">
+                        <p class="alphabet"><span class="red">U</span>FO</p>
+                        <span class="icon"><img src="../images/main/ufo.svg" alt=""></span>
+                    </li>
+                    <li class="swiper-slide">
+                        <p class="alphabet"><span class="red">V</span>ictory</p>
+                        <span class="icon"><img src="../images/main/victory.svg" alt=""></span>
+                    </li>
+                    <li class="swiper-slide">
+                        <p class="alphabet"><span class="red">W</span>hale</p>
+                        <span class="icon"><img src="../images/main/whale.svg" alt=""></span>
+                    </li>
+                    <li class="swiper-slide">
+                        <p class="alphabet"><span class="red">X</span>-mas</p>
+                        <span class="icon"><img src="../images/main/xmas.svg" alt=""></span>
+                    </li>
+                    <li class="swiper-slide">
+                        <p class="alphabet"><span class="red">Z</span>zz</p>
+                        <span class="icon"><img src="../images/main/zzz.svg" alt=""></span>
+                    </li>
+                    
+                </ul>
+            </div>
+        </section>
+        <div id="abcContents">
+            <div class="inner">
+                <h2>Alcohol</h2>
+                <div class="contentsBox">
+                    <div class="imgBox">
+                        <img src="../images/main/alcohol.svg" alt="">
+                    </div>
+                    <div class="desc">
+                        <h3>나의 주량은?</h3>
+                        <p>
+                            소주 1병 <br>
+                            맥주 1000cc <br>
+                        </p>
+                    </div>
+                </div>
+                <button class="btnClose">
+                    <i class="xi-close xi-3x"></i>
+                </button>
+            </div>
+            <div class="bg"></div>
+        </div>
+    </div>
+    <div id="portfolio">
+        <h2>PORTFOLIO</h2>
+    </div>
+    <div id="contact">
+        <h2>CONTANT</h2>
+    </div>
+</body>
+</html>

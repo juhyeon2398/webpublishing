@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AACA,AAAA,WAAW,CAAC;EACR,gBAAgB,ECDR,OAAO;CDElB",
+    "sources": [
+        "main.scss",
+        "_vars.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}

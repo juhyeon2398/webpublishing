@@ -23,6 +23,13 @@ a {
     text-decoration: none;
     color: inherit;
 }
+
+.onlyMobile {
+    display: none;
+}
+
+
+
 /* skip */
 #skip a {
     display: block;
@@ -47,6 +54,7 @@ a {
     position: fixed;
     width:100%;    top:0;    z-index: 99;    color:#999;
     overflow: hidden;    transition: 0.25s ease;
+    z-index: 99;
 }
 #header:after {
     content: '';
@@ -282,6 +290,4 @@ a {
     transform: rotate(-45deg);
 }
 
-.onlymobile{
-    display: none;
-}
+
